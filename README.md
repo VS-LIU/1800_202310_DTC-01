@@ -6,9 +6,9 @@ This browser based web application to ...
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* Abdulqadir Abuharrus, call me Abdo. I'm an international student from Libay looking forward to start my career in tech with CST.
-* ...
-* My name is Victor Liu, and my favourite animals are sheep even though they are incredibly dumb.
+** 
+** My name is Abdo, and I like Rock music.
+* My name is Victor Liu and I am a student in BCIT's CST program. My favourite animals are sheep, even though they are incredibly dumb.
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
