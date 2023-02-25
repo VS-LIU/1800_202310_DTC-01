@@ -4,6 +4,9 @@
  *-------------------------------------
  */
 
+ /* Palette color 
+https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */ 
+
  .material-icons.md-18 { font-size: 18px; }
  .material-icons.md-24 { font-size: 24px; }
  .material-icons.md-36 { font-size: 36px; }
@@ -46,6 +49,60 @@
 .notice-card-img{
     width: 80%;
 }
+
+/* first div */ 
+.display-3 { 
+    font-family: cursive;
+    width: 500px;
+    top: 0px; 
+    left: 0px;
+
+}
+
+.container { 
+    background-color: #CAD2C5; 
+}
+
+/* second div */ 
+
+.container py-5 {
+    font-family: Georgia, serif; 
+
+}
+
+
+h2 {
+    font-size:30px;
+    color: #84A98C; 
+    text-align:center; 
+    line-height:1.5em; 
+    padding-bottom: 5px; 
+    font-family:"Playfair Display", serif; 
+    text-transform:uppercase;
+    letter-spacing: 2px; 
+    color:#111;
+}
+
+p {
+    font-family: Georgia, serif;
+    color: black; 
+}
+  
+
+
+/* footer */ 
+footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2F3E46;
+    color: white;
+    text-align: center;
+  }
+
+  footer span {
+    color: white; 
+  }
 
 @media screen and (max-width: 633px) {
     .map-img{
