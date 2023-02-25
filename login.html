@@ -11,91 +11,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap Library CSS CDN go here -->
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <!-- Other libraries go here -->
-    <!--Google Fonts CDN-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&family=Montserrat:wght@400;900&family=Playfair+Display&family=Roboto+Slab&display=swap"
-        rel="stylesheet">
-    <!--FontAwesome-->
-    <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-    <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="/styles/login.css">
+
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <header class="container-fluid">
-    </header>
-    <nav class="navbar bg-dark">
-        <div class="container-fluid">
-            <div class="navbar-logo-cont">
-                <a class="navbar-brand" href="#">Revival</a>
-            </div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <!-- <i class="search-icon fa-solid fa-magnifying-glass"></i> -->
-            </form>
-        </div>
-    </nav>
 
+    <!-- NAVBAR -->
+    <nav id="my-navbar"></nav>
 
+    <!-- Login Box -->
+    <div class="container">
+        <h1>Let's Login!</h1>
+    </div>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
+    <!-- JS scripts -->
+    <footer id="my-footer"></footer>
 
-    <section class="vh-100" style="background-color: white;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                        <div class="card-body p-5 text-center">
-
-                            <h3 class="mb-5">Sign in</h3>
-
-                            <div class="form-outline mb-4">
-                                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Enter email" />
-                                <label class="form-label" for="typeEmailX-2">Email</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password" />
-                                <label class="form-label" for="typePasswordX-2">Password</label>
-                            </div>
-
-                            <!-- Checkbox -->
-                            <div class="form-check d-flex justify-content-start mb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                                <label class="form-check-label mx-2" for="form1Example3"> Remember password </label>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-primary btn-block" type="submit">Login</button>
-                            </div>
-                            <hr class="my-4">
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-primary" style="background-color: #dd4b39;" type="submit"><i
-                                        class="fab fa-google me-2"></i> Sign in with google</button>
-                                <button class="btn btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i
-                                        class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-                            </div>
-                            <div>
-                                <p class="mb-0">Don't have an account? <a href="#!" class="text-bluek-50 fw-bold">Sign
-                                        Up</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-</body>
+    <!-- JS scripts -->
+    <script src="./scripts/firebaseAPI_DTC0.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/authentication.js"></script>
+    <script src="./scripts/script.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script> -->
 
 </html>
