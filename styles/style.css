@@ -22,3 +22,39 @@
     border-bottom: 3px solid #52796F;
     background-color: #2F3E46;
 }
+
+.content-box{
+    border: 2px solid #2F3E46;
+    border-radius: 10px;
+    background-color: #CAD2C5;
+}
+
+
+.map-image-box{
+    text-align: center;
+}
+.map-img{
+    width: 50%;
+}
+
+.notice-card{
+    background-color: #ECE8DD;
+    border: 2px solid #84A98C;
+    border-radius: 10px;
+}
+
+.notice-card-img{
+    width: 80%;
+}
+
+@media screen and (max-width: 633px) {
+    .map-img{
+        width: 100%;
+    }
+
+
+    .notice-card-img{
+        width: 50%;
+    }
+        
+  }
