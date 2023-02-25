@@ -6,7 +6,7 @@ This browser based web application to ...
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* Abdulqadir Abuharrus, call me Abdo. I'm an international student from Libay looking forward to start my career in tech with CST.
+* Abdulqadir Abuharrus, call me Abdo. I can't affored my hobbies.
 * My name is Mika!
 * My name is Victor Liu, and my favourite animals are sheep even though they are incredibly dumb.
 	
