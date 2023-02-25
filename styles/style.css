@@ -17,3 +17,8 @@
     color: antiquewhite;
     background-color: inherit;
 }
+
+#navbar, #footer{
+    border-bottom: 3px solid #52796F;
+    background-color: #2F3E46;
+}
