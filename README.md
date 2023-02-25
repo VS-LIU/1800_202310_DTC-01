@@ -9,6 +9,8 @@ List team members and/or short bio's here...
 * Abdulqadir Abuharrus, call me Abdo. I can't affored my hobbies.
 * My name is Mika!
 * My name is Victor Liu, and my favourite animals are sheep even though they are incredibly dumb.
+* My name is Emma. I love hiking and biking!
+
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
