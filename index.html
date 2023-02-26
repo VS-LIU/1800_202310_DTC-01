@@ -3,80 +3,84 @@
 
 <head>
     <title>My BCIT Project</title>
-    <meta name="ReVival" content="ReVival app">
+    <meta name="comp1800 template" content="My 1800 App">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!-- Bootstrap Library CSS CDN go here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Other libraries go here -->
+    <!--Google Fonts CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&family=Montserrat:wght@400;900&family=Playfair+Display&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Link to styles of your own -->
+    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
 
 </head>
 
 <body>
 
-    <!-- our own navbar goes here -->
-    <nav id="my-navbar"></nav>
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <header class="container-fluid">
 
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class=" bg-light px-3 py-5">
-        <div class="container">
-            <h1 class="display-3">Stay Connected</h1>
-            <p>Get the latest post-impact updates on your community</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </header>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-logo-cont">
+                <a class="navbar-brand" href="#">ReVival</a>
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <!-- <i class="search-icon fa-solid fa-magnifying-glass"></i> -->
+            </form>
         </div>
-    </div>
 
-    <main>
+    </nav>
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron bg-light px-3 py-5">
+            <div class="container">
+                <h1 class="display-3">Stay Connected</h1>
+                <p>Get the latest post-impact updates on your community</p>
+                <a class="btn btn-primary" href="#" role="button">Join Now &raquo;</a>
+                <span>or</span>
+                <a class="btn btn-outline-secondary" href="#" role="button">Sign In</a>
+            </div>
+        </div>
+        </div>
+
+
         <div class="container py-5">
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4 pb-4">
                     <h2>Alerts</h2>
-                </br>
-                    <p>Stay up-to-date on the latest announcements in the local community. Familiarize yourself with current conditions concerning natural disasters, weather events, and road conditions. Utilize the information to stay protected, take safe routes for transportation, and stay vigilant for changes in road conditions. The information is prioritized by the most important and timely first, then more later news. </p>
-                </br>
-                    <img src="/images/alerts.jpg" style="width:300px" alt="">
+                    <p>Stay up-to-date on the latest announcements in the local community. Familiarize yourself with current conditions concerning natural disasters, weather events, and road conditions. Utilize the information to stay protected, take safe routes for transportation, and stay vigilant for changes in road conditions. The information is prioritized by the most important and timely first, then more later news.</p>
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
                 <div class="col-md-4 pb-4">
                     <h2>Maps</h2>
-                </br>
-                    <p>Navigate through traffic conditions, transit routes, relief centers, medical centers, and retail stores in the community. Look up safe traffic and transit routes, seek help from the community, rest up at public facilities, and purchase necessary supplies and goods when natural disasters occur. Get access to the latest information on the date of occurrence, location, severity, economic impact, and social impact of natural disasters in the area.</p>
-                    <img src="Maps.jpg" style="width:300px" alt="">
+                    <p>Navigate through traffic conditions, transit routes, relief centers, medical centers, and retail stores in the community. Look up safe traffic and transit routes, seek help from the community, rest up at public facilities, and purchase necessary supplies and goods when natural disasters occur. Get access to the latest information on the date of occurrence, location, severity, economic impact, and social impact of natural disasters in the area</p>
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
                 <div class="col-md-4 pb-4">
                     <h2>Community Board</h2>
-                </br>
-                    <p>Use the community board to search trending news, jobs, opportunities, and resources in the community. Look up local issues in the community and collaborate together to improve on ideas as a community. Utilize the board to post news and updates on community news. The community board aims to represent the voice of the local citizens and respond to their needs. </p>
-            </br>
-        </br>
-    </br>
-</br>
-                    <img src="/images/Bulletin.jpg" style="width:300px" alt="">
+                    <p>Use the community board to search trending news, jobs, opportunities, and resources in the community. Look up local issues in the community and collaborate together to improve on ideas as a community. Utilize the board to post news and updates on community news. The community board aims to represent the voice of the local citizens and respond to their needs.</p>
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
             </div>
@@ -89,25 +93,25 @@
                     <use xlink:href="#bootstrap" />
                 </svg>
             </a>
-    
+            <span class="mb-3 mb-md-0 text-muted">&copy; 202310 COMP1800 - DTC-01</span>
         </div>
 
-    <footer id="my-footer"></footer>
+        <!-- <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul> -->
+    </footer>
 
-    <main>
-        <div class="container py-5">
-            <!-- Example row of copoylumns -->
-            <div class="row">
-
-    <!-- JS scripts -->
-    <script src="./scripts/firebaseAPI_DTC0.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./scripts/script.js"></script>
+    <!------------------------------>
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <!-- Link to scripts of your own -->
+    <!-- <script src="./scripts/script.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
         crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>
