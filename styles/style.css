@@ -1,83 +1,63 @@
-
 /*-------------------------------------
  * customize material design icon sizes 
  *-------------------------------------
  */
 
- /* Palette color 
-https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */ 
-
- .material-icons.md-18 { font-size: 18px; }
- .material-icons.md-24 { font-size: 24px; }
- .material-icons.md-36 { font-size: 36px; }
- .material-icons.md-48 { font-size: 48px; }
+/* Palette color 
+https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */
 
 
 .accordion {
     max-height: 60vw;
 }
 
- 
-.navbar-brand{
-    color:azure;
+
+.navbar-brand {
+    color: azure;
 }
 
-.search_icon{
+.search_icon {
     color: antiquewhite;
     background-color: inherit;
 }
 
-#navbar, #footer{
+#navbar,
+#footer {
     border-bottom: 3px solid #52796F;
     background-color: #2F3E46;
 }
 
-.content-box{
+.content-box {
     border: 2px solid #2F3E46;
     border-radius: 10px;
     background-color: #CAD2C5;
 }
 
 
-.map-image-box{
+.map-image-box {
     text-align: center;
 }
-.map-img{
+
+.map-img {
     width: 50%;
 }
 
-.notice-card{
+.notice-card {
     background-color: #ECE8DD;
     border: 2px solid #84A98C;
     border-radius: 10px;
 }
 
-.notice-card-img{
+.notice-card-img {
     width: 80%;
 }
 
-/* first div */ 
-.display-3 { 
-    font-family: cursive;
-    width: 500px;
-    top: 0px; 
-    left: 0px;
-
-}
-
-.container { 
-    background-color: #CAD2C5; 
-}
-
-/* second div */ 
-
-.container py-5 {
-    font-family: Georgia, serif; 
-
+.container {
+    background-color: #CAD2C5;
 }
 
 
-h2 {
+/* h2 {
     font-size:30px;
     color: #84A98C; 
     text-align:center; 
@@ -87,37 +67,31 @@ h2 {
     text-transform:uppercase;
     letter-spacing: 2px; 
     color:#111;
-}
-
-p {
-    font-family: Georgia, serif;
-    color: black; 
-}
-  
+} */
 
 
-/* footer */ 
-footer{
+/* footer */
+footer {
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #2F3E46;
     color: white;
     text-align: center;
-  }
+}
 
-  footer span {
-    color: white; 
-  }
+footer span {
+    color: white;
+}
 
 @media screen and (max-width: 633px) {
-    .map-img{
+    .map-img {
         width: 100%;
     }
 
 
-    .notice-card-img{
+    .notice-card-img {
         width: 50%;
     }
-        
-  }
+
+}
