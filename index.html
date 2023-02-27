@@ -53,9 +53,9 @@
 <body>
 
 
-    <!-- our own navbar goes here -->
-    <nav id="my-navbar"></nav>
-    <main role="main">
+    <header>
+        <!-- our own navbar goes here -->
+        <nav id="my-navbar"></nav>
 
         <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -98,16 +98,14 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </header>
 
-
-        <div class="container py-5">
-
+    <main>
+        <!-- Content cards -->
+        <div class="container">
             <div class="container content-box">
                 <div class="row">
                     <div class="col-sm-4">
-                        <img src="/images/alerts.jpg" style="width:300px" alt="">
-                        </br>
-                        </br>
                         <h3>Alerts</h3>
                         <p>Stay up-to-date on the latest announcements in the local community. Familiarize yourself with
                             current conditions concerning natural disasters, weather events, and road conditions.
@@ -118,16 +116,16 @@
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                     </div>
                     <div class="col-sm-4">
+                        <img class="card-image" src="/images/alerts.jpg" alt="">
                     </div>
+
                 </div>
             </div>
-            <hr>
+
             <div class="container content-box ">
                 <div class="row">
                     <div class="col-sm-4">
-                        <img src="/images/Maps.jpg" style="width:300px" alt="">
-                        </br>
-                        </br>
+                        <img class="card-image" src="/images/Maps.jpg" alt="">
                     </div>
                     <div class="col-sm-4">
                         <h3>Maps</h3>
@@ -140,15 +138,11 @@
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                     </div>
                 </div>
-
             </div>
-            <hr>
+
             <div class="container content-box">
                 <div class="row">
                     <div class="col-sm-4">
-                        <img src="/images/Bulletin.jpg" style="width:300px; height: 200px" alt="">
-                        </br>
-                        </br>
                         <h3>Community Board</h3>
                         <p>Use the community board to search trending news, jobs, events, and resources in the
                             community. Look up local issues in the community and collaborate together to improve on
@@ -158,6 +152,7 @@
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                     </div>
                     <div class="col-sm-8">
+                        <img class="card-image" src="/images/Bulletin.jpg" alt="">
                     </div>
                 </div>
 
