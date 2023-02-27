@@ -58,12 +58,11 @@ https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */
 }
 
 .notice-card-img {
-    width: 80%;
+    /* width: 100%; */
 }
 
 .CommunityBoard-box {
     max-height: 100vw;
-    border: 1px black solid;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
