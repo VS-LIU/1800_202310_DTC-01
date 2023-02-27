@@ -43,7 +43,7 @@
   <nav id="my-navbar"></nav>
 
   <h6>Latest Announcements:</h6> <!-- Make this responsive + reformat heading -->
-  <header id="header" class="container-fluid" style="border:1px solid black;">
+  <header id="header" class="container-fluid" style="border:2px solid black;">
     <div class="latest-news content-box">
       <div class="accordion overflow-auto" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
@@ -135,13 +135,13 @@
 
     <!-- Community Board Section -->
     <h6>Community Board</h6> <!-- Make this responsive + reformat heading -->
-    <div class="container-fluid CommunityBoard-box overflow-auto" style="border:2px solid black;">
+    <div class="container-fluid CommunityBoard-box overflow-auto" style="border:1px solid black;">
       <!-- Row One -->
       <div class="row">
         <!-- First Column in Row One -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=1" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -150,8 +150,8 @@
         </div>
         <!-- Second Column in Row One -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=2" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -159,12 +159,14 @@
           </div>
         </div>
       </div>
+
+
       <!-- Row Two -->
       <div class="row">
         <!-- First Column in Row Two -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=3" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -173,8 +175,8 @@
         </div>
         <!-- Second Column in Row Two -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=4" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -182,12 +184,13 @@
           </div>
         </div>
       </div>
+
       <!-- Row Three -->
       <div class="row">
         <!-- First Column in Row Three -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -196,8 +199,8 @@
         </div>
         <!-- Second Column in Row Three -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -205,12 +208,14 @@
           </div>
         </div>
       </div>
-       <!-- Row Four -->
-       <div class="row">
+
+
+      <!-- Row Four -->
+      <div class="row">
         <!-- First Column in Row Four -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -219,8 +224,8 @@
         </div>
         <!-- Second Column in Row Four -->
         <div class="notice-card col">
-          <div class="col-sm-3">
-            <img class="notice-card-img img-fluid" src="/images/placeholder-image.jpg" alt="">
+          <div class="container-fluid notice-card-box">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
           </div>
           <div class="col-sm-9">
             <h6><b>{Posting Title}</b></h6>
@@ -228,6 +233,7 @@
           </div>
         </div>
       </div>
+      
       <div class="text-center">
         <!-- <button class="btn btn-primary" type="button">Button</button> -->
         <a class="btn btn-primary btn-sm" href="#" role="button">View More</a>
@@ -238,10 +244,6 @@
 
   <footer id="my-footer"></footer>
 </body>
-
-
-
-
 
 <script src="./scripts/firebaseAPI_DTC01.js"></script>
 <script src="./scripts/template.js"></script>
