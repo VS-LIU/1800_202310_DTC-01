@@ -29,6 +29,8 @@
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
@@ -41,8 +43,10 @@
 
 
   <nav id="my-navbar"></nav>
-
-  <h6>Latest Announcements:</h6> <!-- Make this responsive + reformat heading -->
+  <header style="border: 1px solid black;">
+    <!-- Make <h6> responsive + reformat heading -->
+    <h6>Latest Announcements</h6>
+  </header>
   <header id="header" class="container-fluid" style="border:2px solid black;">
     <div class="latest-news content-box">
       <div class="accordion overflow-auto" id="accordionPanelsStayOpenExample">
@@ -134,8 +138,17 @@
     </div>
 
     <!-- Community Board Section -->
-    <h6>Community Board</h6> <!-- Make this responsive + reformat heading -->
+    <header class="HeadingCommunityBoard" style="border:1px solid black;">
+      <a href="#">
+        <i class="material-symbols-outlined">forum</i>
+      </a>  
+      <h6>Community Board</h6>
+    </header>
+    <!-- Container for the listings-->
     <div class="container-fluid CommunityBoard-box overflow-auto" style="border:1px solid black;">
+      <div style="border:1px solid black;">
+        <h6><b>Trending</b></h6>
+      </div>
       <!-- Row One -->
       <div class="row">
         <!-- First Column in Row One -->
@@ -184,7 +197,9 @@
           </div>
         </div>
       </div>
-
+      <div style="border:1px solid black;">
+        <h6><b>Recently Posted</b></h6>
+      </div>
       <!-- Row Three -->
       <div class="row">
         <!-- First Column in Row Three -->
@@ -233,7 +248,8 @@
           </div>
         </div>
       </div>
-      
+
+      <!-- I think it's better if the view more button is just blue text link (no bubble) -->
       <div class="text-center">
         <!-- <button class="btn btn-primary" type="button">Button</button> -->
         <a class="btn btn-primary btn-sm" href="#" role="button">View More</a>
