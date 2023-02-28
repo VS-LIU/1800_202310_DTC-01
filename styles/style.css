@@ -18,8 +18,10 @@ body{
 
 /* FOOTER ELEMENTS */
 #index-footer{
+    margin-top: 5%;
+    background-color: #F0EEED;
     padding: 2%;
-    border: 2px solid #68B984;
+    /* border: 2px solid #68B984; */
 }
 
 #footer {
