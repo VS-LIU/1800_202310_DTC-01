@@ -17,6 +17,11 @@ body{
 }
 
 /* FOOTER ELEMENTS */
+#index-footer{
+    padding: 2%;
+    border: 2px solid #68B984;
+}
+
 #footer {
     border-radius: 5px;
     border: 3px solid #68B984;
