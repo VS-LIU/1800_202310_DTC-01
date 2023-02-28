@@ -103,7 +103,7 @@ body{
 }
 
 .CommunityBoard-box {
-    max-height: 100vw;
+    /* max-height: 100vw; */
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
