@@ -122,15 +122,25 @@ body{
 .CommunityBoard-box {
     /* max-height: 100vw; */
     -ms-overflow-style: none;
+    padding: 10px;  
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+
+}
+
+.CommunityBoard-box row {
+    width:100%;
+    margin: 0;
 }
 
 .CommunityBoard-box::-webkit-scrollbar {
     display: none;
 }
 
+.notice-card {
+    overflow: hidden;
+}
 /* /////////////Alerts and News ///////////////////////////////////////////// */
 .news-banner-box{
     font-size: 1.2rem;
@@ -154,3 +164,7 @@ body{
     }
 
 }
+
+/* img {
+    height: auto;
+} */
