@@ -138,6 +138,9 @@ body{
     display: none;
 }
 
+.notice-card {
+    overflow: hidden;
+}
 
 
 @media screen and (max-width: 633px) {
