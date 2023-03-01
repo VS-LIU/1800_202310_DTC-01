@@ -34,7 +34,7 @@ body{
     margin: 2% 5%;
     width: 7%;
 }
-/* //////////////////////////////////////// */
+/* /////////////Index landing page ///////////////////////////////////////////// */
 /* Index page CONTENT */
 .content-box {
     font-size: 1.2rem;
@@ -61,7 +61,7 @@ body{
 }
 
 
-/* Main page  */
+/* /////////////Main Page///////////////////////////////////////////// */
 .accordion {
     max-height: 60vw;
     /* overflow-y: hidden; */
@@ -131,7 +131,18 @@ body{
     display: none;
 }
 
-
+/* /////////////Alerts and News ///////////////////////////////////////////// */
+.news-banner-box{
+    font-size: 1.2rem;
+    padding: 2%;
+    margin: 2%;
+    border: 1px solid #52796F;
+    border-radius: 10px;
+    background-color: #F0EEED;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
 
 @media screen and (max-width: 633px) {
     .map-img {
