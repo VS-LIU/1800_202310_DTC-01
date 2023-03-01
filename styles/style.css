@@ -142,6 +142,10 @@ body{
     overflow: hidden;
 }
 
+.h3 {
+
+}
+
 
 @media screen and (max-width: 633px) {
     .map-img {
