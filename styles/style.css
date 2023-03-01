@@ -50,6 +50,12 @@ body{
     overflow:hidden;
 }
 
+.col-sm h3 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 0;
+}
+
 .card-image{
     width: 100%;
 }
