@@ -15,8 +15,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -137,123 +137,132 @@
       <img class="map-img img-fluid" src="/images/map-image-placeholder.jpg" alt="Placeholder image of map">
     </div>
 
-   <!-- Community Board Section -->
-    <header class="HeadingCommunityBoard" style="border:1px solid black;">
-      <a href="/communityboard.html"><img class="iconbar-icon" src="/images/community-board-icon.svg" alt=""></a>
-      <h6>Community Board</h6>
-    </header>
-    <!-- Container for the listings-->
-    <div class="container-fluid CommunityBoard-box overflow-auto" style="border:1px solid black; ">
-      <div style="border:1px solid black;">
-        <h6><b>Trending</b></h6>
+    <!-- Community Board Section -->
+    <!-- div class applies to all rows -->
+    <div class="m-2">
+      <!-- Header for Community Board -->
+      <header class="HeadingCommunityBoard">
+        <a href="/communityboard.html"><img class="iconbar-icon" src="/images/community-board-icon.svg" alt=""></a>
+        <h6>Community Board</h6>
+      </header>
+  
+
+      <!-- Container for the listings-->
+      <div class="container-fluid overflow-auto">
+        <h4 class="gx-6"><b>Trending</b></h4>
       </div>
       <!-- Row One -->
       <div class="row">
         <!-- First Column in Row One -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
+        <div class="col">
+          <div class="container-fluid box">
             <img class="d-block w-100" src="https://picsum.photos/1080/500?random=1" alt="item picture">
           </div>
           <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
           </div>
         </div>
         <!-- Second Column in Row One -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
+        <div class="col">
+          <div class="container-fluid box">
             <img class="d-block w-100" src="https://picsum.photos/1080/500?random=2" alt="item picture">
           </div>
           <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
           </div>
         </div>
       </div>
-
-
-      <!-- Row Two -->
+      
+      <!-- Row -->
       <div class="row">
         <!-- First Column in Row Two -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
+        <div class="col">
+          <div class="container-fluid">
             <img class="d-block w-100" src="https://picsum.photos/1080/500?random=3" alt="item picture">
           </div>
           <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
           </div>
         </div>
         <!-- Second Column in Row Two -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
+        <div class="col">
+          <div class="container-fluid ">
             <img class="d-block w-100" src="https://picsum.photos/1080/500?random=4" alt="item picture">
           </div>
           <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
           </div>
         </div>
       </div>
-      <div style="border:1px solid black;">
-        <h6><b>Recently Posted</b></h6>
-      </div>
-      <!-- Row Three -->
-      <div class="row">
-        <!-- First Column in Row Three -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-        <!-- Second Column in Row Three -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-      </div>
+      
 
-
-      <!-- Row Four -->
-      <div class="row">
-        <!-- First Column in Row Four -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
-          </div>
+    <!-- Recently Posted -->
+    <div class="container-fluid overflow-auto">
+      <h4 class="gx-6"><b>Recently Posted</b></h4>
+    </div>
+    <!-- Row Three -->
+    <div class="row">
+      <!-- First Column in Row Three -->
+      <div class="col">
+        <div class="container-fluid">
+          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
         </div>
-        <!-- Second Column in Row Four -->
-        <div class="notice-card col">
-          <div class="container-fluid notice-card-box">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6><b>{Posting Title}</b></h6>
-            <p class="d-none d-sm-block">Listing content goes here. Lorem Ipsum </p>
-          </div>
+        <div class="col-sm-9">
+          <h6 class="m-3"><b>Posting Title</b></h6>
+          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
         </div>
       </div>
-
-
-      <!-- I think it's better if the view more button is just blue text link (no bubble) -->
-      <div class="text-center">
-        <!-- <button class="btn btn-primary" type="button">Button</button> -->
-        <a class="btn btn-primary btn-sm" href="#" role="button">View More</a>
-        <!-- <button type="button" class="btn btn-link">View More</button> -->
+      <!-- Second Column in Row Three -->
+      <div class="col">
+        <div class="container-fluid">
+          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
+        </div>
+        <div class="col-sm-9">
+          <h6 class="m-3"><b>Posting Title</b></h6>
+          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+        </div>
       </div>
+    </div>
+    
+    
+    <!-- Row Four -->
+    <div class="row">
+      <!-- First Column in Row Four -->
+      <div class="col">
+        <div class="container-fluid">
+          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
+        </div>
+        <div class="col-sm-9">
+          <h6 class="m-3"><b>Posting Title</b></h6>
+          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+        </div>
+      </div>
+      <!-- Second Column in Row Four -->
+      <div class="col">
+        <div class="container-fluid">
+          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
+        </div>
+        <div class="col-sm-9">
+          <h6 class="m-3"><b>Posting Title</b></h6>
+          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  
+  
+  <!-- I think it's better if the view more button is just blue text link (no bubble) -->
+    <div class="text-center">
+      <!-- <button class="btn btn-primary" type="button">Button</button> -->
+      <a class="btn btn-primary btn-sm" href="#" role="button">View More</a>
+      <!-- <button type="button" class="btn btn-link">View More</button> -->
+    </div>
     </div>
   </main>
 

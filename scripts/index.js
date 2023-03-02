@@ -1,16 +1,29 @@
-// function swiper(){
-//     $(".carousel").swipe({
-//     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-//         if (direction == 'left') $(this).carousel('next');
-//         if (direction == 'right') $(this).carousel('prev');
 
-//         if (distance == '1px') $(this).carousel('next');
-//         if (distance == '1px') $(this).carousel('prev');
+function swiper () {
+    $(".carousel").swipe({
+        swipe: function (direction) {
+            if (direction == 'left') $(this).carousel('next');
+            if (direction == 'right') $(this).carousel('prev');
+        }
+    });
+}
 
+swiper ();
 
-//     },
-//     allowPageScroll:"vertical"
+// $('.carousel').on('touchstart', function(event){
+//     const xClick = event.originalEvent.touches[0].pageX;
+//     $(this).one('touchmove', function(event){
+//         const xMove = event.originalEvent.touches[0].pageX;
+//         const sensitivityInPx = 5;
+
+//         if( Math.floor(xClick - xMove) > sensitivityInPx ){
+//             $(this).carousel('next');
+//         }
+//         else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+//             $(this).carousel('prev');
+//         }
 //     });
-// }
-
-// swiper();
+//     $(this).on('touchend', function(){
+//         $(this).off('touchmove');
+//     });
+// });

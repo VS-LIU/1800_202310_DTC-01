@@ -100,6 +100,7 @@ body {
     width: 100%;
 }
 
+
 /* icon next to Community Board heading */
 .material-symbols-outlined {
     font-variation-settings:
@@ -118,16 +119,17 @@ body {
 .HeadingCommunityBoard h6,
 .HeadingCommunityBoard i {
     display: inline-block;
-    vertical-align: middle;
+    align-items: flex-start;
+    
 }
 
 .CommunityBoard-box {
-    /* max-height: 100vw; */
+    max-height: 100vw;
     -ms-overflow-style: none;
-    padding: 10px;
-    /* IE and Edge */
+    padding: 10px; */
+    IE and Edge
     scrollbar-width: none;
-    /* Firefox */
+    Firefox
 
 }
 
@@ -142,7 +144,7 @@ body {
 
 .notice-card {
     overflow: hidden;
-    margin: 10px;
+    /margin: 10px;
 }
 
 /* /////////////Alerts and News ///////////////////////////////////////////// */
