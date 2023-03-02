@@ -119,8 +119,7 @@ body {
 .HeadingCommunityBoard h6,
 .HeadingCommunityBoard i {
     display: inline-block;
-    align-items: flex-start;
-
+    vertical-align: middle;
 }
 
 .CommunityBoard-box {
@@ -182,9 +181,6 @@ body {
         width: 50%;
     }
     
-    .carousel-caption {
-        flex-direction: column;
-    }
     /* .carousel-caption {
         text-size-adjust: 16rem;
     }
@@ -192,10 +188,9 @@ body {
     .container {
         padding-top: 20px;
     } */
+
 }
 
-/* for images in index */
-img {
-    object-fit: cover;
-    height: 400px;
-}
+/* img {
+    height: auto;
+} */
