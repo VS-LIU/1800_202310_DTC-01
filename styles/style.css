@@ -143,7 +143,7 @@ body {
 
 .notice-card {
     overflow: hidden;
-    /margin: 10px;
+    margin: 10px;
 }
 
 /* /////////////Alerts and News ///////////////////////////////////////////// */
@@ -164,9 +164,6 @@ body {
     width: 12%;
 }
 
-.h3 {
-
-}
 
 .newscard-img {
     width: 100%;
