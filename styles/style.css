@@ -83,7 +83,7 @@ a {
 
 
 .carousel-img {
-    object-fit: fill;
+    object-fit: cover;
     height: 800px;
     /* width: 100%; */
 
