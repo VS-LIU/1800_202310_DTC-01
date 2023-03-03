@@ -23,7 +23,8 @@ a{
     /* border-bottom: 3px solid #52796F; */
     /* background-color: #2F3E46; original!!*/
     /* background-color: #68B984; */
-    background-color: #52a870;
+    /* background-color: #2BA24C; */
+    background-color: #2BA24C;
 }
 
 .subsection_separator {
@@ -88,7 +89,7 @@ a{
 
 
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
-/* Section: Alerts */
+/*                           Section: Alerts                              */
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
 
 .header-space {
@@ -136,8 +137,13 @@ a{
     border-right: none;
 }
 
-.accordian::-webkit-scrollbar {
+/* .accordion::-webkit-scrollbar {
     display: none;
+} */
+
+.accordion-button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -173,7 +179,7 @@ a{
 
 
 .heading_communityboard {
-    padding-left: 12px;
+    padding-left: 20px;
     padding-bottom: 8px;
     margin: 0;
     border-bottom: solid 1px #ced4da;
