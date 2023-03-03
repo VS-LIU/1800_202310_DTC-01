@@ -78,18 +78,27 @@ a{
 
 #section_alerts {
     padding: 0;
+    border-bottom: solid 1px #ced4da;
 }
 
 .heading_alerts {
+    /* box-sizing: border-box; */
     padding-left: 12px;
+    padding-bottom: 8px;
+    margin: 0;
+    border-bottom: solid 1px #ced4da;
 }
 
 
 .latest-news {
     border: none;
+    margin-top: 0;
+    /* border-top: solid black 2px; */
+    
 }
 
 .accordion {
+    /* border-top: none; */
     max-height: 60vw;
     /* overflow-y: hidden; */
     -ms-overflow-style: none;
@@ -99,23 +108,49 @@ a{
 
 }
 
+.accordion-item:first-child {
+    border-top: none;
+}
+
+.accordion-item {
+    border-left: none;
+    border-right: none;
+}
+
 .accordian::-webkit-scrollbar {
     display: none;
 }
 
-
+/* ------------------------------------------------------------------- */
 /* Section: Maps */
+/* ------------------------------------------------------------------- */
+#section_maps {
+    padding: 0;
+    margin: 2vw 0;
+}
+
+.heading_maps {
+    padding-left: 12px;
+}
 
 .map-image-box {
-    text-align: center;
+    text-align: center; /* what is this doing? */
+    padding: 0;
 }
 
 .map-img {
-    width: 50%;
+    width: 100%;
 }
 
+/* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 /* Section: Community Board */
+/* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 
+
+
+.heading_communityboard {
+    padding-left: 12px;
+}
 .notice-card {
     padding: 0;
     background-color: #F0EEED;
@@ -146,16 +181,13 @@ a{
     color: #2F3E46;
 } */
 
-.heading_communityboard {
-    padding-left: 12px;
-}
 
 .CommunityBoard-box {
     max-height: 100vw;
     -ms-overflow-style: none;
     padding: 10px;
     scrollbar-width: none;
-    Firefox
+
 
 }
 
@@ -192,7 +224,7 @@ a{
 }
 
 .h3 {
-
+/*  */
 }
 
 .newscard-img {
