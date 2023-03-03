@@ -125,10 +125,9 @@ body {
 .CommunityBoard-box {
     max-height: 100vw;
     -ms-overflow-style: none;
-    padding: 10px; */
-    IE and Edge
+    padding: 10px;
     scrollbar-width: none;
-    Firefox
+    /* Firefox; */
 
 }
 
@@ -143,7 +142,7 @@ body {
 
 .notice-card {
     overflow: hidden;
-    /margin: 10px;
+    margin: 10px;
 }
 
 /* /////////////Alerts and News ///////////////////////////////////////////// */
@@ -162,10 +161,6 @@ body {
 .newscard-icon {
     margin: 2% 5%;
     width: 12%;
-}
-
-.h3 {
-
 }
 
 .newscard-img {
@@ -189,7 +184,7 @@ body {
         padding-top: 20px;
     } */
 
-    
+
 
 }
 
