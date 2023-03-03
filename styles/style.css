@@ -252,9 +252,6 @@ a{
     width: 12%;
 }
 
-.h3 {
-/*  */
-}
 
 .newscard-img {
     width: 100%;
@@ -264,7 +261,7 @@ a{
     width: 100%;
 }
 
-.bulletin-img{
+/* .bulletin-img{
     margin-top: 0px; 
     margin-bottom: 0px; 
     margin-right: 0px; 
@@ -273,7 +270,7 @@ a{
     padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
-}
+} */
 
 
 
@@ -286,7 +283,7 @@ a{
         width: 50%;
     }
 
-    .bulletin-img{
+    /* .bulletin-img{
         margin-top: 0px; 
         margin-bottom: 0px; 
         margin-right: 0px; 
@@ -295,7 +292,7 @@ a{
         padding-right: 0px;
         padding-bottom: 0px;
         padding-left: 0px;
-    }
+    } */
     
     /* .carousel-caption {
         text-size-adjust: 16rem;
