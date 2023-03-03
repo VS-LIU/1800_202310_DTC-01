@@ -7,6 +7,12 @@ body {
     padding-bottom: 10%;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+     
+}
+
 .navbar-brand {
     color: #C6DE41;
 }
@@ -127,7 +133,7 @@ body {
     -ms-overflow-style: none;
     padding: 10px;
     scrollbar-width: none;
-    /* Firefox; */
+    Firefox
 
 }
 
@@ -163,9 +169,20 @@ body {
     width: 12%;
 }
 
+.h3 {
+
+}
+
 .newscard-img {
     width: 100%;
 }
+
+.article-img{
+    width: 100%;
+}
+
+
+
 
 @media screen and (max-width: 633px) {
     .map-img {
