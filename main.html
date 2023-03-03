@@ -16,7 +16,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-  </script>
+    </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -43,11 +43,13 @@
 
 
   <nav id="my-navbar"></nav>
-  <header style="border: 1px solid black;">
-    <!-- Make <h6> responsive + reformat heading -->
-    <h6>Latest Announcements</h6>
+  <!-- <header style="border: 1px solid black;"> -->
+  <header>
+    <div class="header-space"></div>
   </header>
-  <header id="header" class="container-fluid" style="border:2px solid black;">
+  <!-- Alerts section -->
+  <section id="section_alerts" class="container-fluid">
+    <h5 class="heading_alerts">Latest Announcements</h5>
     <div class="latest-news content-box">
       <div class="accordion overflow-auto" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
@@ -129,7 +131,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <main>
     <!-- Map  -->
@@ -141,11 +143,10 @@
     <!-- div class applies to all rows -->
     <div class="m-2">
       <!-- Header for Community Board -->
-      <header class="HeadingCommunityBoard">
-        <a href="/communityboard.html"><img class="iconbar-icon" src="/images/community-board-icon.svg" alt=""></a>
-        <h6>Community Board</h6>
-      </header>
-  
+
+        <!-- <a href="/communityboard.html"><img class="iconbar-icon" src="/images/community-board-icon.svg" alt=""></a> -->
+        <h5 class="heading_communityboard">Community Board</h5>
+   
 
       <!-- Container for the listings-->
       <div class="container-fluid overflow-auto">
@@ -174,7 +175,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Row -->
       <div class="row">
         <!-- First Column in Row Two -->
@@ -198,66 +199,66 @@
           </div>
         </div>
       </div>
-      
 
-    <!-- Recently Posted -->
-    <div class="container-fluid overflow-auto">
-      <h4 class="gx-6"><b>Recently Posted</b></h4>
+
+      <!-- Recently Posted -->
+      <div class="container-fluid overflow-auto">
+        <h4 class="gx-6"><b>Recently Posted</b></h4>
+      </div>
+      <!-- Row Three -->
+      <div class="row">
+        <!-- First Column in Row Three -->
+        <div class="col">
+          <div class="container-fluid">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
+          </div>
+          <div class="col-sm-9">
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+          </div>
+        </div>
+        <!-- Second Column in Row Three -->
+        <div class="col">
+          <div class="container-fluid">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
+          </div>
+          <div class="col-sm-9">
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Row Four -->
+      <div class="row">
+        <!-- First Column in Row Four -->
+        <div class="col">
+          <div class="container-fluid">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
+          </div>
+          <div class="col-sm-9">
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+          </div>
+        </div>
+        <!-- Second Column in Row Four -->
+        <div class="col">
+          <div class="container-fluid">
+            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
+          </div>
+          <div class="col-sm-9">
+            <h6 class="m-3"><b>Posting Title</b></h6>
+            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!-- Row Three -->
-    <div class="row">
-      <!-- First Column in Row Three -->
-      <div class="col">
-        <div class="container-fluid">
-          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
-        </div>
-        <div class="col-sm-9">
-          <h6 class="m-3"><b>Posting Title</b></h6>
-          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-        </div>
-      </div>
-      <!-- Second Column in Row Three -->
-      <div class="col">
-        <div class="container-fluid">
-          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
-        </div>
-        <div class="col-sm-9">
-          <h6 class="m-3"><b>Posting Title</b></h6>
-          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-        </div>
-      </div>
     </div>
-    
-    
-    <!-- Row Four -->
-    <div class="row">
-      <!-- First Column in Row Four -->
-      <div class="col">
-        <div class="container-fluid">
-          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
-        </div>
-        <div class="col-sm-9">
-          <h6 class="m-3"><b>Posting Title</b></h6>
-          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-        </div>
-      </div>
-      <!-- Second Column in Row Four -->
-      <div class="col">
-        <div class="container-fluid">
-          <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
-        </div>
-        <div class="col-sm-9">
-          <h6 class="m-3"><b>Posting Title</b></h6>
-          <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-  
-  
-  <!-- I think it's better if the view more button is just blue text link (no bubble) -->
+
+
+    <!-- I think it's better if the view more button is just blue text link (no bubble) -->
     <div class="text-center">
       <!-- <button class="btn btn-primary" type="button">Button</button> -->
       <a class="btn btn-primary btn-sm" href="#" role="button">View More</a>

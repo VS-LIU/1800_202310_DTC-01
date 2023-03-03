@@ -69,6 +69,26 @@ a{
 
 
 /* /////////////Main Page///////////////////////////////////////////// */
+
+
+/* Section: Alerts */
+.header-space {
+    margin-top: 5vw;
+}
+
+#section_alerts {
+    padding: 0;
+}
+
+.heading_alerts {
+    padding-left: 12px;
+}
+
+
+.latest-news {
+    border: none;
+}
+
 .accordion {
     max-height: 60vw;
     /* overflow-y: hidden; */
@@ -83,6 +103,9 @@ a{
     display: none;
 }
 
+
+/* Section: Maps */
+
 .map-image-box {
     text-align: center;
 }
@@ -90,6 +113,8 @@ a{
 .map-img {
     width: 50%;
 }
+
+/* Section: Community Board */
 
 .notice-card {
     padding: 0;
@@ -116,16 +141,13 @@ a{
         'opsz' 48
 }
 
-.HeadingCommunityBoard a {
+/* .HeadingCommunityBoard a {
     text-decoration: none;
     color: #2F3E46;
-}
+} */
 
-/* Setting icon and heading to be in-line */
-.HeadingCommunityBoard h6,
-.HeadingCommunityBoard i {
-    display: inline-block;
-    vertical-align: middle;
+.heading_communityboard {
+    padding-left: 12px;
 }
 
 .CommunityBoard-box {
