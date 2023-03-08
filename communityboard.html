@@ -41,8 +41,8 @@
   <header>
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5">
-      <button type="button" class="btn btn-primary btn-sm">Saved</button>
-      <button type="button" class="btn btn-primary btn-sm">My Listings</button>
+      <button type="button" id="btnSaved" class="btn btn-primary btn-sm">Saved</button>
+      <button type="button" id="btnMyListings" class="btn btn-primary btn-sm">My Listings</button>
     </div>
     <hr>
   </header>
@@ -51,42 +51,50 @@
       <div class="container cb-title text-center">
         <h1>Community Board</h1>
       </div>
-      <div class="cb-buttons-top row">
-        <div class="dropdown col">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categories
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Category</a></li>
-            <li><a class="dropdown-item" href="#">Category</a></li>
-            <li><a class="dropdown-item" href="#">Category</a></li>
-          </ul>
+      <div class="cb-buttons-top container row">
+        <div class="col">
+          <div class="dropdown">
+            <button id="catListing" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categories
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Category</a></li>
+              <li><a class="dropdown-item" href="#">Category</a></li>
+              <li><a class="dropdown-item" href="#">Category</a></li>
+            </ul>
+          </div>
         </div>
-        <button type="button" class="btn btn-light col">Filter</button>
-        <button type="button" class="btn btn-secondary col">+ </button>
+        <div class="col">
+          <button type="button" id="filterListing" class="btn btn-light">Filter</button>
+        </div>
+        <div class="col">
+          <button type="button" id="createListing" class="btn btn-secondary">+</button>
+
+        </div>
       </div>
       <div class="cb-buttons-tabs">
-        <button type="button" class="btn btn-primary rounded-pill"
+        <button type="button" id="btnTrending" class="btn btn-primary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Trending
         </button>
-        <button type="button" class="btn btn-primary rounded-pill"
+        <button type="button" id="btnRecent" class="btn btn-primary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Recent
         </button>
-        <button type="button" class="btn btn-warning rounded-pill"
+        <button type="button" id="btnHelp" class="btn btn-warning rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Help Wanted
         </button>
-        <button type="button" class="btn btn-info rounded-pill"
+        <button type="button" id="btnResources" class="btn btn-info rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Resources
         </button>
-        <button type="button" class="btn btn-secondary rounded-pill"
+        <button type="button" id="btnServices" class="btn btn-secondary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Services
         </button>
-        <button type="button" class="btn btn-primary rounded-pill"
+        <button type="button" id="btnCustom" class="btn btn-primary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Custom
         </button>
