@@ -3,14 +3,14 @@ https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */
 
 /* Universal elements and partials */
 body {
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 10%;
 }
 
-a {
+a{
     color: inherit;
     text-decoration: none;
-
+     
 }
 
 .navbar-brand {
@@ -55,7 +55,10 @@ a {
     width: 7%;
 }
 
-/* /////////////Index landing page ///////////////////////////////////////////// */
+/* //+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\ */
+/*                           Page: index.html                                  */
+/* \\|+|//\\|+|//\\+//\\|+|//\\|+|//\\+//\\|+|//\\|+|//\\+//\\|+|//\\|+|//\\+//*/
+
 /* Index page CONTENT */
 .content-box {
     font-size: 1.2rem;
@@ -82,14 +85,23 @@ a {
 }
 
 
-.carousel-img {
-    object-fit: cover;
-    height: 800px;
-    /* width: 100%; */
+/* //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\ */
+/*                           Page: login.html                               */
+/* \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\// */
 
+
+
+#loader {
+    padding-left: 4vw;
 }
 
-/* /////////////Main Page///////////////////////////////////////////// */
+
+
+
+
+/* |/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\| */
+/*                           Page: main.html                                */
+/* |\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/| */
 
 
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
@@ -118,7 +130,7 @@ a {
     border: none;
     margin-top: 0;
     /* border-top: solid black 2px; */
-
+    
 }
 
 .accordion {
@@ -159,7 +171,7 @@ a {
 }
 
 /* ------------------------------------------------------------------- */
-/* Section: Maps */
+/*                           Section: Maps                             */
 /* ------------------------------------------------------------------- */
 #section_maps {
     padding: 0;
@@ -175,8 +187,7 @@ a {
 
 
 .map-image-box {
-    text-align: center;
-    /* what is this doing? */
+    text-align: center; /* what is this doing? */
     padding: 0;
     margin: 0;
 }
@@ -186,7 +197,7 @@ a {
 }
 
 /* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
-/* Section: Community Board */
+/*                     Section: Community Board                           */
 /* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 
 
@@ -276,9 +287,22 @@ a {
     width: 100%;
 }
 
-.article-img {
+.article-img{
     width: 100%;
 }
+
+/* .bulletin-img{
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-right: 0px; 
+    margin-left: 0px; 
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+} */
+
+
 
 @media screen and (max-width: 633px) {
     .map-img {
@@ -289,12 +313,6 @@ a {
         width: 50%;
     }
 
-    .carousel-img {
-        height: 100%;
-        /* height: 400px; */
-        object-fit: fill;
-    }
-}
     /* .bulletin-img{
         margin-top: 0px; 
         margin-bottom: 0px; 
@@ -305,7 +323,7 @@ a {
         padding-bottom: 0px;
         padding-left: 0px;
     } */
-
+    
     /* .carousel-caption {
         text-size-adjust: 16rem;
     }
@@ -315,6 +333,8 @@ a {
     } */
 
 
+
+}
 
 /* img {
     height: auto;
