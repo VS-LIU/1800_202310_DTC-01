@@ -200,7 +200,9 @@ a{
 /*                     Section: Community Board                           */
 /* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 
-
+.cb-buttons-tabs {
+    text-align: center;
+}
 
 .heading_communityboard {
     padding-left: 20px;
