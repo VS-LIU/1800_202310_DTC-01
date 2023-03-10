@@ -25,6 +25,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
@@ -35,6 +36,7 @@
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 </head>
 
 <body>
@@ -56,7 +58,8 @@
         </button>
         <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
       </div>
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- <div class="modal-header">
@@ -70,7 +73,7 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-link" data-bs-dismiss="modal">
                 <a href="communityboard.html">Discard</a>
-                </button>
+              </button>
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
             </div>
           </div>
@@ -114,6 +117,7 @@
       </div>
     </main>
     <script src="./scripts/template.js"></script>
+    <script src="./scripts/create.js"></script>
   </body>
 
 </html>
