@@ -47,46 +47,44 @@
       </div>
       <div class="container d-flex justify-content-between">
         <button type="button" id="btnBack" class="btn btn-primary btn-sm">Back</button>
-        <span class="badge rounded-pill text-bg-warning">Help Wanted</span>
-        
+        <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
       </div>
       <hr>
     </header>
     <!-- Listing Image -->
     <main>
-      <div class="postImages text-center">
+      <div class="createImages text-center mb-3">
         <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
       </div>
-      
+
       <!-- Listing Title -->
-      <div class="container p-2 text-center">
-        <h1 class="d-inline-block"><span id="postTitle">{Listing Title}</span></h1>
-        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
-      <h6 class="card-subtitle text-muted"><span id="postTime">{Date & Time}</span></h6>
-    </div>
+
+      <div id="createTitle" class="input-group mb-2">
+        <input type="text" class="form-control text-muted" placeholder="Enter a Title">
+      </div>
 
 
-    <!-- Listing Labels -->
-    <div class="card mb-2">
-      <div class="card-body p-1">
-        <a href="#">{location}</a>
-        <a href="#">{map icon shortcut}</a>
+      <!-- Listing Labels -->
+      <div id="createLocation" class="input-group mb-2">
+        <input type="text" class="form-control text-muted" placeholder="Enter Location">
       </div>
-    </div>
-    <div class="card mb-2">
-      <div class="card-body p-1">
-        <span id="postCategory">{Category}</span>
+      <div id="createCategory" class="mb-2">
+        <select class="form-select text-muted" aria-label="Select Category">
+          <option selected>Select Category</option>
+          <option value="1">Help Wanted</option>
+          <option value="2">Resources</option>
+          <option value="3">Services</option>
+          <option value="4">Other</option>
+        </select>
       </div>
-    </div>
-    <div class="card mb-2">
-      <div id="postDescription" class="card-body p-1">
-        {Listing Description}
-        <br>
-        <br>
-        <br>
+      <div id="createDescription" class="mb-2">
+        <!-- <label for="exampleFormControlTextarea1" class="form-label"></label> -->
+        <textarea class="form-control text-muted" rows="3" placeholder="Enter a description"></textarea>
       </div>
-    </div>
-     
+
+      <div id="createNewBtn" class="text-center">
+        <button type="button" class="btn btn-primary text-muted">Create Listing</button>
+      </div>
     </main>
     <script src="./scripts/template.js"></script>
   </body>
