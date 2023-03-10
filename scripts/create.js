@@ -1,3 +1,6 @@
+
+const storage = firebase.storage();
+
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
     var storageRef = storage.ref("images/" + postDocID + ".jpg");
