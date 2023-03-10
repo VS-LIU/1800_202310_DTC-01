@@ -45,80 +45,48 @@
       <nav id="my-navbar"></nav>
       <div class="cb-top-nav container mt-5">
       </div>
-      <div class="container">
+      <div class="container d-flex justify-content-between">
         <button type="button" id="btnBack" class="btn btn-primary btn-sm">Back</button>
-        <h1><span id="postingTitle">{Title Placeholder}</span></h1>
-        <h6><span id="postingTime">{Date & Time}</span></h6>
-        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
+        <span class="badge rounded-pill text-bg-warning">Help Wanted</span>
+        
       </div>
       <hr>
     </header>
     <!-- Listing Image -->
     <main>
-      <div class="postingImages text-center">
+      <div class="postImages text-center">
         <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
       </div>
+      
+      <!-- Listing Title -->
+      <div class="container p-2 text-center">
+        <h1 class="d-inline-block"><span id="postTitle">{Listing Title}</span></h1>
+        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
+      <h6 class="card-subtitle text-muted"><span id="postTime">{Date & Time}</span></h6>
+    </div>
 
 
-      <section class="container cb-main-cards">
-        <div class="row g-2">
-          <!-- <div class="card col-6" style="width: 18rem;"> -->
-          <div class="col-6 p-1">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="card col-6" style="width: 18rem;"> -->
-          <div class="col-6 p-1">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row g-2">
-          <!-- <div class="card col-6" style="width: 18rem;"> -->
-          <div class="col-6 p-1">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="card col-6" style="width: 18rem;"> -->
-          <div class="col-6 p-1">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+    <!-- Listing Labels -->
+    <div class="card mb-2">
+      <div class="card-body p-1">
+        <a href="#">{location}</a>
+        <a href="#">{map icon shortcut}</a>
+      </div>
+    </div>
+    <div class="card mb-2">
+      <div class="card-body p-1">
+        <span id="postCategory">{Category}</span>
+      </div>
+    </div>
+    <div class="card mb-2">
+      <div id="postDescription" class="card-body p-1">
+        {Listing Description}
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+     
     </main>
     <script src="./scripts/template.js"></script>
   </body>
