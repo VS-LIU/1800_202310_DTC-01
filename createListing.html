@@ -41,15 +41,42 @@
   <!-- This page is to view the actual listing -->
 
   <body>
-    <header>
+    <header class="m-0">
       <nav id="my-navbar"></nav>
-      <div class="cb-top-nav container mt-5">
+      <div class="cb-top-nav container p-4">
       </div>
-      <div class="container d-flex justify-content-between">
-        <button type="button" id="btnBack" class="btn btn-primary btn-sm">Back</button>
+      <!-- Return Button + Modal -->
+      <div class="container d-flex justify-content-between px-0">
+        <button type="button" id="btnBack" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+          </svg>
+        </button>
         <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
       </div>
-      <hr>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Discard New Listing?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> -->
+            <div class="modal-body" id="staticBackdropLabel">
+              <h2>Discard New Listing?</h2>
+              <small>This action cannot be undone</small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link" data-bs-dismiss="modal">
+                <a href="communityboard.html">Discard</a>
+                </button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-3">
     </header>
     <!-- Listing Image -->
     <main>
