@@ -41,6 +41,20 @@
   <header>
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5">
+      <!-- Return Button + Modal -->
+      <div class="container d-flex justify-content-between px-0">
+        <a href="communityboard.html">
+          <button type="button" id="btnBack" class="btn btn-link" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+          </button>
+        </a>
+        <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
+      </div>
       <button type="button" id="btnSaved" class="btn btn-primary btn-sm">Saved</button>
       <button type="button" id="btnMyListings" class="btn btn-primary btn-sm" style="text-align: right;">My
         Listings</button>
@@ -86,7 +100,7 @@
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Recent
         </button> -->
-        <!-- <button type="button" id="btnHelp" class="btn btn-warning rounded-pill"
+      <!-- <button type="button" id="btnHelp" class="btn btn-warning rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Help Wanted
         </button>
