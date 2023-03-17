@@ -4,16 +4,17 @@ function addMapPins() {
 
     var mapReference = db.collection("map") //keep name???
     mapReference.add({
-        address: "Jim Pattison Pavilion, 899 W 12th Ave",
+        address: "555 Seymour St",
         city: "Vancouver",
-        latitude: 49.25666564,
-        longitude: "-123.120499518",
-        name: "Vancouver General Hospital",
-        postcode: " V5Z 1M9",
+        latitude: 49.2748107,
+        longitude: -123.1278527,
+        name: "BCIT Downtown Campus",
+        postcode: " V6B 3H6",
         province: "British Columbia",
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
 }
+// addMapPins();
 
 function showMap() {
             // Defines basic mapbox data
