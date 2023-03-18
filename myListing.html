@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Revival - Community Board - Home</title>
+  <title>Revival - My Listings</title>
   <meta name="comp1800 template" content="My 1800 App">
 
   <!-- Required meta tags -->
@@ -41,20 +41,26 @@
   <header>
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 d-flex justify-content-between">
-      <a href="#">
-        <button type="button" id="btnSaved" class="btn btn-primary btn-sm">Saved</button>
+      <!-- Return Button -->
+      <a href="communityboard.html">
+        <button type="button" id="btnBack" class="btn btn-link btn-sm" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
+          <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+          </svg>
+        </button>
       </a>
-      <a href="myListing.html">
-        <button type="button" id="btnMyListings" class="btn btn-primary btn-sm">My Listings</button>
-      </a>
+      <button type="button" id="btnDrafts" class="btn btn-primary btn-sm">Drafts</button>
     </div>
     <hr>
   </header>
 
   <main>
     <header>
-      <div class="cb-title container text-center">
-        <h1>Community Board</h1>
+      <div class="container cb-title text-center">
+        <h1>My Listings</h1>
       </div>
       <div class="cb-buttons-top container d-flex">
         <div class="col">
@@ -71,16 +77,24 @@
             </ul>
           </div>
         </div>
-        <div class="col d-flex justify-content-start">
-          <button type="button" id="listingFilter" class="btn btn-light">Filter</button>
-        </div>
         <div class="col d-flex justify-content-end">
-          <button type="button" id="listingCreate" class="btn btn-secondary">
-            <a href="createListing.html">+</a>
+
+          <button type="button" id="listingEdit" class="btn btn-secondary">
+            <a href="editListing.html">{edit icon}</a>
           </button>
+
         </div>
       </div>
       <div class="container cb-buttons-tabs overflow-x-auto">
+        <button type="button" id="btnTrending" class="invisible btn btn-primary rounded-pill"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Trending
+        </button>
+        <button type="button" id="btnRecent" class="invisible btn btn-primary rounded-pill"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Recent
+        </button>
+        <!-- <div class="container cb-buttons-tabs overflow-x-auto">
         <button type="button" id="btnTrending" class="btn btn-primary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Trending
@@ -88,7 +102,7 @@
         <button type="button" id="btnRecent" class="btn btn-primary rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Recent
-        </button>
+        </button> -->
         <!-- <button type="button" id="btnHelp" class="btn btn-warning rounded-pill"
           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
           Help Wanted
