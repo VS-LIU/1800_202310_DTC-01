@@ -2,14 +2,14 @@
 // https://bcit-cst.notion.site/Tech-Tip-B08-When-user-makes-a-post-how-do-I-have-the-post-ID-into-the-user-s-document-899eda82797a4d25bc957dd7c1897201
 
 
-const storage = firebase.storage();
+// const storage = firebase.storage();
 
 // File Selection
 var ImageFile;
 function listenFileSelect() {
+    const image = document.getElementById("mypic-goes-here"); // pointer #2
     // listen for file selection
     var fileInput = document.getElementById("mypic-input"); // pointer #1
-    const image = document.getElementById("mypic-goes-here"); // pointer #2
 
     // When a change happens to the File Chooser Input
     fileInput.addEventListener('change', function (e) {
@@ -18,7 +18,32 @@ function listenFileSelect() {
         image.src = blob; // Display this image
     })
 }
-// listenFileSelect();
+listenFileSelect();
+
+
+// function getFiles() {
+//     const image = document.getElementById("mypic-goes-here");
+//     const fileSelector = document.getElementById('files');
+//     fileSelector.addEventListener('change', (event) => {
+//         const fileList = event.target.files;
+//         console.log(fileList);
+
+//         // Convert FileList to array
+//         const arr = Array.from(fileList);
+
+//         // Loop through an array
+//         arr.forEach(file => {
+//             console.log(file.name);
+//             // do what you would now do for ONE image
+//             ImageFile = e.target.files[file];
+//             var blob = URL.createObjectURL(ImageFile);
+//             image.src = blob; // Display this image
+
+//         })
+//     });
+// }
+// getFiles();
+
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
@@ -37,6 +62,7 @@ function uploadPic(postDocID) {
                     db.collection("posts").doc(postDocID).update({
                         "image": url // Save the URL into users collection
                     })
+
                         // AFTER .update is done
                         .then(function () {
                             console.log('Added pic URL to Firestore.');
@@ -47,6 +73,8 @@ function uploadPic(postDocID) {
             console.log("error uploading to cloud storage");
         })
 }
+
+
 // function to save post id to user's document in database
 function saveNewPostID(userUID, postDocID) {
     db.collection("users")
@@ -87,7 +115,7 @@ function savePost() {
             }).then(doc => {
                 console.log("Post document added!");
                 console.log(doc.id);
-                uploadPic(doc.id);
+                // uploadPic(doc.id);
                 // Save post id to user's document in database
                 saveNewPostID(user.uid, doc.id);
             })
