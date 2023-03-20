@@ -94,8 +94,8 @@
             <textarea id="description" rows="4" cols="50"></textarea>
           </div> -->
           <div class="card container py-3 mb-2">
-            <input type="file" id="mypic-input" accept="image/*" />
             <img id="mypic-goes-here" width=100 height=100 />
+            <input type="file" id="mypic-input" accept="image/*" />
             <br>
             <div>
               <button type="button" class="btn btn-primary btn-sm" onclick="savePost()">Upload</button>
@@ -104,17 +104,17 @@
       </div>
 
       <!-- Text Input: Listing Title -->
-      <div id="createTitle" class="input-group mb-2">
-        <input type="text" class="form-control text-muted" placeholder="Enter a Title">
+      <div id="createTitleDiv" class="input-group mb-2">
+        <input id="createTitle" type="text" class="form-control text-muted" placeholder="Enter a Title">
       </div>
 
       <!-- Text Input: Location -->
-      <div id="createLocation" class="input-group mb-2">
-        <input type="text" class="form-control text-muted" placeholder="Enter Location">
+      <div id="createLocationDiv" class="input-group mb-2">
+        <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
       </div>
       <!-- Dropdown menu: Choose category -->
-      <div id="createCategory" class="mb-2">
-        <select class="form-select text-muted" aria-label="Select Category">
+      <div id="createCategoryDiv" class="mb-2">
+        <select id="createCategory" class="form-select text-muted" aria-label="Select Category">
           <option selected>Select Category</option>
           <option value="1" id="categoryHelp_Wanted">Help Wanted</option>
           <option value="2" id="categoryResources">Resources</option>
@@ -123,9 +123,9 @@
         </select>
       </div>
       <!-- Textbox: Listing Description -->
-      <div id="createDescription" class="mb-2">
+      <div id="createDescriptionDiv" class="mb-2">
         <!-- <label for="exampleFormControlTextarea1" class="form-label"></label> -->
-        <textarea class="form-control text-muted" rows="4" placeholder="Enter a description"></textarea>
+        <textarea id="createDescription" class="form-control text-muted" rows="4" placeholder="Enter a description"></textarea>
       </div>
       <!-- Button: Create Listing -->
       <div id="createNewBtn" class="text-center">
