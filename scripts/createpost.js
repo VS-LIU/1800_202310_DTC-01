@@ -55,7 +55,7 @@ function savePost() {
             var title = document.getElementById("createTitle").value;
             db.collection("posts").add({
                 owner: user.uid,
-                title: title
+                title: title,
                 description: desc,
                 last_updated: firebase.firestore.FieldValue
                     .serverTimestamp() //current system time
