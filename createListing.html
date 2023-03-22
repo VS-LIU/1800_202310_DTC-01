@@ -105,18 +105,19 @@
         </form>
       </div>
 
+
       <!-- Text Input: Listing Title -->
-      <div class="input-group mb-2">
+      <div id="createTitleDiv" class="input-group mb-2">
         <input id="createTitle" type="text" class="form-control text-muted" placeholder="Enter a Title">
       </div>
 
       <!-- Text Input: Location -->
-      <div class="input-group mb-2">
+      <div id="createLocationDiv" class="input-group mb-2">
         <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
       </div>
       <!-- Dropdown menu: Choose category -->
-      <div class="mb-2">
-        <select id="createCategory" class="form-select text-muted" aria-label="Select Category">
+      <div id="createCategoryDiv" class="mb-2">
+        <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
           <option selected>Select Category</option>
           <option value="1" id="categoryHelp_Wanted">Help Wanted</option>
           <option value="2" id="categoryResources">Resources</option>
@@ -125,7 +126,7 @@
         </select>
       </div>
       <!-- Textbox: Listing Description -->
-      <div class="mb-2">
+      <div id="createDescriptionDiv" class="mb-2">
         <!-- <label for="exampleFormControlTextarea1" class="form-label"></label> -->
         <textarea id="createDescription" class="form-control text-muted" rows="4"
           placeholder="Enter a description"></textarea>
