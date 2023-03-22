@@ -41,23 +41,46 @@ function listenFileSelect() {
 }
 listenFileSelect();
 
+
+// function to save post id to user's document in database
+function saveNewPostID(userUID, postDocID) {
+    db.collection("users")
+        .doc(userUID)
+        .update({
+            posts: firebase.firestore.FieldValue.arrayUnion(postDocID)
+        })
+        .then(() =>
+            console.log("Saved to user's document!"))
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+}
+
 function savePost() {
     alert("SAVE POST is triggered");
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             // Do something for the user here. 
-            var desc = document.getElementById("createDescription").value;
-            var title = document.getElementById("createTitle").value;
+            var postTitle = document.getElementById("createTitle").value;
+            console.log("postTitle: " + postTitle);
+            var postLoc = document.getElementById("createLocation").value;
+            var postCatSelect = document.getElementById("createCategory");
+            var postCat = postCatSelect.options[postCatSelect.selectedIndex].text;
+            console.log("postCat: " + postCat);
+            var postDesc = document.getElementById("createDescription").value;
             db.collection("posts").add({
                 owner: user.uid,
-                title: title,
-                description: desc,
+                title: postTitle,
+                location: postLoc,
+                category: postCat,
+                description: postDesc,
                 last_updated: firebase.firestore.FieldValue
                     .serverTimestamp() //current system time
             }).then(doc => {
                 console.log("Post document added!");
-                //console.log(doc.id);
+                console.log(doc.id);
+                saveNewPostID(user.uid, doc.id);
                 uploadPic(doc.id);
             })
         } else {
@@ -67,3 +90,7 @@ function savePost() {
         }
     });
 }
+
+
+
+
