@@ -2,23 +2,19 @@ const storage = firebase.storage();
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
-    var storageRef = storage.ref("images/" + postDocID + ".jpg");
+    var storageRef = storage.ref("images" + postDocID + ".jpg");
 
     storageRef.put(ImageFile)   //global variable ImageFile
 
-    AFTER.put() is done
         .then(function () {
             console.log('Uploaded to Cloud Storage.');
             storageRef.getDownloadURL()
 
-            AFTER.getDownloadURL is done
                 .then(function (url) { // Get URL of the uploaded file
                     console.log("Got the download URL.");
-                    db.collection("posts").doc(postDocID).update({
+                    db.collection("images").add({
                         "image": url // Save the URL into users collection
                     })
-
-                    AFTER.update is done
                         .then(function () {
                             console.log('Added pic URL to Firestore.');
                         })
@@ -32,11 +28,11 @@ function uploadPic(postDocID) {
 
 var ImageFile;
 function listenFileSelect() {
-listen for file selection
-var fileInput = document.getElementById("mypic-input"); // pointer #1
+
+    var fileInput = document.getElementById("mypic-input"); // pointer #1
     const image = document.getElementById("mypic-goes-here"); // pointer #2
 
- When a change happens to the File Chooser Input
+
     fileInput.addEventListener('change', function (e) {
         ImageFile = e.target.files[0];   //Global variable
         var blob = URL.createObjectURL(ImageFile);
@@ -61,11 +57,12 @@ function savePost() {
                     .serverTimestamp() //current system time
             }).then(doc => {
                 console.log("Post document added!");
-                console.log(doc.id);
-                //uploadPic(doc.id);
+                //console.log(doc.id);
+                uploadPic(doc.id);
             })
         } else {
             // No user is signed in.
+            alert("Error, no user signed in");
             console.log("Error, no user signed in");
         }
     });
