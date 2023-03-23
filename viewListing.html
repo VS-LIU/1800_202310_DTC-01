@@ -54,9 +54,9 @@
     </header>
     <!-- Listing Image -->
     <main>
-      <div class="postImages text-center">
+      <!-- <div class="postImages text-center">
         <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
-      </div>
+      </div> -->
       
       <!-- Listing Title -->
       <div class="container p-2 text-center">
@@ -68,18 +68,18 @@
 
     <!-- Listing Labels -->
     <div class="card mb-2">
-      <div class="card-body p-1">
+      <div class="card-body ">
         <a href="#">{location}</a>
         <a href="#">{map icon shortcut}</a>
       </div>
     </div>
     <div class="card mb-2">
-      <div class="card-body p-1">
+      <div class="card-body">
         <span id="postCategory">{Category}</span>
       </div>
     </div>
     <div class="card mb-2">
-      <div id="postDescription" class="card-body p-1">
+      <div id="postDescription" class="card-body">
         {Listing Description}
         <br>
         <br>
@@ -88,8 +88,9 @@
     </div>
      
     </main>
+    <script src="./scripts/firebaseAPI_DTC01.js"></script>
     <script src="./scripts/template.js"></script>
-    <script src="./scripts/firebaseAPI_DTC0.js"></script>
+    <script src="./viewListing.html"></script>
   </body>
 
 </html>
