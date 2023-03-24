@@ -2,7 +2,7 @@ const storage = firebase.storage();
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
-    var storageRef = storage.ref("images" + postDocID + ".jpg");
+    var storageRef = storage.ref("images/" + postDocID + ".jpg");
 
     storageRef.put(ImageFile)   //global variable ImageFile
 
@@ -12,6 +12,9 @@ function uploadPic(postDocID) {
 
                 .then(function (url) { // Get URL of the uploaded file
                     console.log("Got the download URL.");
+                    db.collection("posts").doc(postDocID).update({
+                        "image": url // Save the URL into users collection
+                    })
                     db.collection("images").add({
                         "image": url // Save the URL into users collection
                     })
