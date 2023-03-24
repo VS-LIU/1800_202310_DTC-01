@@ -15,7 +15,7 @@ function displayCardsDynamically(collection) {
                 //update title and text and image etc.
                 listingCard.querySelector('.cb-card-img').src = `${imageURL}`;
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
-                // listingCard.querySelector('a').href = "main.html?docID=" + docID;
+                listingCard.querySelector('.cb-card-template').href = "communityboard.html?docID=" + docID;
 
                 console.log("TEST #2!");
 
