@@ -1,10 +1,4 @@
 function populateReviews() {
-    // Gets the template from the HTML.
-    let listingCardTemplate = document.getElementById("listingCardTemplate");
-    // Gets the div where the cards will be placed.
-    let listGroup = document.getElementById("listGroup");
-
-    
     //retreive thes url.
     let params = new URL(window.location.href) //get the url from the searbar
     // Looks for Docid. This is how it is passed from the previous page.
@@ -28,7 +22,6 @@ function populateReviews() {
             let postDescription = document.getElementById("postDescription");
             postDescription.innerHTML = description;
             // grab the image in the viewlisting.html
-
             let postImage = document.getElementById("postImage");
             // postImage.src = `./images/${postID}.jpg`;
 
@@ -39,14 +32,7 @@ function populateReviews() {
             // Grab the location in the viewlisting.html
             let postLocation = doc.data().location;
             let location = document.getElementById("postLocation");
-            location.innerHTML = postLocation;
-            
-            
-            
-            
-    
-
-            
+            location.innerHTML = postLocation;          
         })
 }
 populateReviews();
