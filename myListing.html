@@ -100,13 +100,13 @@
         </div>
 
     </header>
+
     <!-- Here is the container for cards  -->
-    <div class="container card-deck">
-      <div id="posts-go-here" class="row row-cols-auto">
+    <section>
+      <div class="container card-deck">
+        <div id="posts-go-here" class="row row-cols-auto">
+        </div>
       </div>
-    </div>
-    </div>
-    </div>
     </section>
 
     <!-- listings template -->
@@ -114,8 +114,9 @@
     <template id="listingTemplate">
       <div class="col-6 p-1">
         <div class="card shadow-sm flex-grow-1">
-          <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#868e96"></rect>
           </svg>
@@ -129,12 +130,12 @@
       </div>
 
       </div>
-    </template> -->
+    </template>
     <!-- Templates for general use, not displayed -->
     <!-- Has a "card-image", "card-title", and "card-description" -->
     <template id="postCardTemplate">
       <div class="card py-2 mx-2 bg-light" style="width: 10rem;">
-        <img class="card-image card-img-top" src=" ..." alt="...">
+        <img class="card-image card-img-top" src="..." alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-description">placeholder</p>
@@ -159,7 +160,7 @@
   <footer id="my-footer"></footer>
   <script src="./scripts/template.js"></script>
   <script src="./scripts/firebaseAPI_DTC01.js"></script>
-  <script src="./scripts/mylisting.js"></script>
+  <script src="./scripts/myListingsV.js"></script>
 </body>
 
 </html>

@@ -6,25 +6,24 @@
 // and displays a card for each item. 
 //------------------------------------------------
 function showMyPosts() {
-      firebase.auth().onAuthStateChanged(user => {
-            console.log("user is: " + user.uid);
-            db.collection("users").doc(user.uid)
-                    .get()
-                    .then(doc => {
-                        
-                        posts = doc.data().posts; //get array of my posts
-                        console.log(posts);
-                        console.log("asdfas12412412412421412f");
-                        posts.forEach(item => {
-                            db.collection("posts")
-                            .doc(item)
-                                .get()
-                                .then(doc => {
-                                    displayMyPostCard(doc);
-                                })
-                        })
-                    })
-      })
+    firebase.auth().onAuthStateChanged(user => {
+          console.log("user is: " + user.uid);
+          db.collection("users").doc(user.uid)
+                  .get()
+                  .then(doc => {
+                      myposts = doc.data().posts; //get array of my posts
+                      console.log(myposts);
+                      myposts.forEach(item => {
+                          db.collection("posts")
+                              .doc(item)
+                              .get()
+                              .then(doc => {
+                                console.log(doc.data().title)
+                                  displayMyPostCard(doc);
+                              })
+                      })
+                  })
+    })
 }
 showMyPosts();
 
@@ -33,6 +32,7 @@ showMyPosts();
 // from the post document extracted (name, description, image)
 //------------------------------------------------------------
 function displayMyPostCard(doc) {
+            console.log(doc.data());
             var title = doc.data().title; // get value of the "name" key
             var desc = doc.data().description; //gets the length field
             var image = doc.data().image; //the field that contains the URL 
