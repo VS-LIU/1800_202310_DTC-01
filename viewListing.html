@@ -16,7 +16,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+  </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -25,6 +25,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <script type="text/JavaScript" src=" https://MomentJS.com/downloads/moment.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
@@ -47,19 +48,19 @@
       </div>
       <div class="container d-flex justify-content-between px-0">
 
-          <button type="button" id="btnBack" class="btn btn-link btn-sm" onclick="history.back()">
-            <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-            </svg>
-          </button>
+        <button type="button" id="btnBack" class="btn btn-link btn-sm" onclick="history.back()">
+          <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+          </svg>
+        </button>
         <div>
           <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
         </div>
       </div>
       <hr>
-    </header>    
+    </header>
     <!-- Listing Image -->
     <main>
       <!-- <div class="postImages text-center">
@@ -68,36 +69,36 @@
 
       <!-- Listing Title -->
       <div class="container p-2 text-center">
-      <!-- Listing Title -->
-      <div class="container p-2 text-center">
+        <!-- Listing Title -->
+        <div class="container p-2 text-center">
 
-        <h1 class="d-inline-block">
-          <span id="postTitle">Listing Title</span>
-        </h1>
-        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
-        <h6 class="card-subtitle text-muted"><span id="last_updated">Date & Time</span></h6>
-      </div>
+          <h1 class="d-inline-block">
+            <span id="postTitle">Listing Title</span>
+          </h1>
+          <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
+          <h6 class="card-subtitle text-muted"><span id="last_updated">Date & Time</span></h6>
+        </div>
 
-      <!-- Listing Labels -->
-      <div class="card mb-2">
-        <div class="card-body p-1">
-          <a href="location">
-            <span id="postLocation">Location</span>
-          </a>
+        <!-- Listing Labels -->
+        <div class="card mb-2">
+          <div class="card-body p-1">
+            <a href="location">
+              <span id="postLocation">Location</span>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="card mb-2">
-        <div class="card-body p-1">
-          <span id="postCategory">Category</span>
+        <div class="card mb-2">
+          <div class="card-body p-1">
+            <span id="postCategory">Category</span>
+          </div>
         </div>
-      </div>
-      <div class="card mb-2">
-        <span id="postDescription" class="card-body p-1">
-          <br>
-          <br>
-          <br>
-        </span>
-      </div>
+        <div class="card mb-2">
+          <span id="postDescription" class="card-body p-1">
+            <br>
+            <br>
+            <br>
+          </span>
+        </div>
 
     </main>
     <script src="./scripts/firebaseAPI_DTC01.js"></script>

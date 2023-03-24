@@ -14,7 +14,7 @@ function populateReviews() {
             let postTitle = document.getElementById("postTitle");
             postTitle.innerHTML = listTitle;
             // grab the date in the viewlisting.html
-            let postedDate = doc.data().last_updated;
+            let postedDate = doc.data().last_updated.toDate().toDateString();
             let postDate = document.getElementById("last_updated");
             postDate.innerHTML = postedDate
             // Grab the description in the viewlisting.html
