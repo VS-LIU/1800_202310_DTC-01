@@ -170,24 +170,34 @@
 
     <!-- <a href="/communityboard.html"><img class="iconbar-icon" src="/images/community-board-icon.svg" alt=""></a> -->
 
-    <h5 class="heading_communityboard">Community Board</h5>
-    <div class="my-2 p-0 CommunityBoard-box overflow-auto">
-      <!-- Header for Community Board -->
+    <section>
 
-
-      <!-- Container for the listings-->
-      <div class="container-fluid overflow-auto">
-        <h6 class="gx-6 mt-2 mb-2">Trending</h6>
+      <h5 class="heading_communityboard">Community Board</h5>
+      <div class="my-2 p-0 CommunityBoard-box overflow-auto">
+        <!-- Header for Community Board -->
+        
+        
+        <!-- Container for the listings-->
+        <div class="container-fluid overflow-auto">
+          <h6 class="gx-6 mt-2 mb-2">Trending</h6>
+        </div>
+        <div id="cb-listing-card" class="row">
+          <!-- CARDS APPENDED HERE -->
+        </div>
       </div>
+    </section>
+
+    
+    <template id="cb-listing-card-template">
       <!-- Row One -->
       <div class="row">
         <!-- First Column in Row One -->
         <div class="col px-1">
           <div class="container-fluid box">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=1" alt="item picture">
+            <img class=" cb-listing-card-img d-block w-100" src="https://picsum.photos/1080/500?random=1" alt="item picture">
           </div>
           <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
+            <h6  class="my-1 text-center cb-listing-card-title">Posting Title</h6>
             <p class="d-none">Listing content goes here. Lorem Ipsum </p>
           </div>
         </div>
@@ -202,92 +212,7 @@
           </div>
         </div>
       </div>
-
-      <!-- Row -->
-      <div class="row">
-        <!-- First Column in Row Two -->
-        <div class="col px-1">
-          <div class="container-fluid">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=3" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-        <!-- Second Column in Row Two -->
-        <div class="col px-1 px-0">
-          <div class="container-fluid ">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=4" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-      </div>
-
-      <hr class="subsection_separator">
-      <!-- Subsection: Recently Posted -->
-      <div class="container-fluid overflow-auto">
-        <h6 class="gx-6 mt-0 mb-2">Recently Posted</h6>
-      </div>
-      <!-- Row Three -->
-      <div class="row">
-        <!-- First Column in Row Three -->
-        <div class="col px-1">
-          <div class="container-fluid">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=5" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-        <!-- Second Column in Row Three -->
-        <div class="col px-1">
-          <div class="container-fluid">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=6" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Row Four -->
-      <div class="row">
-        <!-- First Column in Row Four -->
-        <div class="col px-1">
-          <div class="container-fluid">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=7" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-        <!-- Second Column in Row Four -->
-        <div class="col px-1">
-          <div class="container-fluid">
-            <img class="d-block w-100" src="https://picsum.photos/1080/500?random=8" alt="item picture">
-          </div>
-          <div class="col-sm-9">
-            <h6 class="my-1 text-center">Posting Title</h6>
-            <p class="d-none">Listing content goes here. Lorem Ipsum </p>
-          </div>
-        </div>
-      </div>
-      <div class="text-center BtnViewMore">
-        <a class="btn btn-sm btn-link" href="./communityboard.html" role="button" style="text-decoration:  none;">View
-          More</a>
-      </div>
-
-    </div>
-
-
+    </template>
 
   </main>
 
