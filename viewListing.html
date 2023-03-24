@@ -56,54 +56,38 @@
     <main>
       <!-- <div class="postImages text-center">
         <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
-      </div>
+      </div> -->
 
-      <!-- Listing Title -->
-      <div class="container p-2 text-center">
-        <h1 class="d-inline-block"><span id="postTitle">{Listing Title}</span></h1>
-        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
-        <h6 class="card-subtitle text-muted"><span id="postTime">{Date & Time}</span></h6>
-      </div>
+        <!-- Listing Title -->
+        <div class="container p-2 text-center">
 
-
-      <!-- Listing Labels -->
-      <div class="card mb-2">
-        <div class="card-body p-1">
-          <a href="#">{location}</a>
-          <a href="#">{map icon shortcut}</a>
+          <h1 class="d-inline-block">
+            <span id="postTitle">Listing Title</span>
+          </h1>
+          <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
+          <h6 class="card-subtitle text-muted"><span id="last_updated">Date & Time</span></h6>
         </div>
-      </div>
-      <div class="card mb-2">
-        <div class="card-body p-1">
-          <span id="postCategory">{Category}</span>
-        </div>
-      </div>
-      <div class="card mb-2">
-        <div id="postDescription" class="card-body p-1">
-          {Listing Description}
-          <br>
-          <br>
-          <br>
-        </div>
-      </div>
 
-      <!-- Template -->
-      <template id="reviewCardTemplate">
-        <div class="card bg-secondary">
-          <img class="card-img-top">
-          <div class="card-body bg-light">
-            <h5 class="title">placeholder</h5>
-            <p class="time">placeholder</p>
-            <p class="level">placeholder</p>
-            <p class="season">placeholder</p>
-            <p class="scrambled">placeholder</p>
-            <p class="flooded">placeholder</p>
-            <br>
-            <p class="description">This card has supporting text below as a natural lead-in to additional content.
-            </p>
+        <!-- Listing Labels -->
+        <div class="card mb-2">
+          <div class="card-body p-1">
+            <a href="location">
+              <span id="postLocation">Location</span>
+            </a>
           </div>
         </div>
-      </template>
+        <div class="card mb-2">
+          <div class="card-body p-1">
+            <span id="postCategory">Category</span>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <span id="postDescription" class="card-body p-1">
+            <br>
+            <br>
+            <br>
+          </span>
+        </div>
 
     </main>
     <script src="./scripts/firebaseAPI_DTC01.js"></script>
