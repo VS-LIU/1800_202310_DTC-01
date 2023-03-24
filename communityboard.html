@@ -107,77 +107,36 @@
         </button> -->
       </div>
     </header>
-    <section class="container cb-main-cards">
-      <div class="row g-2">
-        <!-- <div class="card col-6" style="width: 18rem;"> -->
-        <div class="col-6 p-1">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">{Card title}</h5>
-              <p class="card-text mb-0">{Description}</p>
-              <br>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="card col-6" style="width: 18rem;"> -->
-        <div class="col-6 p-1">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">{Card title}</h5>
-              <p class="card-text mb-0">{Description}</p>
-              <br>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
+    <!-- Here is the container for cards  -->
+    <div class="container cb-main-cards">
+      <div id="posts-go-here" class="row g-2 row-cols-auto">
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- listings template -->
+
+    <template id="listingTemplate">
+      <div class="col-6 p-1">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+          </svg>
+          <div class="card-body">
+            <h5 class="card-title">{Card title}</h5>
+            <p class="card-text mb-0">{Description}</p>
+            <br>
+            <a href="#" class="btn btn-primary card-link">View</a>
           </div>
         </div>
       </div>
-      <div class="row g-2">
-        <!-- <div class="card col-6" style="width: 18rem;"> -->
-        <div class="col-6 p-1">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">{Card title}</h5>
-              <p class="card-text mb-0">{Description}</p>
-              <br>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="card col-6" style="width: 18rem;"> -->
-        <div class="col-6 p-1">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="130" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">{Card title}</h5>
-              <p class="card-text mb-0">{Description}</p>
-              <br>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
 
       </div>
-    </section>
+    </template>
   </main>
 
 
@@ -193,6 +152,7 @@
   <footer id="my-footer"></footer>
   <script src="./scripts/firebaseAPI_DTC01.js"></script>
   <script src="./scripts/template.js"></script>
+  <script src="./scripts/communityboard.js"></script>
 </body>
 
 </html>
