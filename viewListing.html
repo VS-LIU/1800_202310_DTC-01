@@ -58,21 +58,23 @@
           <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
         </div>
       </div>
-      <hr class="mt-1 mb-3">
-    </header>
+      <hr>
+    </header>    
     <!-- Listing Image -->
     <main>
       <!-- <div class="postImages text-center">
-        <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
-      </div> -->
+          <img src="https://picsum.photos/350/350?grayscale" class="img-fluid" alt="...">
+        </div> -->
 
+      <!-- Listing Title -->
+      <div class="container p-2 text-center">
       <!-- Listing Title -->
       <div class="container p-2 text-center">
 
         <h1 class="d-inline-block">
           <span id="postTitle">Listing Title</span>
         </h1>
-
+        <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
         <h6 class="card-subtitle text-muted"><span id="last_updated">Date & Time</span></h6>
       </div>
 
@@ -90,16 +92,17 @@
         </div>
       </div>
       <div class="card mb-2">
-        <span id="postDescription" class="card-body p-1" rows="4">
-          Description
+        <span id="postDescription" class="card-body p-1">
+          <br>
+          <br>
+          <br>
         </span>
-    
       </div>
 
     </main>
     <script src="./scripts/firebaseAPI_DTC01.js"></script>
     <script src="./scripts/template.js"></script>
-    <script src="./scripts/viewlistings.js"></script>
+    <script src="./scripts/viewlisting.js"></script>
   </body>
 
 </html>

@@ -21,7 +21,7 @@ function displayCardsDynamically(collection) {
                 //update image
                 newcard.querySelector('.card-image').src = `./images/${docID}.jpg`;
                 // update link
-                newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`; //Example: ./viewpost.html?NV01
+                newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`;
 
                 // //Finally done modifying newcard
                 document.getElementById("posts-go-here").appendChild(newcard);
