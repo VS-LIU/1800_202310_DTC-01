@@ -16,19 +16,9 @@ function addMapPins() {
 
 
      // USER ADDS POINTS
-     map.on('click', (event) => {
-        // If the user clicked on one of your markers, get its information.
-        const features = map.queryRenderedFeatures(event.point, {
-            layers: [my_layer] // replace with your layer name
-        });
-        if (!features.length) {
-            return;
-        }
-        const feature = features[0];
 
-        // Code from the next step will go here.
-    });
 
+     
     // var mapReference = db.collection("map") //keep name???
     // mapReference.add({
     //     address: "555 Seymour St",
