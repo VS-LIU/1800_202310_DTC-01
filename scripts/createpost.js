@@ -18,8 +18,11 @@ function uploadPic(postDocID) {
                     db.collection("images").add({
                         "image": url // Save the URL into users collection
                     })
+
                         .then(function () {
                             console.log('Added pic URL to Firestore.');
+                        }).then(function () {
+                            location.assign("./myListing.html");
                         })
                 })
         })
@@ -85,7 +88,7 @@ function savePost() {
                 console.log(doc.id);
                 saveNewPostID(user.uid, doc.id);
                 uploadPic(doc.id);
-            })
+        })
         } else {
             // No user is signed in.
             alert("Error, no user signed in");
