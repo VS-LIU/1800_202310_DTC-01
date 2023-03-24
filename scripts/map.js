@@ -1,6 +1,6 @@
 
 // Function that adds pins
-function addMapPins() {
+function addMapPins(map) {
 
     let my_layer = map.addLayer({
         'id': 'places',
@@ -12,13 +12,30 @@ function addMapPins() {
             'icon-size': 0.1, // Pin Size
             'icon-allow-overlap': true // Allows icons to overlap
         }
+
+        /* 
+        Add an event listener that runs
+        when a user clicks on the map element.
+        */
+       map.on('click', (event) => {
+            // If the user clicked on one of your markers, get its information.
+            const features = map.queryRenderedFeatures(event.point, {
+                layers: ['YOUR_LAYER_NAME'] // replace with your layer name
+            });
+            if (!features.length) {
+                return;
+            }
+            const feature = features[0];
+
+            // Code from the next step will go here.
+        });
+
     });
+}
+    // USER ADDS POINTS
 
 
-     // USER ADDS POINTS
 
-
-     
     // var mapReference = db.collection("map") //keep name???
     // mapReference.add({
     //     address: "555 Seymour St",
