@@ -18,7 +18,8 @@ function showMyPosts() {
                               .doc(item)
                               .get()
                               .then(doc => {
-                                console.log(doc.data().title)
+                                console.log("AAAAAAAAAAAAAAAAAAAAAAAAA", doc.data())
+                                console.log(doc.get("owner"))
                                   displayMyPostCard(doc);
                               })
                       })
@@ -33,9 +34,9 @@ showMyPosts();
 //------------------------------------------------------------
 function displayMyPostCard(doc) {
             console.log(doc.data());
-            var title = doc.data().title; // get value of the "name" key
-            var desc = doc.data().description; //gets the length field
-            var image = doc.data().image; //the field that contains the URL 
+            var title = doc.get("title"); // get value of the "name" key
+            var desc = doc.get("description"); //gets the length field
+            var image = doc.get("image"); //the field that contains the URL 
             
 
             //clone the new card
