@@ -1,29 +1,50 @@
 function populateReviews() {
     // Gets the template from the HTML.
-    let reviewCardTemplate = document.getElementById("reviewCardTemplate");
+    let listingCardTemplate = document.getElementById("listingCardTemplate");
     // Gets the div where the cards will be placed.
-    let hikeCardGroup = document.getElementById("reviewCardGroup");
+    let listGroup = document.getElementById("listGroup");
 
     
     //retreive thes url.
     let params = new URL(window.location.href) //get the url from the searbar
     // Looks for Docid. This is how it is passed from the previous page.
-    let hikeID = params.searchParams.get("docID");
-    // var hikeID = localStorage.getItem("hikeDocID");
-    console.log(hikeID);
+    let postID = params.searchParams.get("docID");
 
-    // doublecheck: is your collection called "Reviews" or "reviews"?
-    // In the database, going inside collection called reviews, looking where 'hikedocID' == the parameter hikeid.
-    db.collection("posts").doc(hikeID).get()
-        .then(allReviews => {
-            // Maybe it turns it into an array?
-            console.log(allReviews.data().title)
+
+    db.collection("posts").doc(postID).get()
+        .then(doc => {
             // Grabbing the and assigning inside
-            let hikeTitle = allReviews.data().title;
-            // Grab the postTitle span id in the viewlisting.html
+            let listTitle = doc.data().title;
+
+
             let postTitle = document.getElementById("postTitle");
-            //Assign postitle with hiketitle
-            postTitle.innerHTML = hikeTitle;
+            postTitle.innerHTML = listTitle;
+            // grab the date in the viewlisting.html
+            let postedDate = doc.data().last_updated;
+            let postDate = document.getElementById("last_updated");
+            postDate.innerHTML = postedDate
+            // Grab the description in the viewlisting.html
+            let description = doc.data().description;
+            let postDescription = document.getElementById("postDescription");
+            postDescription.innerHTML = description;
+            // grab the image in the viewlisting.html
+
+            let postImage = document.getElementById("postImage");
+            // postImage.src = `./images/${postID}.jpg`;
+
+            // Grab the category in the viewlisting.html
+            let postCategory = document.getElementById("postCategory");
+            let category = postCategory.innerHTML = doc.data().category;
+            postCategory.innerHTML = category
+            // Grab the location in the viewlisting.html
+            let postLocation = doc.data().location;
+            let location = document.getElementById("postLocation");
+            location.innerHTML = postLocation;
+            
+            
+            
+            
+    
 
             
         })
