@@ -37,14 +37,18 @@ function displayMyPostCard(doc) {
             var desc = doc.get("description"); //gets the length field
             var image = doc.get("image"); //the field that contains the URL 
             
+            //define doc id 
+            var docID = doc.id;
 
             //clone the new card
             let newcard = document.getElementById("postCardTemplate").content.cloneNode(true);
             //populate with title, image
+            // newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`;
             newcard.querySelector('.card-title').innerHTML = title;
             newcard.querySelector('.card-image').src = image;
             newcard.querySelector('.card-description').innerHTML = desc;
             //append to the posts
+            newcard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
             document.getElementById("myposts-go-here").prepend(newcard);
 }
 
