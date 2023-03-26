@@ -1,53 +1,30 @@
 
 // Function that adds pins
-function addMapPins(map) {
+function addMapPins(lat, lng, name, address) {
 
-    let my_layer = map.addLayer({
-        'id': 'places',
-        'type': 'symbol',
-        // source: 'places',
-        'source': 'places',
-        'layout': {
-            'icon-image': 'eventpin', // Pin Icon
-            'icon-size': 0.1, // Pin Size
-            'icon-allow-overlap': true // Allows icons to overlap
-        }
+    var mapReference = db.collection("map") //keep name???
 
-        /* 
-        Add an event listener that runs
-        when a user clicks on the map element.
-        */
-       map.on('click', (event) => {
-            // If the user clicked on one of your markers, get its information.
-            const features = map.queryRenderedFeatures(event.point, {
-                layers: ['YOUR_LAYER_NAME'] // replace with your layer name
-            });
-            if (!features.length) {
-                return;
-            }
-            const feature = features[0];
-
-            // Code from the next step will go here.
-        });
-
+    mapReference.add({
+        name: name,
+        //     address: "555 Seymour St",
+        //     city: "Vancouver",
+        //     postcode: " V6B 3H6",
+        //     province: "British Columbia",
+        latitude: lat,
+        longitude: lng,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    })
+    .then((docRef) => {
+        console.log("New pin added with ID: ", docRef.id);
+        alert("Pin added!");
+        location.reload();
+    })
+    .catch((error) => {
+        console.error("Error adding new pin: ", error);
     });
 }
-    // USER ADDS POINTS
 
 
-
-    // var mapReference = db.collection("map") //keep name???
-    // mapReference.add({
-    //     address: "555 Seymour St",
-    //     city: "Vancouver",
-    //     latitude: 49.2748107,
-    //     longitude: -123.1278527,
-    //     name: "BCIT Downtown Campus",
-    //     postcode: " V6B 3H6",
-    //     province: "British Columbia",
-    //     last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
-    // });
-}
 // addMapPins();
 
 function showMap() {
@@ -145,6 +122,7 @@ function showMap() {
                             .addTo(map);
                     });
 
+
                     // Change the cursor to a pointer when the mouse is over the places layer.
                     map.on('mouseenter', 'places', () => {
                         map.getCanvas().style.cursor = 'pointer';
@@ -213,6 +191,36 @@ function showMap() {
                                 .setHTML(description)
                                 .addTo(map);
                         });
+
+                        // This portion allows users to add a pin on map
+                        map.on('click', (e) => {
+                            const lat = e.lngLat.lat;
+                            const lng = e.lngLat.lng;
+                            const name = prompt("Enter a name for the new pin:");
+
+                            // TO-DO for Pin entry!!!!
+                            // Pass Date to addMapPins and find way to retrieve addresses too
+                            // Add widget for entering address and name!
+                            
+                            // if (name) {
+                            //     db.collection('map').add({
+                            //         lat: lat,
+                            //         lng: lng,
+                            //         name: name
+                            //     })
+                            //         .then((docRef) => {
+                            //             console.log("New pin added with ID: ", docRef.id);
+                            //             alert("Pin added!");
+                            //             location.reload();
+                            //         })
+                            //         .catch((error) => {
+                            //             console.error("Error adding new pin: ", error);
+                            //         });
+                            // }
+                            if (name){
+                                addMapPins(lat, lng, name);
+                            }
+                        })
 
                         // Change the cursor to a pointer when the mouse is over the userLocation layer.
                         map.on('mouseenter', 'userLocation', () => {
