@@ -62,10 +62,10 @@ function showMap() {
                         coordinates = [lng, lat];
                         console.log(coordinates);
                         // Coordinates
-                        pin_name = doc.data().name; // Event Name
+                        pin_name = doc.data().name; // pin Name
 
-                        // we dont have this...
-
+                        // THIS IS STUFF WE DON'T NEED BUT MIGHT USE LATER!
+                        
                         // preview = doc.data().details; // Text Preview
                         // img = doc.data().posterurl; // Image
                         // url = doc.data().link; // URL
