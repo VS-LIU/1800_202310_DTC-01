@@ -14,14 +14,14 @@ function addMapPins(lat, lng, name, address) {
         longitude: lng,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     })
-    .then((docRef) => {
-        console.log("New pin added with ID: ", docRef.id);
-        alert("Pin added!");
-        location.reload();
-    })
-    .catch((error) => {
-        console.error("Error adding new pin: ", error);
-    });
+        .then((docRef) => {
+            console.log("New pin added with ID: ", docRef.id);
+            alert("Pin added!");
+            location.reload();
+        })
+        .catch((error) => {
+            console.error("Error adding new pin: ", error);
+        });
 }
 
 
@@ -65,7 +65,7 @@ function showMap() {
                         pin_name = doc.data().name; // pin Name
 
                         // THIS IS STUFF WE DON'T NEED BUT MIGHT USE LATER!
-                        
+
                         // preview = doc.data().details; // Text Preview
                         // img = doc.data().posterurl; // Image
                         // url = doc.data().link; // URL
@@ -198,26 +198,7 @@ function showMap() {
                             const lng = e.lngLat.lng;
                             const name = prompt("Enter a name for the new pin:");
 
-                            // TO-DO for Pin entry!!!!
-                            // Pass Date to addMapPins and find way to retrieve addresses too
-                            // Add widget for entering address and name!
-                            
-                            // if (name) {
-                            //     db.collection('map').add({
-                            //         lat: lat,
-                            //         lng: lng,
-                            //         name: name
-                            //     })
-                            //         .then((docRef) => {
-                            //             console.log("New pin added with ID: ", docRef.id);
-                            //             alert("Pin added!");
-                            //             location.reload();
-                            //         })
-                            //         .catch((error) => {
-                            //             console.error("Error adding new pin: ", error);
-                            //         });
-                            // }
-                            if (name){
+                            if (name) {
                                 addMapPins(lat, lng, name);
                             }
                         })
