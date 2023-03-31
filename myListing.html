@@ -101,7 +101,9 @@
 
     </header>
 
-    <!-- dynamically added listings go here  -->
+    <!-- dynamicalled added listings go here  -->
+
+    <!-- Here is the container for cards  -->
     <section>
       <div class="container card-deck">
         <div id="myposts-go-here" class="row row-cols-auto">
@@ -109,7 +111,29 @@
       </div>
     </section>
 
-    <!-- Listings Template -->
+    <!-- listings template -->
+
+    <!-- <template id="listingTemplate">
+      <div class="col-6 p-1">
+        <div class="card shadow-sm flex-grow-1">
+          <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+          </svg>
+          <div class="card-body">
+            <h5 class="card-title">{Card title}</h5>
+            <p class="card-text mb-0">{Description}</p>
+            <br>
+            <a href="#" class="card-link btn btn-primary flex-grow-1">View</a>
+          </div>
+        </div>
+      </div>
+    </template> -->
+    <!-- Templates for general use, not displayed -->
+    <!-- Has a "card-image", "card-title", and "card-description" -->
+    <template id="postCardTemplate">
       <div class="card py-2 mx-2 bg-light click-card" style="width: 10rem;" onclick="location.href='...'">
         <img class="card-image card-img-top" src="..." alt="...">
         <div class="card-body">
@@ -120,13 +144,20 @@
         </div>
       </div>
     </template>
+
   </main>
 
-  <footer id="my-footer"></footer>
 
-  <!---------------------------------------------->
-  <!-- JS scripts  -->
-  <!---------------------------------------------->
+  <!-- This page is the landing page for the Community Board section-->
+  <!-- Similar to the main page, listings should be viewable here, perhaps under different headings -->
+  <!-- Possible heading ideas:
+            Trending
+            Recent
+            Help
+            Services
+            Resources
+    -->
+  <footer id="my-footer"></footer>
   <script src="./scripts/template.js"></script>
   <script src="./scripts/firebaseAPI_DTC01.js"></script>
   <script src="./scripts/myListings.js"></script>
