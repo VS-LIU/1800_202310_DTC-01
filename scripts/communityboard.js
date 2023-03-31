@@ -4,10 +4,9 @@ function displayCardsDynamically(collection) {
     let cardTemplate = document.getElementById("listingTemplate");
     console.log("hello")
 
-    db.collection("posts").orderBy("last_updated").get() //get all docs from collection and orders them by last_updated
+    db.collection("posts").orderBy("last_updated").get() 
         .then(allListings => {
-            // console.log("allListings: " + allListings.docs)
-            allListings.forEach(doc => { //iterate thru each doc
+            allListings.forEach(doc => { 
                 var title = doc.data().title;
                 console.log("allListings: " + doc.data().title)
 
@@ -15,15 +14,11 @@ function displayCardsDynamically(collection) {
                 var docID = doc.id;
                 let newcard = cardTemplate.content.cloneNode(true);
 
-                //update title and text and image etc.
                 newcard.querySelector('.card-title').innerHTML = title;
                 newcard.querySelector('.card-text').innerHTML = description;
-                //update image
                 newcard.querySelector('.card-image').src = `./images/${docID}.jpg`;
-                // update link
                 newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`; //Example: ./viewpost.html?NV01
 
-                // //Finally done modifying newcard
                 document.getElementById("posts-go-here").appendChild(newcard);
 
             })

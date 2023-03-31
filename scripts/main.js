@@ -23,13 +23,11 @@ function displayCardsDate(collection) {
         })
 }
 
-// displayCardsDate("posts")
 
 function displayCardsRandom(collection) {
     let cardTemplate = document.getElementById("cb-card-template");
     console.log("TEST #1!")
 
-    // var allPostsArray = [];
     db.collection(collection).orderBy("last_updated", "desc").limit(6).get()
         .then(allPosts => {
             console.log('line 34:' + allPosts)
@@ -45,8 +43,7 @@ function displayCardsRandom(collection) {
            .then(allPostsArray => {
                 console.log('line 47:' + allPostsArray)
             
-                allPostsArray.forEach(doc => { //iterate through each doc
-                // let title = doc.data().title;
+                allPostsArray.forEach(doc => { 
                 console.log("line 49: doc.id " + doc.id);
                 let title = doc.get("title");
                 let imageURL = doc.get("image");

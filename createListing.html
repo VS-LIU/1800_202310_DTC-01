@@ -17,8 +17,8 @@
 
   <link href="/favicon.ico" type="image/x-icon" rel="icon" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -42,102 +42,95 @@
 </head>
 
 <body>
-  <!-- This page is to view the actual listing -->
-
-  <body>
-    <header class="m-0">
-      <nav id="my-navbar"></nav>
-      <div class="cb-top-nav container p-4">
-      </div>
-      <!-- Return Button + Modal -->
-      <div class="container d-flex justify-content-between px-0">
-        <button type="button" id="btnBack" class="btn btn-link btn-sm" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
-          <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-          </svg>
-        </button>
-        <!-- <span class="badge rounded-pill text-bg-warning">Help Wanted</span> -->
-      </div>
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <!-- <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Discard New Listing?</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div> -->
-            <div class="modal-body" id="staticBackdropLabel">
-              <h2>Discard New Listing?</h2>
-              <small>This action cannot be undone</small>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-link" data-bs-dismiss="modal">
-                <a href="./communityboard.html">Discard</a>
-              </button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-            </div>
+  <header class="m-0">
+    <nav id="my-navbar"></nav>
+    <div class="cb-top-nav container p-4">
+    </div>
+    <!-- Return Button + Modal -->
+    <div class="container d-flex justify-content-between px-0">
+      <button type="button" id="btnBack" class="btn btn-link btn-sm" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+      </button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body" id="staticBackdropLabel">
+            <h2>Discard New Listing?</h2>
+            <small>This action cannot be undone</small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-bs-dismiss="modal">
+              <a href="./communityboard.html">Discard</a>
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>
-      <hr class="mt-1 mb-3">
-    </header>
-    <main>
-      <div class="container mb-3">
-        <h1 class="text-center">Create a Post</h1>
-      </div>
-      <!-- Upload: Listing Image(s) -->
-      <div id="createImage" class="container">
-        <form>
-          <div class="card container py-3 mb-2">
-            <p class="text-muted">Upload Image</p>
-            <!-- <img id="mypic-goes-here" width=100 height=100 /> -->
-            <img id="mypic-goes-here" style="max-width: 200px; max-height: 200px;" />
-            <input type="file" id="mypic-input" accept="image/*" />
-            <br>
-            <div>
-              <!-- <button type="button" class="btn btn-primary btn-sm" onclick="savePost()">Upload</button> -->
-              <!-- <button type="button" class="btn btn-primary btn-sm" onclick="savePost()">Upload</button> -->
-            </div>
-        </form>
-      </div>
+    </div>
+    <hr class="mt-1 mb-3">
+  </header>
+  <main>
+    <div class="container mb-3">
+      <h1 class="text-center">Create a Post</h1>
+    </div>
+
+    <!-- Upload: Listing Image(s) -->
+    <div id="createImage" class="container">
+      <form>
+        <div class="card container py-3 mb-2">
+          <p class="text-muted">Upload Image</p>
+          <img id="mypic-goes-here" style="max-width: 200px; max-height: 200px;" />
+          <input type="file" id="mypic-input" accept="image/*" />
+          <br>
+          <div>
+          </div>
+      </form>
+    </div>
 
 
-      <!-- Text Input: Listing Title -->
-      <div id="createTitleDiv" class="input-group mb-2">
-        <input id="createTitle" type="text" class="form-control text-muted" placeholder="Enter a Title">
-      </div>
+    <!-- Text Input: Listing Title -->
+    <div id="createTitleDiv" class="input-group mb-2">
+      <input id="createTitle" type="text" class="form-control text-muted" placeholder="Enter a Title">
+    </div>
 
-      <!-- Text Input: Location -->
-      <div id="createLocationDiv" class="input-group mb-2">
-        <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
-      </div>
-      <!-- Dropdown menu: Choose category -->
-      <div id="createCategoryDiv" class="mb-2">
-        <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
-          <option selected>Select Category</option>
-          <option value="1" id="categoryHelp_Wanted">Help Wanted</option>
-          <option value="2" id="categoryResources">Resources</option>
-          <option value="3" id="categoryServices">Services</option>
-          <option value="4" id="categoryOther">Other</option>
-        </select>
-      </div>
-      <!-- Textbox: Listing Description -->
-      <div id="createDescriptionDiv" class="mb-2">
-        <!-- <label for="exampleFormControlTextarea1" class="form-label"></label> -->
-        <textarea id="createDescription" class="form-control text-muted" rows="4"
-          placeholder="Enter a description"></textarea>
-      </div>
-      <!-- Button: Create Listing -->
-      <div id="createNewBtn" class="text-center">
-        <button type="button" class="btn btn-primary" onclick="savePost()">Create Listing</button>
-      </div>
-    </main>
-    <script src="./scripts/firebaseAPI_DTC01.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./scripts/createpost.js"></script>
-  </body>
+    <!-- Text Input: Location -->
+    <div id="createLocationDiv" class="input-group mb-2">
+      <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
+    </div>
+    <!-- Dropdown menu: Choose category -->
+    <div id="createCategoryDiv" class="mb-2">
+      <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
+        <option selected>Select Category</option>
+        <option value="1" id="categoryHelp_Wanted">Help Wanted</option>
+        <option value="2" id="categoryResources">Resources</option>
+        <option value="3" id="categoryServices">Services</option>
+        <option value="4" id="categoryOther">Other</option>
+      </select>
+    </div>
+    <!-- Textbox: Listing Description -->
+    <div id="createDescriptionDiv" class="mb-2">
+      <textarea id="createDescription" class="form-control text-muted" rows="4"
+        placeholder="Enter a description"></textarea>
+    </div>
+    <!-- Button: Create Listing -->
+    <div id="createNewBtn" class="text-center">
+      <button type="button" class="btn btn-primary" onclick="savePost()">Create Listing</button>
+    </div>
+  </main>
+
+  <!---------------------------------------------->
+  <!-- JS scripts  -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_DTC01.js"></script>
+  <script src="./scripts/template.js"></script>
+  <script src="./scripts/createpost.js"></script>
+</body>
 
 </html>
