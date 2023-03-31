@@ -6,6 +6,10 @@ function addMapPins(lat, lng, address, name) {
 
     mapReference.add({
         name: name,
+        //     address: "555 Seymour St",
+        //     city: "Vancouver",
+        //     postcode: " V6B 3H6",
+        //     province: "British Columbia",
         latitude: lat,
         longitude: lng,
         address: address,
@@ -212,17 +216,21 @@ function showMap() {
                                     .then(data => {
                                         // get the first result from the response
                                         const addressData = data.features[0].place_name;
+                                        console.log(addressData);
                                         callback(addressData);
                                     });
                             }
+
+                            finalizedAddress = getAddress(function (address) {
+                                console.log(address);
+                            });
+
 
                             // console.log(address);
                             const name = prompt("Enter a name for the new pin:");
 
                             if (name) {
-                                addMapPins(lat, lng, getAddress(function (address) {
-                                    console.log(address);
-                                }), name);
+                                addMapPins(lat, lng, finalizedAddress, name);
                             }
                         })
 
