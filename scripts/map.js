@@ -1,17 +1,14 @@
 
 // Function that adds pins
-function addMapPins(lat, lng, name, address) {
+function addMapPins(lat, lng, address, name) {
 
     var mapReference = db.collection("map") //keep name???
 
     mapReference.add({
         name: name,
-        //     address: "555 Seymour St",
-        //     city: "Vancouver",
-        //     postcode: " V6B 3H6",
-        //     province: "British Columbia",
         latitude: lat,
         longitude: lng,
+        address: address,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     })
         .then((docRef) => {
@@ -196,10 +193,36 @@ function showMap() {
                         map.on('click', (e) => {
                             const lat = e.lngLat.lat;
                             const lng = e.lngLat.lng;
+                            console.log(e)
+
+                            // call the Mapbox Geocoding API to get the address
+                            var geocodingUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + lng + ',' + lat + '.json?access_token=pk.eyJ1IjoiYWRhbWNoZW4zIiwiYSI6ImNsMGZyNWRtZzB2angzanBjcHVkNTQ2YncifQ.fTdfEXaQ70WoIFLZ2QaRmQ';
+                            //  addressGetter = fetch(geocodingUrl)
+                            //         .then(response => response.json())
+                            //         .then(data => {
+                            //             // get the first result from the response
+                            //             var addressData = data.features[0].place_name;
+                            //             console.log(addressData);
+                            //         })
+
+
+                            function getAddress(callback) {
+                                let addressGetter = fetch(geocodingUrl)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // get the first result from the response
+                                        const addressData = data.features[0].place_name;
+                                        callback(addressData);
+                                    });
+                            }
+
+                            // console.log(address);
                             const name = prompt("Enter a name for the new pin:");
 
                             if (name) {
-                                addMapPins(lat, lng, name);
+                                addMapPins(lat, lng, getAddress(function (address) {
+                                    console.log(address);
+                                }), name);
                             }
                         })
 
