@@ -119,6 +119,7 @@ function showMap() {
 
                             // Map On Click function that creates a popup, displaying previously defined information from "events" collection in Firestore
                             map.on('click', 'places', (e) => {
+                                clickOnPin = true;
                                 // Copy coordinates array.
                                 const coordinates = e.features[0].geometry.coordinates.slice();
                                 const description = e.features[0].properties.description;
@@ -149,6 +150,7 @@ function showMap() {
                     }
                 );
 
+                let clickOnPin = false;
                 // Add the image to the map style.
                 map.loadImage(
                     'https://cdn-icons-png.flaticon.com/512/61/61168.png',
@@ -206,33 +208,50 @@ function showMap() {
 
                                 // This portion allows users to add a pin on map
                                 map.on('click', (e) => {
-                                    const lat = e.lngLat.lat;
-                                    const lng = e.lngLat.lng;
-                                    console.log(e)
-
-                                    // call the Mapbox Geocoding API to get the address
-                                    var geocodingUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + lng + ',' + lat + '.json?access_token=pk.eyJ1IjoiYWRhbWNoZW4zIiwiYSI6ImNsMGZyNWRtZzB2angzanBjcHVkNTQ2YncifQ.fTdfEXaQ70WoIFLZ2QaRmQ';
-                                    function getAddress(callback) {
-                                        let addressGetter = fetch(geocodingUrl)
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                // get the first result from the response
-                                                const addressData = data.features[0].place_name;
-                                                callback(addressData);
-                                            });
+                                    if (clickOnPin) {
+                                        clickOnPin = false;
+                                        return;
                                     }
 
-                                    finalizedAddress = getAddress(function (address) {
-                                        // prompt user to enter a name and then pass arguments to addMapPins()
-                                        const name = prompt("Enter a name for the new pin:");
+                                    // Define a search radius in pixels
+                                    const radiusInPixels = 10;
 
-                                        if (name) {
-                                            addMapPins(lat, lng, name, address, userID);
+                                    // Query features within the radius around the click point
+                                    const features = map.queryRenderedFeatures(e.point, { layers: ['places'], radius: radiusInPixels });
+
+                                    // If no features are found within the search radius, create a new hike
+                                    if (features.length === 0) {
+                                        const lat = e.lngLat.lat;
+                                        const lng = e.lngLat.lng;
+                                        const name = prompt("Enter a name for the new hike:");
+                                        // call the Mapbox Geocoding API to get the address
+                                        var geocodingUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + lng + ',' + lat + '.json?access_token=pk.eyJ1IjoiYWRhbWNoZW4zIiwiYSI6ImNsMGZyNWRtZzB2angzanBjcHVkNTQ2YncifQ.fTdfEXaQ70WoIFLZ2QaRmQ';
+                                        function getAddress(callback) {
+                                            let addressGetter = fetch(geocodingUrl)
+                                                .then(response => response.json())
+                                                .then(data => {
+                                                    // get the first result from the response
+                                                    const addressData = data.features[0].place_name;
+                                                    callback(addressData);
+                                                });
                                         }
-                                    });
 
-                                  saveMapPinID(userID, doc.id); 
+                                        finalizedAddress = getAddress(function (address) {
+                                            // prompt user to enter a name and then pass arguments to addMapPins()
+                                            const name = prompt("Enter a name for the new pin:");
+
+                                            if (name) {
+                                                // Call the save map pin function
+                                                addMapPins(lat, lng, name, address, userID);
+                                            }
+                                        });
+
+                                        // attempt to add map pins to user document
+                                        //saveMapPinID(userID, doc.id);
+                                    }
                                 });
+
+
 
                                 // Change the cursor to a pointer when the mouse is over the userLocation layer.
                                 map.on('mouseenter', 'userLocation', () => {
