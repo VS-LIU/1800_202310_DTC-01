@@ -1,6 +1,6 @@
 
 // Function that adds pins
-function addMapPins(lat, lng, address, name) {
+function addMapPins(lat, lng, name, passed_address) {
 
     var mapReference = db.collection("map") //keep name???
 
@@ -12,7 +12,7 @@ function addMapPins(lat, lng, address, name) {
         //     province: "British Columbia",
         latitude: lat,
         longitude: lng,
-        address: address,
+        address: passed_address,
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     })
         .then((docRef) => {
@@ -25,8 +25,6 @@ function addMapPins(lat, lng, address, name) {
         });
 }
 
-
-// addMapPins();
 
 function showMap() {
     // Defines basic mapbox data
@@ -216,22 +214,20 @@ function showMap() {
                                     .then(data => {
                                         // get the first result from the response
                                         const addressData = data.features[0].place_name;
-                                        console.log(addressData);
                                         callback(addressData);
                                     });
                             }
 
                             finalizedAddress = getAddress(function (address) {
-                                console.log(address);
+                                // prompt user to enter a name and then pass arguments to addMapPins()
+                                const name = prompt("Enter a name for the new pin:");
+
+                                if (name) {
+                                    addMapPins(lat, lng, name, address);
+                                }
                             });
 
-
-                            // console.log(address);
-                            const name = prompt("Enter a name for the new pin:");
-
-                            if (name) {
-                                addMapPins(lat, lng, finalizedAddress, name);
-                            }
+        
                         })
 
                         // Change the cursor to a pointer when the mouse is over the userLocation layer.
