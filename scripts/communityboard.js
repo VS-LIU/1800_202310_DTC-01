@@ -15,7 +15,7 @@ function displayCardsDynamically(collection) {
                 let newcard = cardTemplate.content.cloneNode(true);
 
                 newcard.querySelector('.card-title').innerHTML = title;
-                newcard.querySelector('.card-text').innerHTML = description;
+                // newcard.querySelector('.card-text').innerHTML = description;
                 newcard.querySelector('.card-image').src = `./images/${docID}.jpg`;
                 newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`; //Example: ./viewpost.html?NV01
 
