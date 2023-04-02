@@ -2,6 +2,11 @@
 https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46 */
 
 /* Universal elements and partials */
+* {
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: Roboto, sans-serif;
+}
+
 body {
     padding-top: 3%;
     padding-bottom: 10%;

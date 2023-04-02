@@ -16,7 +16,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-  </script>
+    </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -175,20 +175,20 @@
       <div class="my-2 p-0 CommunityBoard-box overflow-auto">
 
         <!-- Container for the listings-->
+        <!-- CARDS DYNAMICALLY INSERTED HERE -->
         <div class="container-fluid">
-          <h6 class="gx-6 mt-2 mb-2">Most Recent</h6>
+          <h6 class="gx-6 mt-2 mb-2">Trending</h6>
         </div>
-
-        <div id="cb-card-random" class="row">
+        <div id="cb-card-random" class="row d-flex flex-row overflow-x-scroll flex-nowrap">
         </div>
 
         <!-- CARDS DYNAMICALLY INSERTED HERE -->
         <div class="container-fluid">
           <h6 class="gx-6 mt-2 mb-2">Recent</h6>
         </div>
-        <div id="cb-card-date" class="row">
 
-          <!-- CARDS DYNAMICALLY INSERTED HERE -->
+          <div id="cb-card-date" class="row mx-4 d-flex flex-row overflow-x-scroll flex-nowrap">
+
         </div>
       </div>
     </section>
@@ -197,11 +197,10 @@
     <!-- Templates for general use, not displayed -->
     <!-- Has a "card-image", "card-title", and "card-description" -->
     <template id="cb-card-template">
-      <div class="card click-card py-2 mx-2 bg-light" style="width: 10rem;" onclick="location.href='...'">
+      <div class="card click-card bg-light p-0" style="width: 10rem;" onclick="location.href='...'">
         <img class="cb-card-img card-img-top" src="" alt="">
         <div class="card-body">
-          <h5 class="cb-card-title">Card title</h5>
-          <br>
+          <h6 class="cb-card-title text-center overflow-x-hidden">Card title</h6>
         </div>
       </div>
     </template>
