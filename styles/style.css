@@ -70,7 +70,7 @@ a{
     padding: 2%;
     text-align: center;
     margin: 2%;
-    border: 1px solid #52a870;
+    /* border: 1px solid #52a870; */
     border-radius: 10px;
     /* background-color: #F0EEED; */
     padding-top: 0;
@@ -298,17 +298,6 @@ a{
     width: 100%;
 }
 
-/* .bulletin-img{
-    margin-top: 0px; 
-    margin-bottom: 0px; 
-    margin-right: 0px; 
-    margin-left: 0px; 
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-} */
-
 
 
 @media screen and (max-width: 633px) {
@@ -319,30 +308,4 @@ a{
     .notice-card-img {
         width: 50%;
     }
-
-    /* .bulletin-img{
-        margin-top: 0px; 
-        margin-bottom: 0px; 
-        margin-right: 0px; 
-        margin-left: 0px; 
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-    } */
-    
-    /* .carousel-caption {
-        text-size-adjust: 16rem;
-    }
-
-    .container {
-        padding-top: 20px;
-    } */
-
-
-
 }
-
-/* img {
-    height: auto;
-} */
