@@ -30,6 +30,7 @@ showMyPosts();
 //------------------------------------------------------------
 // this function displays ONE card, with information
 // from the post document extracted (name, description, image)
+// this function is called by showMyPosts()
 //------------------------------------------------------------
 function displayMyPostCard(doc) {
     console.log(doc.data());
