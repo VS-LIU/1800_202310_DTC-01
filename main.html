@@ -187,7 +187,9 @@
       <h5 class="heading_maps">Maps</h5>
       <!-- <div class="container-fluid map-image-box" style="border: 2px solid black;"> -->
       <div class="container-fluid map-image-box">
-        <img class="map-img img-fluid" src="/images/maps_dark.png" alt="Placeholder image of map">
+        <a href="/map.html">
+          <img class="map-img img-fluid" src="/images/map-vancouver.png" alt="Placeholder image of map">
+        </a>
       </div>
     </section>
 
@@ -196,23 +198,27 @@
     <!-- Section: COMMUNITY BOARD -->
     <section>
       <h5 class="heading_communityboard">Community Board</h5>
-      <div class="my-2 p-0 CommunityBoard-box overflow-auto">
+      <div class="my-2 CommunityBoard-box">
 
         <!-- Container for the listings-->
         <!-- CARDS DYNAMICALLY INSERTED HERE -->
         <div class="container-fluid">
           <h6 class="gx-6 mt-2 mb-2">Trending</h6>
         </div>
-        <div id="cb-card-random" class="row d-flex flex-row overflow-x-scroll flex-nowrap">
+        <div id="cb-card-random" class="row d-flex justify-content-center g-2">
         </div>
 
         <!-- CARDS DYNAMICALLY INSERTED HERE -->
-        <div class="container-fluid">
-          <h6 class="gx-6 mt-2 mb-2">Recent</h6>
-        </div>
+        <div class="container mx-auto">
 
-        <div id="cb-card-date" class="row mx-4 d-flex flex-row overflow-x-scroll flex-nowrap">
-
+          <div class="container-fluid">
+            <h6 class="gx-6 mt-2 mb-2">Recent</h6>
+          </div>
+          
+          <div id="cb-card-date" class="row d-flex justify-content-center g-2">
+            
+            
+          </div>
         </div>
       </div>
     </section>
@@ -221,10 +227,11 @@
     <!-- Templates for general use, not displayed -->
     <!-- Has a "card-image", "card-title", and "card-description" -->
     <template id="cb-card-template">
-      <div class="card click-card bg-light p-0" style="width: 10rem;" onclick="location.href='...'">
-        <img class="cb-card-img card-img-top" src="" alt="">
-        <div class="card-body">
+      <div class=" shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;" onclick="location.href='...'">
+        <img class="cb-card-img card-img-top" src="" alt="" style="height: 147px;">
+        <div class="card-body text-center">
           <h6 class="cb-card-title text-center overflow-x-hidden">Card title</h6>
+          <span class="cb-card-category" style="font-size: 0.855rem;"></span>
         </div>
       </div>
     </template>

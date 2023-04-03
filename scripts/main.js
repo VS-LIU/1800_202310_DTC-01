@@ -7,6 +7,7 @@ function displayCardsDate(collection) {
 
             allPosts.forEach(doc => { //iterate through each doc
                 let title = doc.data().title;
+                let category = doc.data().category;
                 console.log("allPosts: " + doc.data().title)
                 let imageURL = doc.get("image");
                 var docID = doc.id;
@@ -15,6 +16,7 @@ function displayCardsDate(collection) {
                 //update title and text and image etc.
                 listingCard.querySelector('.cb-card-img').src = imageURL;
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
+                listingCard.querySelector('.cb-card-category').innerHTML = category;
                 listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
                 console.log("TEST #2!");
 
@@ -46,6 +48,7 @@ function displayCardsRandom(collection) {
                 allPostsArray.forEach(doc => { 
                 console.log("line 49: doc.id " + doc.id);
                 let title = doc.get("title");
+                let category = doc.get("category");
                 let imageURL = doc.get("image");
                 var docID = doc.id;
                 let listingCard = cardTemplate.content.cloneNode(true);
@@ -53,6 +56,7 @@ function displayCardsRandom(collection) {
                 //update title and text and image etc.
                 listingCard.querySelector('.cb-card-img').src = imageURL;
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
+                listingCard.querySelector('.cb-card-category').innerHTML = category;
                 listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
                 console.log("TEST #2!");
 
