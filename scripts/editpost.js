@@ -6,42 +6,31 @@
 // 5. save the changes to Firestore
 // 6. redirect to the post page with the new data
 
-let modal = document.getElementsByClassName("modal");
-let deletebtn = document.getElementsByClassName("deletebtn");
-let modalDelete = document.getElementsByClassName("modaldeleteBtn")
+// let modal = document.getElementsByClassName("modal");
+// let deletebttn = document.getElementsByClassName("deletebtn");
+// let modalDelete = document.getElementsByClassName("modaldeleteBtn")
 
-// deletebtn.onclick = function () {
+// deletebttn.addEventListener('click', function deletePost(postid) {
 //     console.log("hello")
-//     modal.style.display = "none";
-//     newcard.querySelector('#modaldeleteBtn').onclick = () => deletePost(doc.id);
-//     console.log("hello")
-// }
+//     var result = confirm("Want to delete?");
+//     if (result) {
+//         //Logic to delete the item
+//         db.collection("posts").doc(postid)
+//             .delete()
+//             .then(() => {
+//                 console.log("1. Document deleted from Posts collection");
+//                 deleteFromMyPosts(postid);
+//             }).catch((error) => {
+//                 console.error("Error removing document: ", error);
+//             });
 
-deletebtn.onclick(function deletePost(postid) {
-    console.log("hello")
-    var result = confirm("Want to delete?");
-    if (result) {
-        //Logic to delete the item
-        db.collection("posts").doc(postid)
-            .delete()
-            .then(() => {
-                console.log("1. Document deleted from Posts collection");
-                deleteFromMyPosts(postid);
-            }).catch((error) => {
-                console.error("Error removing document: ", error);
-            });
-
-    }
-})
-
-
-
-
-
-
-
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
 //     }
+// })
+
+// let deletedummy = document.getElemetsBtClassName("deletebutton2")
+// let modaldummy = document.getElementsByClassName("modalDUMMYDEL")
+
+// console.log("hi")
+// deletedummy.addEventListener('click', function deleteDummy() {
 // }
+// )

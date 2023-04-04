@@ -1,3 +1,5 @@
+// const storage = firebase.storage();
+
 //-------------------------------------------------
 // this function shows finds out who is logged in,
 // reads the "myposts" field (an array) for that user, 
@@ -41,65 +43,92 @@ function displayMyPostCard(doc) {
     //define doc id 
     var docID = doc.id;
 
+
     //clone the new card
     let newcard = document.getElementById("postCardTemplate").content.cloneNode(true);
     //populate with title, image
     // newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`;
     newcard.querySelector('.card-title').innerHTML = title;
     newcard.querySelector('.card-image').src = image;
-    // newcard.querySelector('.card-description').innerHTML = desc;
-    //append to the posts
-    // newcard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
-    // console.log("hello")
     newcard.querySelector('.card-image').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
-    // newcard.querySelector('.deleteBtn').onclick = () => deletePost(doc.id);
-    let delbtn = newcard.querySelector('.deletebttn')
-    delbtn.addEventListener('click', deletePost)
-    console.log("hello")
-    document.getElementById("myposts-go-here").prepend(newcard);
+    // Replacing the Id by different docID
+    newcard.querySelector("#my-listing-card").setAttribute('id', docID);
+
+    // 
+    newcard.querySelector(`#${docID}`).addEventListener('click', function () {
+        const deleteBtn = document.querySelector('.modaldeleteBtn');
+        deleteBtn.addEventListener('click', function () {
+            deleteListing(docID);
+        });
+    });
 
 }
+console.log("hello from outside")
 
-function deletePost(postid) {
-    // var result = confirm("Want to delete?");
-    // if (result) {
-        //Logic to delete the item
-        db.collection("posts").doc(postid)
-                        .delete()
+function deleteListing(cardID) {
+    console.log("hello from delete")
+    console.log(cardID)
+    db.collection("posts").doc(cardID)
+        .delete()
         .then(() => {
             console.log("1. Document deleted from Posts collection");
-            deleteFromMyPosts(postid);
+            deleteFromMyPosts(cardID);
         }).catch((error) => {
             console.error("Error removing document: ", error);
         });
-    // }
+    db.collection("users")
+        .doc(user.uid)
+        .delete({
+            posts: firebase.firestore.FieldValue.arrayUnion(postDocID)
+        })
+        .then(() =>
+        console.log("Deleted post from user's profile"))
+        .catch((error) =>
+        console.error("Error deleting document! :("))
+
 }
 
 
-function deleteFromMyPosts(postid) {
-    firebase.auth().onAuthStateChanged(user => {
-        db.collection("users").doc(user.uid).update({
-                myposts: firebase.firestore.FieldValue.arrayRemove(postid)
-            })
-            .then(() => {
-                console.log("2. post deleted from user doc");
-                deleteFromStorage(postid);
-            })
-    })
-}
+// function deletePost(postid) {
+//     // var result = confirm("Want to delete?");
+//     // if (result) {
+//         //Logic to delete the item
+//         db.collection("posts").doc(postid)
+//                         .delete()
+//         .then(() => {
+//             console.log("1. Document deleted from Posts collection");
+//             deleteFromMyPosts(postid);
+//         }).catch((error) => {
+//             console.error("Error removing document: ", error);
+//         });
+//     // }
+// }
 
 
-function deleteFromStorage(postid) {
-    // Create a reference to the file to delete
-    var imageRef = storageRef.child('images/' + postid + '.jpg');
+// function deleteFromMyPosts(postid) {
+//     firebase.auth().onAuthStateChanged(user => {
+//         db.collection("users").doc(user.uid).update({
+//                 myposts: firebase.firestore.FieldValue.arrayRemove(postid)
+//             })
+//             .then(() => {
+//                 console.log("2. post deleted from user doc");
+//                 // deleteFromStorage(postid);
+//             })
+//     })
+// }
 
-    // Delete the file
-    imageRef.delete().then(() => {
-        // File deleted successfully
-        console.log("3. image deleted from storage");
-        alert("DELETE is completed!");
-        location.reload();
-    }).catch((error) => {
-        // Uh-oh, an error occurred!
-    });
-}
+
+// function deleteFromStorage(postid) {
+//     // Create a reference to the file to delete
+//     var imageRef = storageRef.child('images/' + postid + '.jpg');
+
+//     // Delete the file
+//     imageRef.delete().then(() => {
+//         // File deleted successfully
+//         console.log("3. image deleted from storage");
+//         alert("DELETE is completed!");
+//         location.reload();
+//     }).catch((error) => {
+//         // Uh-oh, an error occurred!
+//     });
+// }
