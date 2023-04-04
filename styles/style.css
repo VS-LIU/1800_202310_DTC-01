@@ -7,9 +7,7 @@
 body {
     padding-top: 8%;
     padding-bottom: 20%;
-    /* background-color: #f2f2f2; */
-    /* background-color: #f8f8f8; */
-    background-color: #f6f7f4;
+    background-color: whitesmoke
     
 }
 
@@ -29,10 +27,11 @@ a {
     /* background-color: #2F3E46; original!!*/
     /* background-color: #F8F8F8; */
     background-color: white;
-    border-bottom: 0.75px solid #5A5A5A;
+    border-bottom: 0.5px solid #5A5A5A;
     
 }
 
+/* Buttons */
 .btn-signup {
     /* background-color: #2E7B68;
     border-color: #2E7B68; */
@@ -51,6 +50,34 @@ a {
     color: #5A5A5A;
     /* border-radius: 0.5px; */
 }
+
+.btn-saved {
+    border-color: #5A5A5A;
+    font-size: small;
+    color: #5A5A5A;
+}
+
+.btn-mylistings {
+    border-color: #5A5A5A;
+    font-size: small;
+    color: #5A5A5A;
+}
+
+.btn-category {
+    border-color: #5A5A5A;
+    font-size: small;
+    color: #5A5A5A;
+}
+
+.btn-save {
+    /* border-color: #5A5A5A; */
+    font-size: small;
+    /* color: #5A5A5A; */
+    /* border-color: #5A5A5A; */
+}
+
+
+
 
 .subsection_separator {
     width: 85vw;

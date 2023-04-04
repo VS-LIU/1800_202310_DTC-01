@@ -43,24 +43,28 @@
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 d-flex justify-content-between">
       <a href="#">
-        <button type="button" id="btnSaved" class="btn btn-primary btn-sm">Saved</button>
+        <button type="button" id="btnSaved" class="btn btn-saved rounded-pill btn-sm px-2">Saved</button>
       </a>
       <a href="myListing.html">
-        <button type="button" id="btnMyListings" class="btn btn-primary btn-sm">My Listings</button>
+        <button type="button" id="btnMyListings" class="btn btn-mylistings rounded-pill btn-sm px-2">My Listings</button>
       </a>
     </div>
     <hr>
   </header>
+
+
+  <!-- <a class="btn rounded-pill btn-login btn-sm px-2" href="/login.html" role="button">Log In</a> -->
+
 
   <main>
     <header>
       <div class="cb-title container text-center">
         <h1>Community Board</h1>
       </div>
-      <div class="cb-buttons-top container d-flex">
+      <div class="cb-buttons-top container d-flex justify-content-between">
         <div class="col">
           <div class="dropdown">
-            <button id="listingCategory" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            <button id="listingCategory" class="btn btn-category rounded-pill btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Category
             </button>
@@ -73,21 +77,11 @@
           </div>
         </div>
         <div class="col d-flex justify-content-end">
-          <button type="button" id="listingCreate" class="btn btn-success">
-            <a href="createListing.html">+</a>
+          <button type="button" id="listingCreate" class="btn btn-save rounded-pill btn-sm">
+            <a href="createListing.html"> <img src="./images/add-icon.png" height="30"></a>
           </button>
         </div>
       </div>
-      <!-- <div class="container cb-buttons-tabs overflow-x-auto">
-        <button type="button" id="btnTrending" class="btn btn-primary rounded-pill"
-          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-          Trending
-        </button>
-        <button type="button" id="btnRecent" class="btn btn-primary rounded-pill"
-          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-          Recent
-        </button>
-      </div> -->
     </header>
 
     <!-- Dyanmically generated listings go Here -->
@@ -101,17 +95,11 @@
         <div class="col-6 p-1">
           <div class="shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;" onclick="location.href='...'">
             <img class="card-image card-img-top" src="" alt="" style="height: 147px; object-fit: cover;">
-            <!-- <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130"
-              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect>
-            </svg> -->
+
             <div class="card-body text-center">
-              <h6 class="card-title text-center overflow-x-hidden">Card title</h6>
+              <h6 class="card-title text-center overflow-x-hidden text-nowrap">Card title</h6>
               <span class="card-category" style="font-size: 0.855rem;"></span>
-              <!-- <p class="card-text mb-0">{Description}</p> -->
-              <!-- <a href="#" class="btn btn-primary card-link">View</a> -->
+
             </div>
           </div>
         </div>

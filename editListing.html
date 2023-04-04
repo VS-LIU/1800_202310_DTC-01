@@ -46,6 +46,7 @@
     <header class="">
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 ">
+    
     <!-- Return Button + Modal -->
     <div class="container d-flex justify-content-between px-0">
       <button type="button" id="btnBack" class="btn btn-link btn-sm" data-bs-toggle="modal"
@@ -107,6 +108,7 @@
     <div id="createLocationDiv" class="input-group mb-2">
       <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
     </div>
+
     <!-- Dropdown menu: Choose category -->
     <div id="createCategoryDiv" class="mb-2">
       <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
@@ -117,11 +119,13 @@
         <option value="4" id="categoryOther" selected="">Other</option>
       </select>
     </div>
+
     <!-- Textbox: Listing Description -->
     <div id="createDescriptionDiv" class="mb-2">
       <textarea id="createDescription" class="form-control text-muted" rows="4"
         placeholder="Enter a description"></textarea>
     </div>
+
     <!-- Button: Create Listing -->
     <div id="createNewBtn" class="text-center">
       <button type="button" class="btn btn-primary" onclick="editPost()">Save Changes</button>
@@ -134,7 +138,6 @@
   <script src="./scripts/firebaseAPI_DTC01.js"></script>
   <script src="./scripts/template.js"></script>
   <script src="./scripts/editpost.js"></script>
-  <!-- <script src="./scripts/createpost.js"></script> -->
 </body>
 
 </html>
