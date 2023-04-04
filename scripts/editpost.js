@@ -7,14 +7,16 @@ function populateReviews() {
 
   db.collection("posts").doc(postID).get()
     .then(doc => {
-      let listTitle = doc.data().title;
+      let listTitle = doc.get("title");
       let postTitle = document.getElementById("createTitle");
-      postTitle.setAttribute("placeholder", listTitle);
-      // let description = doc.data().description;
+      // postTitle.setAttribute("placeholder", listTitle);
+      postTitle.value = listTitle;
+      
       let description = doc.get("description");
       let postDescription = document.getElementById("createDescription");
       // postDescription.innerHTML = description;
-      postDescription.setAttribute("placeholder", description);
+      // postDescription.setAttribute("placeholder", description);
+      postDescription.value = description;
 
       let postedImage = doc.get("image");
       let myImage = document.getElementById("mypic-goes-here");
@@ -34,7 +36,8 @@ function populateReviews() {
       }
       let postLocation = doc.get("location");
       let location = document.getElementById("createLocation");
-      location.setAttribute("placeholder", postLocation);
+      // location.setAttribute("placeholder", postLocation);
+      location.value = postLocation;
     })
 }
 populateReviews();
