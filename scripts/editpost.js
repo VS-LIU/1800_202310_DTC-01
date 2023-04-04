@@ -63,9 +63,17 @@ function populateReviews() {
             // myImage.src = postedImage;
             myImage.setAttribute("src", postedImage);
 
-            let category = postCategory.innerHTML = doc.data().category;
-            // let category = doc.get("category");
+            // let category = doc.data().category;
+            let category = doc.get("category");
             let postCategory = document.getElementById("createCategory");
+            for (let i = 0; i < postCategory.options.length; i++) {
+                if (postCategory.options[i].value === category) {
+                  postCategory.options[i].selected = true;
+                  break;
+                }
+              }
+              
+            // postCategory.option[category].selected = true;
             // let postCategory = document.getElementById("optionselected");
             // postCategory.setAttribute("selected", category);
 
