@@ -90,7 +90,6 @@ a {
 /* FOOTER ELEMENTS */
 #index-footer {
     margin-top: 5%;
-    background-color: white;
     padding: 4%;
     /* border: 2px solid #68B984; */
 }
@@ -98,9 +97,10 @@ a {
 #footer {
     /* border-radius: 5px; */
     /* border: 1px solid #407F61; */
+    /* background-color: #407F78; */
+    background-color: #2E7B68;
     border-left: 0;
     border-right: 0;
-    background-color: white;
 }
 
 .iconbar-icon {
