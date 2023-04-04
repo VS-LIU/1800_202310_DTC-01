@@ -11,7 +11,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+        </script>
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
@@ -37,7 +37,7 @@
 
         <nav id="my-navbar"></nav>
 
-        <div class="container-fluid news-banner-box">
+        <div class="container-fluid shadow-lg" style="margin-top: 2%;">
             <div>
                 <h3>Welcome to your news and alerts feed</h3>
             </div>
@@ -49,7 +49,63 @@
 
         <div class="container-fluid">
             <!-- News Card -->
-            <div id="notice-card" class="notice-card" onclick="location.href='./article.html'">
+
+            <div class=" shadow-lg content-box">
+                <div class="row" onclick="location.href='./article.html'">
+                    <div class="col-sm">
+                        <img class="card-image" src="/images/bike.jpg" alt="">
+                    </div>
+                    <div class="col-sm text-align center">
+                        <h5>Heavy rain causes flooding and landslides in Vancouver, forcing evacuations</h5>
+                        <p>Vancouver News 19/03/2023</p>
+                    </div>
+                    <div class="icons-box" display>
+                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" shadow-lg content-box">
+                <div class="row" onclick="location.href='./article.html'">
+                    <div class="col-sm">
+                        <img class="card-image" src="/images/vancouvernews.jpg" alt="">
+                    </div>
+                    <div class="col-sm text-align center">
+                        <h5>Vancouver experiences its driest spring on record, leading to
+                            increased risk of wildfires</h5>
+                        <p>Vancouver News 17/03/2023</p>
+                    </div>
+                    <div class="icons-box" display>
+                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" shadow-lg content-box">
+                <div class="row" onclick="location.href='./article.html'">
+                    <div class="col-sm">
+                        <img class="card-image" src="/images/riverview.jpg" alt="">
+                    </div>
+                    <div class="col-sm text-align center">
+                        <h5>Expected Record-Breaking Heatwave To Sweep Vancouver This Summer </h5>
+                        <p>Vancouver News 28/02/2023</p>
+                    </div>
+                    <div class="icons-box" display>
+                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ////////////////////// -->
+
+            <!-- <div id="notice-card" class="notice-card" onclick="location.href='./article.html'">
                 <div class="row">
                     <div class="col-4">
                         <img class="newscard-img" src="/images/bike.jpg" alt="">
@@ -76,81 +132,7 @@
                         </P>
                     </div>
                 </div>
-            </div>
-
-
-            <div id="notice-card" class="notice-card" onclick="location.href='./article.html'">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="newscard-img" src="/images/vancouvernews.jpg" alt="">
-                        <div class="icons-box" display>
-                            <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <a href="/article.html">
-                            <h2 class="news-headline">Vancouver experiences its driest spring on record, leading to
-                                increased risk of wildfires</h2>
-                        </a>
-                        <p>Vancouver News 17/03/2023</p>
-                        <P>
-                            Vancouver is experiencing its driest spring on record, leading to an increased risk of
-                            wildfires, according to
-                            the city’s fire department.
-
-                            The city’s fire department said in a statement that the city’s fire department is
-                            monitoring the situation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="notice-card" class="notice-card" onclick="location.href='./article.html'">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="newscard-img" src="/images/broadway.jpg" alt="">
-                        <div class="icons-box" display>
-                            <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <a href="/article.html">
-                            <h2 class="news-headline">Vancouver Hit by Severe Winter Storm</h2>
-                        </a>
-                        <p>Vancouver News 09/03/2023</p>
-                        <P>
-                            Vancouver has been hit by a severe winter storm, with snowfall and freezing temperatures
-                            expected to continue throughout the week.
-                        </P>
-                    </div>
-                </div>
-            </div>
-            <div id="notice-card" class="notice-card" onclick="location.href='./article.html'">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="newscard-img" src="/images/riverview.jpg" alt="">
-                        <div class="icons-box" display>
-                            <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
-                            <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <a href="/article.html">
-                            <h2 class="news-headline">Record-Breaking Heatwave Sweeps Vancouver</h2>
-                        </a>
-                        <p>Vancouver News 03/03/2023</p>
-                        <P>
-                            A heatwave hits Vancouver, breaking records for the hottest day in March. Temperatures are
-                            expected to reach 30 degrees Celsius.
-                        </P>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
     </main>
 
