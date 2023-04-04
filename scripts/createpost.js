@@ -1,4 +1,4 @@
-// const storage = firebase.storage();
+const storage = firebase.storage();
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
