@@ -22,9 +22,9 @@
   <!-------------------------------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <!-------------------------------------------->
@@ -121,7 +121,7 @@
     <!-- Templates for general use, not displayed -->
     <!-- Has a "card-image", "card-title", and "card-description" -->
     <template id="postCardTemplate">
-      <div id="my-listing-card"class="shadow card click-card bg-light p-0 m-2 click-card"
+      <div id="my-listing-card" class="shadow card click-card bg-light p-0 m-2 click-card"
         style="width: 10rem; height: 220px; border: none;">
         <img class="card-image card-img-top" src="..." alt="..." style="height: 147px;">
         <div class="card-body pb-0 px-0">
@@ -147,18 +147,18 @@
       </div>
       <!-- Modal -->
       <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Page</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Post</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              Warning: This action cannot be undone
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-danger modaldeleteBtn">Delete</button>
+              <button type="button" class="btn btn modaldeleteBtn">Delete</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
