@@ -228,7 +228,9 @@
     <!-- Has a "card-image", "card-title", and "card-description" -->
     <template id="cb-card-template">
       <div class="shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;" onclick="location.href='...'">
-        <img class="cb-card-img card-img-top" src="" alt="" style="height: 147px;">
+        <!-- <div style="max-height: 147px;"> -->
+        <img class="cb-card-img card-img-top" src="" alt="" style="height: 147px; object-fit: cover;">
+        <!-- </div> -->
         <div class="card-body text-center">
           <h6 class="cb-card-title text-center overflow-x-hidden">Card title</h6>
           <span class="cb-card-category" style="font-size: 0.855rem;"></span>

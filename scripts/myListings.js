@@ -40,22 +40,23 @@ function displayMyPostCard(doc) {
     //print type of the doc object
     console.log(`line 39: type of doc: ${typeof doc.id}`);
 
-    var title = doc.get("title"); // get value of the "name" key
+    let title = doc.get("title"); // get value of the "name" key
     // var desc = doc.get("description"); //gets the length field
-    var image = doc.get("image"); //the field that contains the URL 
+    let image = doc.get("image"); //the field that contains the URL 
 
     //define doc id 
-    var docID = doc.id;
-    var docUID = doc.get("owner");
+    let docID = doc.id;
+    let docUID = doc.get("owner");
     console.log(`line 48: db.posts.owner: ${docUID}`)
 
-
+    let category = doc.get("category");
     //clone the new card
     let newcard = document.getElementById("postCardTemplate").content.cloneNode(true);
     //populate with title, image
     // newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`;
     newcard.querySelector('.card-title').innerHTML = title;
     newcard.querySelector('.card-image').src = image;
+    newcard.querySelector('.cb-card-category').innerHTML = category;
     newcard.querySelector('.card-image').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
     // Replacing the Id by different docID
     newcard.querySelector('#my-listing-card').setAttribute('id', docID);
