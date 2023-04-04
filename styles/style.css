@@ -22,10 +22,21 @@ a {
 }
 
 #navbar {
-    /* border-bottom: 3px solid #52796F; */
     /* background-color: #2F3E46; original!!*/
-    background-color: #4ea16b;
-    /* background-color: #2BA24C; */
+    background-color: #F8F8F8;
+    border-bottom: 1px solid rgb(96, 96, 96);
+    
+}
+
+.btn-signup {
+    background-color: #9DCCB8;
+    font-size: small;
+}
+
+.btn-login {
+    border-color: rgb(96, 96, 96);
+    font-size: small;
+    /* border-radius: 0.5px; */
 }
 
 .subsection_separator {
