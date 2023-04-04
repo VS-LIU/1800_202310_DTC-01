@@ -1,5 +1,4 @@
 // const storage = firebase.storage();
-
 //-------------------------------------------------
 // this function shows finds out who is logged in,
 // reads the "myposts" field (an array) for that user, 
@@ -28,6 +27,7 @@ function showMyPosts() {
     })
 }
 showMyPosts();
+
 
 //------------------------------------------------------------
 // this function displays ONE card, with information
@@ -71,7 +71,7 @@ function displayMyPostCard(doc) {
     // });
 
 }
-console.log("hello from outside")
+
 
 function deleteListing(doc) {
     console.log("hello from delete")
@@ -85,33 +85,18 @@ function deleteListing(doc) {
             console.error("Error removing document: ", error);
         });
     let docUID = doc.get("owner");  // get the owner (user id) of the post
-    // db.collection("users")
-    //     // .doc(user.uid)
-    //     .doc(docUID)  // find the user document with the same id as the owner of the post
-    //     .delete({
-    //         posts: firebase.firestore.FieldValue.arrayUnion(doc.id)  // remove the post id from the user's posts array
-    //     })
-    //     .then(() =>
-    //     console.log("Deleted post from user's profile"))
-    //     .catch((error) =>
-    //     console.error("Error deleting document! :("))
-
 }
 
 
 function deletePost(postid) {
-    // var result = confirm("Want to delete?");
-    // if (result) {
-    //Logic to delete the item
     db.collection("posts").doc(postid.id)
         .delete()
         .then(() => {
-            console.log("1. Document deleted from Posts collection");
+            console.log("1. POST DOCUMENT DELETED FROM POSTS COLLECTION");
             deleteFromMyPosts(postid.id);
         }).catch((error) => {
             console.error("Error removing document: ", error);
         });
-    // }
 }
 
 
@@ -121,27 +106,10 @@ function deleteFromMyPosts(post) {
             posts: firebase.firestore.FieldValue.arrayRemove(post.id)
         })
             .then(() => {
-                console.log("2. post deleted from user doc");
+                console.log("2. POST DELETED FROM USER DOCUMENT");
                 console.log(`line 127: post id: ${post.id}`);
                 console.log(`line 126: post id type: ${typeof post.id}`);
-                // deleteFromStorage(postid);
                 location.reload()
             })
     })
 }
-
-
-// function deleteFromStorage(postid) {
-//     // Create a reference to the file to delete
-//     var imageRef = storageRef.child('images/' + postid + '.jpg');
-
-//     // Delete the file
-//     imageRef.delete().then(() => {
-//         // File deleted successfully
-//         console.log("3. image deleted from storage");
-//         alert("DELETE is completed!");
-//         location.reload();
-//     }).catch((error) => {
-//         // Uh-oh, an error occurred!
-//     });
-// }
