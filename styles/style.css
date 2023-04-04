@@ -1,4 +1,3 @@
-
 /* Universal elements and partials */
 * {
     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
@@ -10,10 +9,10 @@ body {
     padding-bottom: 20%;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
-     
+
 }
 
 .navbar-brand {
@@ -133,7 +132,7 @@ a{
     border: none;
     margin-top: 0;
     /* border-top: solid black 2px; */
-    
+
 }
 
 .accordion {
@@ -190,7 +189,8 @@ a{
 
 
 .map-image-box {
-    text-align: center; /* what is this doing? */
+    text-align: center;
+    /* what is this doing? */
     padding: 0;
     margin: 0;
 }
@@ -233,10 +233,10 @@ a{
 /* icon next to Community Board heading */
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
 }
 
 /* .HeadingCommunityBoard a {
@@ -292,7 +292,7 @@ a{
     width: 100%;
 }
 
-.article-img{
+.article-img {
     width: 100%;
 }
 
@@ -306,4 +306,20 @@ a{
     .notice-card-img {
         width: 50%;
     }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'1,
+        'wght'400,
+        'GRAD'0,
+        'opsz'40
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'1,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
 }
