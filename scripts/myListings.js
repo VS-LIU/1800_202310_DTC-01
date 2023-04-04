@@ -58,6 +58,7 @@ function displayMyPostCard(doc) {
     newcard.querySelector('.card-image').src = image;
     newcard.querySelector('.cb-card-category').innerHTML = category;
     newcard.querySelector('.card-image').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
+    newcard.querySelector('.editbtn').setAttribute('onclick', `location.href='./editListing.html?docID=${docID}'`);
     // Replacing the Id by different docID
     newcard.querySelector('#my-listing-card').setAttribute('id', docID);
     document.getElementById("myposts-go-here").prepend(newcard);

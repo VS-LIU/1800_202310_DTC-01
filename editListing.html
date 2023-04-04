@@ -62,12 +62,12 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body" id="staticBackdropLabel">
-            <h2>Discard New Listing?</h2>
+            <h2>Discard changes?</h2>
             <small>This action cannot be undone</small>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-link" data-bs-dismiss="modal">
-              <a href="./communityboard.html">Discard</a>
+              <a href="./myListing.html">Discard</a>
             </button>
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
           </div>
@@ -78,15 +78,15 @@
   </header>
   <main>
     <div class="container mb-3">
-      <h1 class="text-center">Create a Post</h1>
+      <h1 class="text-center">Edit Post</h1>
     </div>
 
     <!-- Upload: Listing Image(s) -->
     <div id="createImage" class="container">
       <form>
         <div class="card container py-3 mb-2">
-          <p class="text-muted">Upload Image</p>
-          <img id="mypic-goes-here" style="max-width: 200px; max-height: 200px;" />
+          <!-- <p class="text-muted">Upload Image</p> -->
+          <img id="mypic-goes-here" src="" style="max-width: 200px; max-height: 200px;" />
           <input type="file" id="mypic-input" accept="image/*" />
           <br>
           <div>
@@ -97,7 +97,7 @@
 
     <!-- Text Input: Listing Title -->
     <div id="createTitleDiv" class="input-group mb-2">
-      <input id="createTitle" type="text" class="form-control text-muted" placeholder="Enter a Title">
+      <input id="createTitle" type="text" class="form-control" placeholder="">
     </div>
 
     <!-- Text Input: Location -->
@@ -107,7 +107,7 @@
     <!-- Dropdown menu: Choose category -->
     <div id="createCategoryDiv" class="mb-2">
       <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
-        <option selected>Select Category</option>
+        <option id="optionselected" selected="">Select Category</option>
         <option value="1" id="categoryHelp_Wanted">Help Wanted</option>
         <option value="2" id="categoryResources">Resources</option>
         <option value="3" id="categoryServices">Services</option>
@@ -121,7 +121,7 @@
     </div>
     <!-- Button: Create Listing -->
     <div id="createNewBtn" class="text-center">
-      <button type="button" class="btn btn-primary" onclick="savePost()">Create Listing</button>
+      <button type="button" class="btn btn-primary" onclick="savePost()">Save Changes</button>
     </div>
   </main>
 

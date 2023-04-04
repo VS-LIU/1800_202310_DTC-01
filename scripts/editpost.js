@@ -44,28 +44,34 @@ function populateReviews() {
     db.collection("posts").doc(postID).get()
         .then(doc => {
             let listTitle = doc.data().title;
-            let postTitle = document.getElementById("postTitle");
-            postTitle.innerHTML = listTitle;
+            let postTitle = document.getElementById("createTitle");
+            postTitle.setAttribute("placeholder", listTitle);
 
-            let postedDate = doc.data().last_updated.toDate().toDateString();
-            let postDate = document.getElementById("last_updated");
-            postDate.innerHTML = postedDate
+            // let postedDate = doc.data().last_updated.toDate().toDateString();
+            // let postDate = document.getElementById("last_updated");
+            // // postDate.innerHTML = postedDate
+            // postDate.setAttribute("placeholder", postedDate);
 
-            let description = doc.data().description;
-            let postDescription = document.getElementById("postDescription");
-            postDescription.innerHTML = description;
+            // let description = doc.data().description;
+            let description = doc.get("description");
+            let postDescription = document.getElementById("createDescription");
+            // postDescription.innerHTML = description;
+            postDescription.setAttribute("placeholder", description);
 
-            let myImage = document.getElementById("postedImage");
             let postedImage = doc.get("image");
-            myImage.src = postedImage;
+            let myImage = document.getElementById("mypic-goes-here");
+            // myImage.src = postedImage;
+            myImage.setAttribute("src", postedImage);
 
-            let postCategory = document.getElementById("postCategory");
             let category = postCategory.innerHTML = doc.data().category;
-            postCategory.innerHTML = category
+            // let category = doc.get("category");
+            let postCategory = document.getElementById("createCategory");
+            // let postCategory = document.getElementById("optionselected");
+            // postCategory.setAttribute("selected", category);
 
-            let postLocation = doc.data().location;
-            let location = document.getElementById("postLocation");
-            location.innerHTML = postLocation;          
+            let postLocation = doc.get("location");
+            let location = document.getElementById("createLocation");
+            location.setAttribute("placeholder", postLocation);          
         })
 }
 populateReviews();
