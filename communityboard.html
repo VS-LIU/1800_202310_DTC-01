@@ -99,16 +99,17 @@
       <!-- Listings template -->
       <template id="listingTemplate">
         <div class="col-6 p-1">
-          <div class="card shadow-sm click-card">
-            <img class="card-image card-img-top p-0" src="{Image URL}" alt="Card image cap">
+          <div class="shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;" onclick="location.href='...'">
+            <img class="card-image card-img-top" src="" alt="" style="height: 147px; object-fit: cover;">
             <!-- <svg class="bd-placeholder-img card-img-top card-image" width="100%" height="130"
               xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
               preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title>
               <rect width="100%" height="100%" fill="#868e96"></rect>
             </svg> -->
-            <div class="card-body">
-              <h6 class="card-title">{Card title}</h6>
+            <div class="card-body text-center">
+              <h6 class="card-title text-center overflow-x-hidden">Card title</h6>
+              <span class="card-category" style="font-size: 0.855rem;"></span>
               <!-- <p class="card-text mb-0">{Description}</p> -->
               <!-- <a href="#" class="btn btn-primary card-link">View</a> -->
             </div>

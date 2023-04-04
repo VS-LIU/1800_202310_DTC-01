@@ -44,12 +44,13 @@ function displayCardsRandom(collection) {
         })
            .then(allPostsArray => {
                 console.log('line 47:' + allPostsArray)
-            
                 allPostsArray.forEach(doc => { 
                 console.log("line 49: doc.id " + doc.id);
+
+                let imageURL = doc.get("image");
                 let title = doc.get("title");
                 let category = doc.get("category");
-                let imageURL = doc.get("image");
+
                 var docID = doc.id;
                 let listingCard = cardTemplate.content.cloneNode(true);
 
@@ -58,8 +59,6 @@ function displayCardsRandom(collection) {
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
                 listingCard.querySelector('.cb-card-category').innerHTML = category;
                 listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
-                console.log("TEST #2!");
-
                 document.getElementById("cb-card-random").appendChild(listingCard)
                 })
             })
