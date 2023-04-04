@@ -66,11 +66,16 @@ function populateReviews() {
             // let category = doc.data().category;
             let category = doc.get("category");
             let postCategory = document.getElementById("createCategory");
-            
-            // postCategory.option[category].selected = true;
+            console.log("line 69: ", category)
+            // postCategory.options[category].selected = true;
             // let postCategory = document.getElementById("optionselected");
             // postCategory.setAttribute("selected", category);
-
+            for (let i = 0; i < postCategory.options.length; i++) {
+                if (postCategory.options[i].text === category) {
+                  postCategory.options[i].selected = true;
+                  break;
+                }
+              }
             let postLocation = doc.get("location");
             let location = document.getElementById("createLocation");
             location.setAttribute("placeholder", postLocation);          
