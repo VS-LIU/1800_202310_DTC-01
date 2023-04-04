@@ -7,6 +7,10 @@
 body {
     padding-top: 8%;
     padding-bottom: 20%;
+    /* background-color: #f2f2f2; */
+    /* background-color: #f8f8f8; */
+    background-color: #EEF0EB;
+    
 }
 
 a {
@@ -23,19 +27,28 @@ a {
 
 #navbar {
     /* background-color: #2F3E46; original!!*/
-    background-color: #F8F8F8;
-    border-bottom: 1px solid rgb(96, 96, 96);
+    /* background-color: #F8F8F8; */
+    background-color: white;
+    border-bottom: 0.75px solid #5A5A5A;
     
 }
 
 .btn-signup {
-    background-color: #9DCCB8;
+    /* background-color: #2E7B68;
+    border-color: #2E7B68; */
+
+    background-color: #5A5A5A;
+    border-color: #5A5A5A;
+    color: white;
     font-size: small;
+    /* color: white; */
+
 }
 
 .btn-login {
-    border-color: rgb(96, 96, 96);
+    border-color: #5A5A5A;
     font-size: small;
+    color: #5A5A5A;
     /* border-radius: 0.5px; */
 }
 
@@ -50,14 +63,14 @@ a {
 /* FOOTER ELEMENTS */
 #index-footer {
     margin-top: 5%;
-    background-color: #F0EEED;
-    padding: 2%;
+    background-color: white;
+    padding: 4%;
     /* border: 2px solid #68B984; */
 }
 
 #footer {
     /* border-radius: 5px; */
-    border: 1px solid #407F61;
+    /* border: 1px solid #407F61; */
     border-left: 0;
     border-right: 0;
     background-color: white;
@@ -85,6 +98,7 @@ a {
     padding-right: 0;
     padding-left: 0;
     overflow: hidden;
+    background-color: white;
 }
 
 .col-sm h3 {
