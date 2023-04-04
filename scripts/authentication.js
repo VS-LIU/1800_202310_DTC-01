@@ -1,3 +1,4 @@
+const app = initializeApp(firebaseConfig);
 // Initialize the FirebaseUI Widget using Firebase auth.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
