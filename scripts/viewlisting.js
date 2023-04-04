@@ -1,7 +1,6 @@
 function populateReviews() {
     //retreive thes url.
-    let params = new URL(window.location.href) //get the url from the searbar
-    // Looks for Docid. This is how it is passed from the previous page.
+    let params = new URL(window.location.href) 
     let postID = params.searchParams.get("docID");
 
 
