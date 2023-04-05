@@ -23,18 +23,6 @@ function addMapPins(lat, lng, name, passed_address, passed_uid) {
 }
 
 
-// Adds map pin ID to a user's collection
-// function saveMapPinID(userID, mapPinID){
-//     db.collection("users").doc(userID).update({
-//         maps: firebase.firestore.FieldValue.arrayUnion(mapPinID)
-//     })
-//     .then(()=> console.log("Map pin saved to user's document"))
-//     .catch((error) =>{
-//         console.log("Error adding map pin to user: ", error);
-//     });
-// }
-
-
 function showMap() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
