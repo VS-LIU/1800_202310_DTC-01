@@ -50,60 +50,76 @@
       <nav id="my-navbar"></nav>
       <div class="cb-top-nav container mt-5">
       </div>
-      <div class="container d-flex justify-content-between px-0">
+      <div class="d-flex flex-row">
 
-        <button type="button" id="btnBack" class="btn btn-link btn-sm" onclick="history.back()">
-          <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-          </svg>
-        </button>
+
         <div>
         </div>
       </div>
-      <hr>
+      
+      <div class="cb-top-nav container">
+        <!-- Return Button -->
+        <div class="container d-flex px-0">
+          <div>
+            <a href="communityboard.html">
+              <button type="button" id="btnBack" class="btn btn-link btn-sm mt-1 mb-3 mx-4 px-3" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <img src="images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
+              </button>
+            </a>
+          </div>
+          <div>
     </header>
+
+
+
+      
+
+
+  
 
     <!-- Listing Image -->
     <main>
       <div class="text-center" style="max-height: 400px; overflow: hidden;">
-        <img id="postedImage" src="..." class="img-fluid" alt="...">
+        <img id="postedImage" src="..." class="img-fluid placeholder" alt="...">
       </div>
 
-      <!-- Listing Title -->
-      <div class="container p-2 text-center">
+
+  
+
         <!-- Listing Title -->
-        <div class="container p-2 text-center">
-
-          <h1 class="d-inline-block">
-            <span id="postTitle">Listing Title</span>
-          </h1>
-          <button type="button" id="btnSave" class="btn btn-primary btn-sm" style="text-align: right;">Save</button>
-          <h6 class="card-subtitle text-muted"><span id="last_updated">Date & Time</span></h6>
-        </div>
-
-        <!-- Listing Labels -->
-        <div class="card mb-2">
-          <div class="card-body p-1">
-            <a href="location">
-              <span id="postLocation">Location</span>
-            </a>
+        <div class="container  py-3 mb-2 mx-3 text-center">
+          <!-- Listing Title -->
+          <div class="container text-center">
+            
+            <h1 class="d-inline-block pb-1">
+              <span id="postTitle">Listing Title</span>
+            </h1>
+            <p class="card-subtitle text-muted pt-2 pb-2"><span id="last_updated">Date & Time</span></p>
+          </div>
+          
+          <!-- Listing Labels -->
+          <div class="card my-3">
+            <div class="card-body p-2">
+              <a href="location">
+                <span id="postLocation">Location</span>
+              </a>
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body p-2">
+              <span id="postCategory">Category</span>
+            </div>
+          </div>
+          <div class="card my-3">
+            <span id="postDescription" class="card-body p-2">
+              <br>
+              <br>
+              <br>
+            </span>
           </div>
         </div>
-        <div class="card mb-2">
-          <div class="card-body p-1">
-            <span id="postCategory">Category</span>
-          </div>
-        </div>
-        <div class="card mb-2">
-          <span id="postDescription" class="card-body p-1">
-            <br>
-            <br>
-            <br>
-          </span>
-        </div>
-
+          
     </main>
 
     <!---------------------------------------------->

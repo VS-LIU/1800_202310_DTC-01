@@ -46,27 +46,33 @@
 
 <body>
   <!-- <header class="m-0"> -->
-    <header class="">
+  <header class="">
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 ">
-    
-    <!-- Return Button + Modal -->
-    <div class="container d-flex justify-content-between px-0">
-      <button type="button" id="btnBack" class="btn btn-link btn-sm" data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop">
-        <svg xmlns="./images/arrow-left.svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-        </svg>
-      </button>
-      <div>
-        <h1>Edit Post</h1>
-      </div>
-      <div style="width: 42px; height: 42px;">
-      </div>
+
+      <!-- Return Button + Modal -->
+      <header>
+        <nav id="my-navbar"></nav>
+        <div class="cb-top-nav container mt-5">
+          <!-- Return Button -->
+          <div class="container d-flex justify-content-center px-0">
+            <div>
+              <a href="communityboard.html">
+                <button type="button" id="btnBack" class="btn btn-link btn-sm mt-5 px-3" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop">
+                  <img src="images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
+                </button>
+              </a>
+            </div>
+            <div>
+              <h2 class="mt-5">Edit Listing</h2>
+            </div>
+            <div style="width: 42px; height: 42px;">
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
+    </div>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -84,16 +90,18 @@
         </div>
       </div>
     </div>
-    <hr class="mt-1 mb-3">
+    <!-- <hr class="mt-1 mb-3"> -->
   </header>
   <main>
 
+    <div class="mx-4 mt-3">
+
     <!-- Upload: Listing Image(s) -->
-    <div id="createImage" class="container">
+    <div id="createImage" class="container rounded-10">
       <form>
         <div class="card container py-3 mb-2">
           <!-- <p class="text-muted">Upload Image</p> -->
-          <img id="mypic-goes-here" src="" style="max-width: 200px; max-height: 200px;" />
+          <img id="mypic-goes-here" src="placeholder" style="max-width: 200px; max-height: 200px;" class="rounded-circle" />
           <input type="file" id="mypic-input" accept="image/*" />
           <br>
           <div>
@@ -130,10 +138,15 @@
     </div>
 
     <!-- Button: Create Listing -->
-    <div id="createNewBtn" class="text-center">
-      <button type="button" class="btn btn-primary" onclick="editPost()">Save Changes</button>
+    <div id="createNewBtn" class="text-center mt-4"> 
+      <button type="button" class="btn rounded-pill editBtn btn-m " onclick="editPost()">Save</button>
     </div>
+
+
+
+  </div>
   </main>
+
 
   <!---------------------------------------------->
   <!-- JS scripts  -->

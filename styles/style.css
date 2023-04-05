@@ -91,6 +91,13 @@ a {
     /* border-color: #5A5A5A; */
 }
 
+.editBtn {
+    border-color: #407F78;
+    /* font-size: small; */
+    background-color: #407F78;
+    color: white;
+}
+
 
 
 
