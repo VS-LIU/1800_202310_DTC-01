@@ -219,11 +219,10 @@ function showMap() {
                                     // Query features within the radius around the click point
                                     const features = map.queryRenderedFeatures(e.point, { layers: ['places'], radius: radiusInPixels });
 
-                                    // If no features are found within the search radius, create a new hike
+                                    // If no features are found within the search radius, create a new pin
                                     if (features.length === 0) {
                                         const lat = e.lngLat.lat;
                                         const lng = e.lngLat.lng;
-                                        const name = prompt("Enter a name for the new hike:");
                                         // call the Mapbox Geocoding API to get the address
                                         var geocodingUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + lng + ',' + lat + '.json?access_token=pk.eyJ1IjoiYWRhbWNoZW4zIiwiYSI6ImNsMGZyNWRtZzB2angzanBjcHVkNTQ2YncifQ.fTdfEXaQ70WoIFLZ2QaRmQ';
                                         function getAddress(callback) {
