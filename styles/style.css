@@ -7,7 +7,8 @@
 body {
     padding-top: 8%;
     padding-bottom: 20%;
-    background-color: whitesmoke
+    background-color: white;
+
     
 }
 
@@ -29,6 +30,10 @@ a {
     background-color: white;
     border-bottom: 0.5px solid #5A5A5A;
     
+}
+
+.main-cards {
+    background-color: #407F78;
 }
 
 /* Buttons */
@@ -61,11 +66,20 @@ a {
     border-color: #5A5A5A;
     font-size: small;
     color: #5A5A5A;
+
+
 }
 
 .btn-category {
     border-color: #5A5A5A;
     font-size: small;
+    color: #5A5A5A;
+}
+
+.btn-addlisting {
+    font-size: small;
+    color: #5A5A5A;
+    border-color: #5A5A5A;
     color: #5A5A5A;
 }
 
@@ -91,6 +105,8 @@ a {
 #index-footer {
     margin-top: 5%;
     padding: 4%;
+    border-top: #5A5A5A 0.5px solid;
+    background-color: white;
     /* border: 2px solid #68B984; */
 }
 
@@ -98,14 +114,26 @@ a {
     /* border-radius: 5px; */
     /* border: 1px solid #407F61; */
     /* background-color: #407F78; */
-    background-color: #2E7B68;
-    border-left: 0;
-    border-right: 0;
+    background-color: #407F78;
+    /* background-color: #2E7B68; */
+
+    /* border-left: 0; */
+    /* border-right: 0; */
 }
 
 .iconbar-icon {
-    margin: 2% 5%;
-    width: 7%;
+    margin: 3% 8%;
+    width: 6%;
+}
+
+.iconbar-icon-cb {
+    margin: 3% 8%;
+    width: 8%;
+}
+
+.iconbar-icon-bell{
+    margin: 3% 8%;
+    width: 9%;
 }
 
 /* //+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\ */
@@ -125,7 +153,7 @@ a {
     padding-right: 0;
     padding-left: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: #f8f8f8;
 }
 
 .col-sm h3 {
@@ -268,7 +296,7 @@ a {
 
 .notice-card {
     padding: 0;
-    background-color: #F0EEED;
+    background-color: #f8f8f8;
     /* border: 2px solid #84A98C; */
     border-radius: 10px;
 }
@@ -328,7 +356,7 @@ a {
     margin: 2%;
     border: 1px solid #407F61;
     border-radius: 10px;
-    background-color: #F0EEED;
+    background-color: #F8f8f8;
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;

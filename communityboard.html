@@ -42,14 +42,9 @@
   <header>
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 d-flex justify-content-between">
-      <a href="#">
-        <button type="button" id="btnSaved" class="btn btn-saved rounded-pill btn-sm px-2">Saved</button>
-      </a>
-      <a href="myListing.html">
-        <button type="button" id="btnMyListings" class="btn btn-mylistings rounded-pill btn-sm px-2">My Listings</button>
-      </a>
+  
     </div>
-    <hr>
+  
   </header>
 
 
@@ -59,9 +54,9 @@
   <main>
     <header>
       <div class="cb-title container text-center">
-        <h1>Community Board</h1>
+        <h2 class="mt-4">Community Board</h2>
       </div>
-      <div class="cb-buttons-top container d-flex justify-content-between">
+      <div class="mt-2 container d-flex justify-content-between">
         <div class="col">
           <div class="dropdown">
             <button id="listingCategory" class="btn btn-category rounded-pill btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -76,9 +71,12 @@
             </ul>
           </div>
         </div>
-        <div class="col d-flex justify-content-end">
-          <button type="button" id="listingCreate" class="btn btn-save rounded-pill btn-sm">
-            <a href="createListing.html"> <img src="./images/add-icon.png" height="30"></a>
+        <div class="col d-flex justify-content-end pl-2">
+          <a href="myListing.html">
+            <button type="button" id="btnMyListings" class="btn btn-mylistings rounded-pill btn-sm">My Listings</button>
+          </a>
+          <button type="button" id="listingCreate" class="btn btn-save btn-signup rounded-pill btn-sm">
+            <a href="createListing.html">Add</a>
           </button>
         </div>
       </div>
