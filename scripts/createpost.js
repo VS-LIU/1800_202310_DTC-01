@@ -63,7 +63,7 @@ function saveNewPostID(userUID, postDocID) {
 }
 
 function savePost() {
-    alert("SAVE POST is triggered");
+    // alert("SAVE POST is triggered");
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
@@ -96,8 +96,3 @@ function savePost() {
         }
     });
 }
-
-
-
-
-
