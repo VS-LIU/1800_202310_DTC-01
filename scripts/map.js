@@ -1,5 +1,6 @@
 
-// Function that adds pins to the Firestore collection maps
+// Function that adds pins to the Firestore collection 'maps'
+// It's details about the pin's location and sets them as fields for the pin's document in the collection
 function addMapPins(lat, lng, name, passed_address, passed_uid) {
 
     var mapReference = db.collection("map") //keep name???
@@ -63,12 +64,6 @@ function showMap() {
                                 pin_name = doc.data().name; // pin Name
                                 pin_address = doc.data().address;
 
-                                // THIS IS STUFF WE DON'T NEED BUT MIGHT USE LATER!
-
-                                // preview = doc.data().details; // Text Preview
-                                // img = doc.data().posterurl; // Image
-                                // url = doc.data().link; // URL
-
                                 // Pushes information into the features array
                                 features.push({
                                     'type': 'Feature',
@@ -105,14 +100,16 @@ function showMap() {
                                 }
                             });
 
-                            // Map On Click function that creates a popup, displaying previously defined information from "events" collection in Firestore
+                            // Map On Click function that creates a popup, displaying
+                            //  previously defined information from "events" collection in Firestore
                             map.on('click', 'places', (e) => {
                                 clickOnPin = true;
                                 // Copy coordinates array.
                                 const coordinates = e.features[0].geometry.coordinates.slice();
                                 const description = e.features[0].properties.description;
 
-                                // Ensure that if the map is zoomed out such that multiple copies of the feature are visible, the popup appears over the copy being pointed to.
+                                // Ensure that if the map is zoomed out such that multiple copies
+                                //  of the feature are visible, the popup appears over the copy being pointed to.
                                 while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                                     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                                 }
@@ -194,14 +191,15 @@ function showMap() {
                                         .addTo(map);
                                 });
 
-                                // This portion allows users to add a pin on map
+                                // This portion allows users to add a pin on map by clicking on 
+                                // an unpinned location
                                 map.on('click', (e) => {
                                     if (clickOnPin) {
                                         clickOnPin = false;
                                         return;
                                     }
 
-                                    // Define a search radius in pixels
+                                    // Define a search radius in pixels for the user's tap...
                                     const radiusInPixels = 10;
 
                                     // Query features within the radius around the click point
@@ -211,7 +209,7 @@ function showMap() {
                                     if (features.length === 0) {
                                         const lat = e.lngLat.lat;
                                         const lng = e.lngLat.lng;
-                                        // call the Mapbox Geocoding API to get the address
+                                        // call the Mapbox Geocoding API to get the address from the coordinates provided
                                         var geocodingUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + lng + ',' + lat + '.json?access_token=pk.eyJ1IjoiYWRhbWNoZW4zIiwiYSI6ImNsMGZyNWRtZzB2angzanBjcHVkNTQ2YncifQ.fTdfEXaQ70WoIFLZ2QaRmQ';
                                         function getAddress(callback) {
                                             let addressGetter = fetch(geocodingUrl)
@@ -226,14 +224,14 @@ function showMap() {
                                         finalizedAddress = getAddress(function (address) {
                                             // prompt user to enter a name and then pass arguments to addMapPins()
                                             const name = prompt("Enter a name for the new pin:");
-
                                             if (name) {
                                                 // Call the save map pin function
                                                 addMapPins(lat, lng, name, address, userID);
                                             }
                                         });
 
-                                        // attempt to add map pins to user document
+                                        // attempt to add map pins to user document,
+                                        // This was never implemented but was in the works...
                                         //saveMapPinID(userID, doc.id);
                                     }
                                 });

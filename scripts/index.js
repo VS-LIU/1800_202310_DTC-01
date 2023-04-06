@@ -1,4 +1,4 @@
-
+// This function enables swiping on the carousel for touch screen mobile devices
 function swiper () {
     $(".carousel").swipe({
         swipe: function (direction) {

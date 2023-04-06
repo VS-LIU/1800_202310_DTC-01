@@ -1,3 +1,5 @@
+
+// This funciton displays Community Board posts as cards sorted by last added
 function displayCardsDate(collection) {
     let cardTemplate = document.getElementById("cb-card-template");
     console.log("TEST #1!")
@@ -25,7 +27,7 @@ function displayCardsDate(collection) {
         })
 }
 
-
+// This funciton displays Community Board posts as cards sorted randomly...
 function displayCardsRandom(collection) {
     let cardTemplate = document.getElementById("cb-card-template");
     console.log("TEST #1!")
@@ -59,11 +61,11 @@ function displayCardsRandom(collection) {
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
                 listingCard.querySelector('.cb-card-category').innerHTML = category;
                 listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
-                document.getElementById("cb-card-random").appendChild(listingCard)
+                document.getElementById("cb-card-random").appendChild(listingCard);
                 })
             })
 }
 
-displayCardsDate("posts")
-displayCardsRandom("posts")
-
+// invoke the funcitons
+displayCardsDate("posts");
+displayCardsRandom("posts");

@@ -28,7 +28,7 @@ var uiConfig = {
         }
     },
     signInFlow: 'popup',
-    signInSuccessUrl: 'main.html',
+    signInSuccessUrl: 'main.html', //directs to main page once login successful
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
@@ -37,5 +37,5 @@ var uiConfig = {
     // Privacy policy url.
     privacyPolicyUrl: '<your-privacy-policy-url>'
 };
-
+// Start up the authenctication widget's UI
 ui.start('#firebaseui-auth-container', uiConfig);

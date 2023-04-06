@@ -1,9 +1,10 @@
 function populateReviews() {
-    //retreive thes url.
+    //retreive thes url for each listing .
     let params = new URL(window.location.href) 
     let postID = params.searchParams.get("docID");
 
 
+    // Sets listing elements dynamically after reading from Firestore
     db.collection("posts").doc(postID).get()
         .then(doc => {
             let listTitle = doc.data().title;

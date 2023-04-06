@@ -9,7 +9,7 @@ body {
     padding-bottom: 20%;
     background-color: white;
 
-    
+
 }
 
 a {
@@ -25,12 +25,8 @@ a {
 }
 
 #navbar {
-    /* background-color: #2F3E46; original!!*/
-    /* background-color: #F8F8F8; */
     background-color: white;
     border-bottom: 0.1px solid #5A5A5A;
-    /* height: min-content; */
-    
 }
 
 .main-cards {
@@ -39,22 +35,16 @@ a {
 
 /* Buttons */
 .btn-signup {
-    /* background-color: #2E7B68;
-    border-color: #2E7B68; */
-
     background-color: #5A5A5A;
     border-color: #5A5A5A;
     color: white;
     font-size: small;
-    /* color: white; */
-
 }
 
 .btn-login {
     border-color: #5A5A5A;
     font-size: small;
     color: #5A5A5A;
-    /* border-radius: 0.5px; */
 }
 
 .btn-saved {
@@ -85,15 +75,11 @@ a {
 }
 
 .btn-save {
-    /* border-color: #5A5A5A; */
     font-size: small;
-    /* color: #5A5A5A; */
-    /* border-color: #5A5A5A; */
 }
 
 .editBtn {
     border-color: #407F78;
-    /* font-size: small; */
     background-color: #407F78;
     color: white;
 }
@@ -115,18 +101,10 @@ a {
     padding: 4%;
     border-top: #5A5A5A 0.5px solid;
     background-color: white;
-    /* border: 2px solid #68B984; */
 }
 
 #footer {
-    /* border-radius: 5px; */
-    /* border: 1px solid #407F61; */
-    /* background-color: #407F78; */
     background-color: #407F78;
-    /* background-color: #2E7B68; */
-
-    /* border-left: 0; */
-    /* border-right: 0; */
 }
 
 .iconbar-icon {
@@ -139,7 +117,7 @@ a {
     width: 8%;
 }
 
-.iconbar-icon-bell{
+.iconbar-icon-bell {
     margin: 3% 8%;
     width: 9%;
 }
@@ -154,9 +132,7 @@ a {
     padding: 2%;
     text-align: center;
     margin: 5%;
-    /* border: 1px solid #52a870; */
     border-radius: 10px;
-    /* background-color: #F0EEED; */
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
@@ -195,7 +171,7 @@ a {
 
 
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
-/*                           Section: Alerts                              */
+/*                           Section: Alerts & News                             */
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
 
 .header-space {
@@ -208,7 +184,6 @@ a {
 }
 
 .heading_alerts {
-    /* box-sizing: border-box; */
     padding-left: 20px;
     padding-bottom: 8px;
     margin: 0;
@@ -219,14 +194,10 @@ a {
 .latest-news {
     border: none;
     margin-top: 0;
-    /* border-top: solid black 2px; */
-
 }
 
 .accordion {
-    /* border-top: none; */
     max-height: 60vw;
-    /* overflow-y: hidden; */
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -243,9 +214,6 @@ a {
     border-right: none;
 }
 
-/* .accordion::-webkit-scrollbar {
-    display: none;
-} */
 
 .accordion-button {
     font-family: Arial, Helvetica, sans-serif;
@@ -278,7 +246,6 @@ a {
 
 .map-image-box {
     text-align: center;
-    /* what is this doing? */
     padding: 0;
     margin: 0;
 }
@@ -291,10 +258,6 @@ a {
 /*                     Section: Community Board                           */
 /* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 
-/* .cb-buttons-tabs {
-    text-align: center;
-} */
-
 .heading_communityboard {
     padding-left: 20px;
     padding-bottom: 8px;
@@ -304,8 +267,7 @@ a {
 
 .notice-card {
     padding: 0;
-    background-color: #FAF9F6;;
-    /* border: 2px solid #84A98C; */
+    background-color: #FAF9F6;
     border-radius: 10px;
 }
 
@@ -321,20 +283,13 @@ a {
 /* icon next to Community Board heading */
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL'0,
-        'wght'400,
-        'GRAD'0,
-        'opsz'48
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
-/* .HeadingCommunityBoard a {
-    text-decoration: none;
-    color: #2F3E46;
-} */
-
-
 .CommunityBoard-box {
-    /* overflow-y: hidden; */
     max-height: 100vw;
     padding: 10px;
     -ms-overflow-style: none;
@@ -364,7 +319,8 @@ a {
     margin: 2%;
     border: 1px solid #407F61;
     border-radius: 10px;
-    background-color: #FAF9F6;;
+    background-color: #FAF9F6;
+    ;
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
@@ -398,16 +354,16 @@ a {
 
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL'1,
-        'wght'400,
-        'GRAD'0,
-        'opsz'40
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 40
 }
 
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL'1,
-        'wght'400,
-        'GRAD'0,
-        'opsz'48
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
