@@ -49,22 +49,41 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-├── login.html               # login and signup page
-├── main.html                # landing page after user login
-└── README.md                # README for this project
-
-It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    ├── footer               # Folder for footer images
-    └── (39) image files
-├── scripts                  # Folder for scripts
-    └── style.css            # Our style sheet for all things CSS
+├── .gitignore                # Git ignore file
+├── index.html                # landing HTML file, this is what users see when you come to url
+├── login.html                # login and signup page
+├── main.html                 # landing page after user login
+├── README.md                 # README for this project
+│
+│------It has the following subfolders and files------
+├── .git                      # Folder for git repo
+├── images                    # Folder for images
+│   ├── footer                # Folder for footer images
+│   └── (39) image files
+│
+├── partials                  # Folder for templates to be used across our pages
+│   └── footer.html           # Template for app's footer bar
+│   └── navbar.html           # Template for app's top navbar
+│   └── oldPageTemplate.html  # For reference purposes
+│ 
+├── scripts                   # Folder for scripts
+│   └── authentication.js     # For login and authentication
+│   └── communityboard.js     # For communityboard page
+│   └── createpost.js         # To create posts for communityboard
+│   └── editpost.js           # To edit own posts in communiboard
+│   └── index.js              # For index landing page
+│   └── main.js               # For main landing page after user login
+│   └── map.js                # For map page
+│   └── myListings.js         # Page to view your own posts in communityboard
+│   └── script.js             # Script to logout
+│   └── template.js           # To display our templates
+│   └── viewListing.js        # To view post details in communityboard
+│
+│
+│
 ├── styles                   # Folder for styles
-    /blah.css                # 
-
+│   └── style.css            # Our style sheet for all things CSS
+│ 
 
 
 ```
