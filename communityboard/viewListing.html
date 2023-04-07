@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
   </style>
@@ -49,18 +49,17 @@
     <header>
       <!-- Top Navbar Template-->
       <nav id="my-navbar"></nav>
-
       <!-- Invisible block -->
-      <div class="cb-top-nav container mt-5"></div>
+      <div class="header-space" style="height: 70px;"></div>
 
       <!-- Return Button -->
       <div class="cb-top-nav container">
         <div class="container px-0">
           <div>
-            <a href="communityboard.html">
+            <a href="./communityboard.html">
               <button type="button" id="btnBack" class="btn btn-link btn-sm mt-1 mb-3 px-3" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">
-                <img src="images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
+                <img src="../images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
               </button>
             </a>
           </div>
@@ -70,7 +69,7 @@
     <main>
       <!-- Listing Image -->
       <div class="text-center w-100" style="max-height: 400px; overflow: hidden;">
-        <img id="postedImage" src="..." class="img-fluid placeholder" alt="...">
+        <img id="postedImage" src="..." class="img-fluid" alt="...">
       </div>
 
 
@@ -89,9 +88,7 @@
           <!-- Location -->
           <div class="card my-3">
             <div class="card-body p-2">
-              <a href="location">
-                <span id="postLocation">Location</span>
-              </a>
+              <span id="postLocation">Location</span>
             </div>
           </div>
 
@@ -117,9 +114,9 @@
     <!---------------------------------------------->
     <!-- JS scripts  -->
     <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_DTC01.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./scripts/viewlisting.js"></script>
+    <script src="../scripts/firebaseAPI_DTC01.js"></script>
+    <script src="../scripts/template.js"></script>
+    <script src="../scripts/viewlisting.js"></script>
   </body>
 
 </html>
