@@ -1,6 +1,3 @@
-const storage = firebase.storage();
-
-
 //function to upload image to cloud storage
 function uploadPic(postDocID) {
     var storageRef = storage.ref("images/" + postDocID + ".jpg");
