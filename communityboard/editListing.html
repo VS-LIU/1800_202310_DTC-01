@@ -18,7 +18,7 @@
   <link href="/favicon.ico" type="image/x-icon" rel="icon" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-  </script>
+    </script>
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -40,120 +40,117 @@
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
   </style>
   <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 </head>
 
 <body>
   <!-- <header class="m-0"> -->
-  <header class="">
-    <nav id="my-navbar"></nav>
-    <div class="cb-top-nav container mt-5 ">
-
-      <!-- Return Button + Modal -->
-      <header>
-        <nav id="my-navbar"></nav>
-        <div class="cb-top-nav container mt-5">
-          <!-- Return Button -->
-          <div class="container d-flex justify-content-center px-0">
-            <div>
-              <a href="communityboard.html">
-                <button type="button" id="btnBack" class="btn btn-link btn-sm mt-5 px-3" data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop">
-                  <img src="images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
-                </button>
-              </a>
-            </div>
-            <div>
-              <h2 class="mt-5">Edit Listing</h2>
-            </div>
-            <div style="width: 42px; height: 42px;">
-            </div>
-          </div>
+  <header class="m-0">
+    <header>
+      <nav id="my-navbar"></nav>
+      <div class="header-space" style="height: 80px;"></div>
+      <!-- Return Button -->
+      <div class="container d-flex justify-content-between px-0">
+        <div>
+          <button type="button" id="btnBack" class="btn btn-link btn-sm ps-3" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <img src="../images/noun-back-arrow-1828978.png" alt="back arrow" width="20" height="20">
+          </button>
         </div>
-    </div>
-    </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body" id="staticBackdropLabel">
-            <h2>Discard changes?</h2>
-            <small>This action cannot be undone</small>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-              <a href="./myListing.html">Discard</a>
-            </button>
-            <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+        <div>
+          <h1>Edit Post</h1>
+        </div>
+        <div style="width: 42px; height: 42px;">
+        </div>
+      </div>
+      </div>
+
+      <!-- Modal template -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body" id="staticBackdropLabel">
+              <h2>Discard Changes?</h2>
+              <small>This action cannot be undone</small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="history.back()">
+                Discard
+              </button>
+              <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- <hr class="mt-1 mb-3"> -->
-  </header>
-  <main>
+    </header>
 
-    <div class="mx-4 mt-3">
+    <hr class="mt-1 mb-3">
+    <main>
 
-    <!-- Upload: Listing Image(s) -->
-    <div id="createImage" class="container rounded-10">
-      <form>
-        <div class="card container py-3 mb-2">
-          <!-- <p class="text-muted">Upload Image</p> -->
-          <img id="mypic-goes-here" src="placeholder" style="max-width: 200px; max-height: 200px;" class="rounded-circle" />
-          <input type="file" id="mypic-input" accept="image/*" />
-          <br>
-          <div>
-          </div>
-      </form>
-    </div>
+      <div class="mx-4 mt-3">
 
-
-    <!-- Text Input: Listing Title -->
-    <div id="createTitleDiv" class="input-group mb-2">
-      <input id="createTitle" type="text" class="form-control" placeholder="">
-    </div>
-
-    <!-- Text Input: Location -->
-    <div id="createLocationDiv" class="input-group mb-2">
-      <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
-    </div>
-
-    <!-- Dropdown menu: Choose category -->
-    <div id="createCategoryDiv" class="mb-2">
-      <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
-        <option selected="">Select Category</option>
-        <option value="1" id="categoryHelp_Wanted" selected="">Help Wanted</option>
-        <option value="2" id="categoryResources" selected="">Resources</option>
-        <option value="3" id="categoryServices" selected="">Services</option>
-        <option value="4" id="categoryOther" selected="">Other</option>
-      </select>
-    </div>
-
-    <!-- Textbox: Listing Description -->
-    <div id="createDescriptionDiv" class="mb-2">
-      <textarea id="createDescription" class="form-control text-muted" rows="4"
-        placeholder="Enter a description"></textarea>
-    </div>
-
-    <!-- Button: Create Listing -->
-    <div id="createNewBtn" class="text-center mt-4"> 
-      <button type="button" class="btn rounded-pill editBtn btn-m " onclick="editPost()">Save</button>
-    </div>
+        <!-- Upload: Listing Image(s) -->
+        <div id="createImage" class="container rounded-10">
+          <form>
+            <div class="card container py-3 mb-2 text-center">
+              <div class="text-center">
+                <!-- <p class="text-muted">Upload Image</p> -->
+                <img id="mypic-goes-here" src="placeholder" style="max-width: 200px; max-height: 200px;"
+                  class="rounded-circle" />
+                <input type="file" id="mypic-input" accept="image/*" class="mt-2" />
+                <br>
+              </div>
+            </div>
+          </form>
+        </div>
 
 
+        <!-- Text Input: Listing Title -->
+        <div id="createTitleDiv" class="input-group mb-2">
+          <input id="createTitle" type="text" class="form-control" placeholder="">
+        </div>
 
-  </div>
-  </main>
+        <!-- Text Input: Location -->
+        <div id="createLocationDiv" class="input-group mb-2">
+          <input id="createLocation" type="text" class="form-control text-muted" placeholder="Enter Location">
+        </div>
+
+        <!-- Dropdown menu: Choose category -->
+        <div id="createCategoryDiv" class="mb-2">
+          <select id="createCategory" class="form-select text-muted" aria-label="Select Category" required>
+            <option selected="">Select Category</option>
+            <option value="1" id="categoryHelp_Wanted" selected="">Help Wanted</option>
+            <option value="2" id="categoryResources" selected="">Resources</option>
+            <option value="3" id="categoryServices" selected="">Services</option>
+            <option value="4" id="categoryOther" selected="">Other</option>
+          </select>
+        </div>
+
+        <!-- Textbox: Listing Description -->
+        <div id="createDescriptionDiv" class="mb-2">
+          <textarea id="createDescription" class="form-control text-muted" rows="4"
+            placeholder="Enter a description"></textarea>
+        </div>
+
+        <!-- Button: Create Listing -->
+        <div id="createNewBtn" class="text-center mt-4">
+          <button type="button" class="btn rounded-pill editBtn btn-m " onclick="editPost()">Save</button>
+        </div>
 
 
-  <!---------------------------------------------->
-  <!-- JS scripts  -->
-  <!---------------------------------------------->
-  <script src="./scripts/firebaseAPI_DTC01.js"></script>
-  <script src="./scripts/template.js"></script>
-  <script src="./scripts/editpost.js"></script>
+
+      </div>
+    </main>
+
+
+    <!---------------------------------------------->
+    <!-- JS scripts  -->
+    <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI_DTC01.js"></script>
+    <script src="../scripts/template.js"></script>
+    <script src="../scripts/editpost.js"></script>
 </body>
 
 </html>
