@@ -1,7 +1,8 @@
 const storage = firebase.storage();
 
+
+//function to upload image to cloud storage
 function uploadPic(postDocID) {
-    console.log("inside uploadPic " + postDocID);
     var storageRef = storage.ref("images/" + postDocID + ".jpg");
 
     storageRef.put(ImageFile)   //global variable ImageFile
@@ -19,7 +20,7 @@ function uploadPic(postDocID) {
                         "image": url // Save the URL into users collection
                     })
 
-                        .then(function () {
+                    .then(function () {
                             console.log('Added pic URL to Firestore.');
                         }).then(function () {
                             location.assign("./myListing.html");
@@ -32,12 +33,11 @@ function uploadPic(postDocID) {
 }
 
 
+// Function to listen for file selection
 var ImageFile;
 function listenFileSelect() {
-
     var fileInput = document.getElementById("mypic-input"); // pointer #1
     const image = document.getElementById("mypic-goes-here"); // pointer #2
-
 
     fileInput.addEventListener('change', function (e) {
         ImageFile = e.target.files[0];   //Global variable
@@ -48,7 +48,7 @@ function listenFileSelect() {
 listenFileSelect();
 
 
-// function to save post id to user's document in database
+// Function to save post id to user's document in database
 function saveNewPostID(userUID, postDocID) {
     db.collection("users")
         .doc(userUID)
@@ -62,19 +62,22 @@ function saveNewPostID(userUID, postDocID) {
         });
 }
 
+
+// Function to save post to database
 function savePost() {
-    // alert("SAVE POST is triggered");
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             // Do something for the user here. 
             var postTitle = document.getElementById("createTitle").value;
             console.log("postTitle: " + postTitle);
+
             var postLoc = document.getElementById("createLocation").value;
             var postCatSelect = document.getElementById("createCategory");
             var postCat = postCatSelect.options[postCatSelect.selectedIndex].text;
-            console.log("postCat: " + postCat);
+
             var postDesc = document.getElementById("createDescription").value;
+            
             db.collection("posts").add({
                 owner: user.uid,
                 title: postTitle,
