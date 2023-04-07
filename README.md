@@ -53,14 +53,27 @@ Content of the project folder:
 ├── index.html                # landing HTML file, this is what users see when you come to url
 ├── login.html                # login and signup page
 ├── main.html                 # landing page after user login
+├── template.html             # page for template components
 ├── README.md                 # README for this project
 │
 It has the following subfolders and files:
 │
 ├── .git                      # Folder for git repo
+│
+├── alertsnews
+│   ├── alertsandnews.html    # Page to view all articles
+│   └── article.html          # Page to view an article
+│
+├── communityboard
+│   ├── alertsandnews.html    # Page to view all articles
+│   └── article.html          # Page to view an article
+│
 ├── images                    # Folder for images
 │   ├── footer                # Folder for footer images
 │   └── (39) image files
+│
+├── maps
+│   └── map.html              # Page to use maps widget
 │
 ├── partials                  # Folder for templates to be used across our pages
 │   └── footer.html           # Template for app's footer bar
