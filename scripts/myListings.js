@@ -35,49 +35,41 @@ showMyPosts();
 // this function is called by showMyPosts()
 //------------------------------------------------------------
 function displayMyPostCard(doc) {
-    console.log(`line 38a: post object: ${doc.data()}`);
-    console.log(`line 38b: db.posts.doc.id: ${doc.id}`);
-    //print type of the doc object
-    console.log(`line 39: type of doc: ${typeof doc.id}`);
+    console.log(`post object: ${doc.data()}`);
+    console.log(`db.posts.doc.id: ${doc.id}`);
 
-    let title = doc.get("title"); // get value of the "name" key
-    // var desc = doc.get("description"); //gets the length field
-    let image = doc.get("image"); //the field that contains the URL 
-
-    //define doc id 
+    // Define doc id
     let docID = doc.id;
-    let docUID = doc.get("owner");
-    console.log(`line 48: db.posts.owner: ${docUID}`)
+    console.log(`line 48: db.posts.owner: ${doc.get("owner")}`)
 
+    // Get the values from the post document
+    let title = doc.get("title"); // get value of the "name" key
+    let image = doc.get("image"); //the field that contains the URL 
     let category = doc.get("category");
-    //clone the new card
+
+    // Clone the template card
     let newcard = document.getElementById("postCardTemplate").content.cloneNode(true);
-    //populate with title, image
-    // newcard.querySelector('.card-link').href = `./viewListing.html?docID=${docID}`;
+
+    // Populate with title, image, category, and set onclick events to edit and view the post
     newcard.querySelector('.card-title').innerHTML = title;
     newcard.querySelector('.card-image').src = image;
     newcard.querySelector('.cb-card-category').innerHTML = category;
     newcard.querySelector('.card-image').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
     newcard.querySelector('.editbtn').setAttribute('onclick', `location.href='./editListing.html?docID=${docID}'`);
+
     // Replacing the Id by different docID
     newcard.querySelector('#my-listing-card').setAttribute('id', docID);
     document.getElementById("myposts-go-here").prepend(newcard);
 
-    // newcard.querySelector(docID).addEventListener('click', function () {
-    // newcard.addEventListener('click', function () {
-
+    // Delete button
     const deleteBtn = document.querySelector('.modaldeleteBtn');
     deleteBtn.addEventListener('click', function () {
         deleteListing(doc);  // passing the post object to deleteListing()
     });
-    // });
-
 }
 
 
 function deleteListing(doc) {
-    console.log("hello from delete")
-    console.log(`line 74: post object in deleteListing: ${doc}`)
     db.collection("posts").doc(doc.id)
         .delete()
         .then(() => {
@@ -86,7 +78,6 @@ function deleteListing(doc) {
         }).catch((error) => {
             console.error("Error removing document: ", error);
         });
-    let docUID = doc.get("owner");  // get the owner (user id) of the post
 }
 
 
@@ -108,9 +99,9 @@ function deleteFromMyPosts(post) {
             posts: firebase.firestore.FieldValue.arrayRemove(post.id)
         })
             .then(() => {
+                // console.log(`post id: ${post.id}`);
+                // console.log(`post id type: ${typeof post.id}`);
                 console.log("2. POST DELETED FROM USER DOCUMENT");
-                console.log(`line 127: post id: ${post.id}`);
-                console.log(`line 126: post id type: ${typeof post.id}`);
                 location.reload()
             })
     })
