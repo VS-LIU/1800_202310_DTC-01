@@ -56,6 +56,7 @@ Content of the project folder:
 ├── template.html             # page for template components
 ├── README.md                 # README for this project
 │
+│
 It has the following subfolders and files:
 │
 ├── .git                      # Folder for git repo
@@ -65,8 +66,11 @@ It has the following subfolders and files:
 │   └── article.html          # Page to view an article
 │
 ├── communityboard
-│   ├── alertsandnews.html    # Page to view all articles
-│   └── article.html          # Page to view an article
+│   ├── communityboard.html   # Community Board main page
+│   ├── createListing.html    # Page to create a new post
+│   ├── editListing.html      # Page to edit an existing post
+│   ├── myListing.html        # Page to view posts made by logged in user
+│   └── viewListing.html      # Page to view post details
 │
 ├── images                    # Folder for images
 │   ├── footer                # Folder for footer images
@@ -95,9 +99,6 @@ It has the following subfolders and files:
 │
 ├── styles                   # Folder for styles
 │   └── style.css            # Our style sheet for all things CSS
-│ 
-
-
 ```
 
 
