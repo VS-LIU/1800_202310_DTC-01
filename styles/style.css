@@ -1,6 +1,5 @@
 /* Universal elements and partials */
 * {
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -8,18 +7,14 @@ body {
     /* padding-top: 8%; */
     padding-bottom: 20%;
     background-color: white;
-
-
 }
 
 a {
     color: inherit;
     text-decoration: none;
-
 }
 
 .navbar-brand {
-    /* color: #C6DE41; */
     color: white;
     font-family: 'Work Sans', sans-serif;
 }
@@ -28,10 +23,6 @@ a {
     background-color: white;
     border-bottom: 0.1px solid #5A5A5A;
 }
-
-/* .main-cards {
-    background-color: #407F78;
-} */
 
 /* Buttons */
 .btn-signup {
@@ -57,8 +48,6 @@ a {
     border-color: #5A5A5A;
     font-size: small;
     color: #5A5A5A;
-
-
 }
 
 .btn-category {
@@ -84,16 +73,12 @@ a {
     color: white;
 }
 
-
-
-
 .subsection_separator {
     width: 85vw;
     margin-left: auto;
     margin-right: auto;
     opacity: 20%;
 }
-
 
 /* FOOTER ELEMENTS */
 #index-footer {
@@ -121,6 +106,7 @@ a {
     margin: 3% 8%;
     width: 9%;
 }
+
 
 /* //+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\//+\\ */
 /*                           Page: index.html                                  */
@@ -155,28 +141,14 @@ a {
 /*                           Page: login.html                               */
 /* \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\// */
 
-
-
 #loader {
     padding-left: 4vw;
 }
 
 
-
-
-
 /* |/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\| */
-/*                           Page: main.html                                */
+/*                         Section: Alerts & News                           */
 /* |\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/||\||/| */
-
-
-/* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
-/*                           Section: Alerts & News                             */
-/* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
-
-/* .header-space {
-    margin-top: 7vw;
-} */
 
 #section_alerts {
     padding: 0;
@@ -190,7 +162,6 @@ a {
     border-bottom: solid 1px #ced4da;
 }
 
-
 .latest-news {
     border: none;
     margin-top: 0;
@@ -199,10 +170,7 @@ a {
 .accordion {
     max-height: 60vw;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
-
 }
 
 .accordion-item:first-child {
@@ -213,7 +181,6 @@ a {
     border-left: none;
     border-right: none;
 }
-
 
 .accordion-button {
     font-family: Arial, Helvetica, sans-serif;
@@ -228,9 +195,11 @@ a {
     margin-bottom: auto;
 }
 
+
 /* ------------------------------------------------------------------- */
 /*                           Section: Maps                             */
 /* ------------------------------------------------------------------- */
+
 #section_maps {
     padding: 0;
     margin: 2vw 0;
@@ -243,7 +212,6 @@ a {
     border-bottom: solid 1px #ced4da;
 }
 
-
 .map-image-box {
     text-align: center;
     padding: 0;
@@ -253,6 +221,7 @@ a {
 .map-img {
     width: 100%;
 }
+
 
 /* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 /*                     Section: Community Board                           */
@@ -279,7 +248,6 @@ a {
     width: 100%;
 }
 
-
 /* icon next to Community Board heading */
 .material-symbols-outlined {
     font-variation-settings:
@@ -294,8 +262,6 @@ a {
     padding: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none;
-
-
 }
 
 .CommunityBoard-box row {
@@ -312,7 +278,10 @@ a {
     margin: 10px;
 }
 
-/* /////////////Alerts and News ///////////////////////////////////////////// */
+
+/* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
+/*                                 OTHER                                  */
+/* -=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=- */
 .news-banner-box {
     font-size: 1.2rem;
     padding: 2%;
@@ -331,7 +300,6 @@ a {
     width: 12%;
 }
 
-
 .newscard-img {
     width: 100%;
 }
@@ -340,13 +308,10 @@ a {
     width: 100%;
 }
 
-
-
 @media screen and (max-width: 633px) {
     .map-img {
         width: 100%;
     }
-
     .notice-card-img {
         width: 50%;
     }
