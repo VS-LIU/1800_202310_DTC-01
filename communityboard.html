@@ -42,29 +42,20 @@
 </head>
 
 <body>
-
-
-  
   <header>
     <nav id="my-navbar"></nav>
     <div class="cb-top-nav container mt-5 d-flex justify-content-between">
-
     </div>
-
   </header>
-
   <main>
     <header>
       <div class="cb-title container text-center">
         <h2 class="mt-4 mb-3">Community Board</h2>
       </div>
-
       <!-- container for buttons -->
       <div class="container d-flex justify-content-between ml-1">
         <div class="col">
           <div class="dropdown">
-
-
             <button id="listingCategory" class="btn btn-category rounded-pill btn-sm dropdown-toggle mx-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Category
@@ -77,14 +68,14 @@
             </ul>
           </div>
         </div>
-        <!-- My Lisitngs Button -->
+        <!-- `My Listings` button to view your own posts -->
         <div class="container-fluid d-flex justify-content-end p-1">
           <a href="myListing.html">
             <button type="button" id="btnMyListings" class="btn btn-mylistings rounded-pill btn-sm mx-1">My
               Listings</button>
           </a>
 
-          <!-- Add Button -->
+          <!-- `Add` button to create a new post -->
           <button type="button" id="listingCreate" class="btn btn-save btn-signup rounded-pill btn-sm mx-1">
             <a href="createListing.html">Add</a>
           </button>
@@ -93,39 +84,34 @@
     </header>
 
     <!-- Dyanmically generated listings go Here -->
-    <div class="container cb-main-cards align-center">
-      <div id="posts-go-here" class="row gx-2 row-cols-auto">
-      </div>
-      </section>
+    <section>
+      <div class="container cb-main-cards align-center">
+        <div id="posts-go-here" class="row gx-2 row-cols-auto">
+        </div>
+    </section>
 
-      <!-- Listings template -->
-      <template id="listingTemplate">
-        <div class="col-6">
-          <div class="shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;"
-            onclick="location.href='...'">
-            <img class="card-image card-img-top" src="" alt="" style="height: 147px; object-fit: cover;">
-
-            <div class="card-body text-center">
-              <h6 class="card-title text-center overflow-x-hidden text-nowrap">Card title</h6>
-              <span class="card-category" style="font-size: 0.855rem;"></span>
-
-            </div>
+    <!-- Listings template -->
+    <template id="listingTemplate">
+      <div class="col-6">
+        <div class="shadow card click-card bg-light p-0 m-2" style="width: 10rem; height: 220px; border: none;"
+          onclick="location.href='...'">
+          <img class="card-image card-img-top" src="" alt="" style="height: 147px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h6 class="card-title text-center overflow-x-hidden text-nowrap">Card title</h6>
+            <span class="card-category" style="font-size: 0.855rem;"></span>
           </div>
         </div>
-
-        <!-- </div> -->
-      </template>
+      </div>
+    </template>
   </main>
 
   <footer id="my-footer"></footer>
-
   <!---------------------------------------------->
   <!-- JS scripts  -->
   <!---------------------------------------------->
   <script src="./scripts/firebaseAPI_DTC01.js"></script>
   <script src="./scripts/template.js"></script>
   <script src="./scripts/communityboard.js"></script>
-
 </body>
 
 </html>
