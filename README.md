@@ -37,6 +37,7 @@ Here are some known bugs:
 * Our top navbar hovers over the page instead of taking actual space. Our temporary workaround is to place an empty block for the navbar to cover..
 * Delete button does not delete the actual post but the most recent post made.
 * Our trending section for our communityboard doesn't actually populate the cards with the most clicks, but randomly from the DB.
+* Category filters in Community Board do not work
 
 ## 6. Features for Future
 What we'd like to build in the future:
