@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerts and News</title>
+    <title>Revival - Alerts and News</title>
     <!-- Bootstrap Library CSS JS CDN go here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -20,6 +20,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
@@ -32,14 +33,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
     <header>
 
         <nav id="my-navbar"></nav>
-
+        <div class="header-space" style="height: 70px;"></div>
         <div class="container-fluid shadow-lg" style="margin-top: 2%;">
             <div>
                 <h3>Welcome to your news and alerts feed</h3>
@@ -57,16 +58,16 @@
             <div class=" shadow-lg content-box">
                 <div class="row" onclick="location.href='./article.html'">
                     <div class="col-sm">
-                        <img class="card-image" src="/images/bike.jpg" alt="">
+                        <img class="card-image" src="../images/bike.jpg" alt="">
                     </div>
                     <div class="col-sm text-align center">
                         <h5>Heavy rain causes flooding and landslides in Vancouver, forcing evacuations</h5>
                         <p>Vancouver News 19/03/2023</p>
                     </div>
                     <div class="icons-box" display>
-                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/share.svg" alt=""></a>
                     </div>
 
                 </div>
@@ -75,7 +76,7 @@
             <div class=" shadow-lg content-box">
                 <div class="row" onclick="location.href='./article.html'">
                     <div class="col-sm">
-                        <img class="card-image" src="/images/vancouvernews.jpg" alt="">
+                        <img class="card-image" src="../images/vancouvernews.jpg" alt="">
                     </div>
                     <div class="col-sm text-align center">
                         <h5>Vancouver experiences its driest spring on record, leading to
@@ -83,9 +84,9 @@
                         <p>Vancouver News 17/03/2023</p>
                     </div>
                     <div class="icons-box" display>
-                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/share.svg" alt=""></a>
                     </div>
 
                 </div>
@@ -94,33 +95,28 @@
             <div class=" shadow-lg content-box">
                 <div class="row" onclick="location.href='./article.html'">
                     <div class="col-sm">
-                        <img class="card-image" src="/images/riverview.jpg" alt="">
+                        <img class="card-image" src="../images/riverview.jpg" alt="">
                     </div>
                     <div class="col-sm text-align center">
                         <h5>Expected Record-Breaking Heatwave To Sweep Vancouver This Summer </h5>
                         <p>Vancouver News 28/02/2023</p>
                     </div>
                     <div class="icons-box" display>
-                        <a href="#"><img class="newscard-icon" src="images/open-in-browser.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/star.svg" alt=""></a>
-                        <a href="#"><img class="newscard-icon" src="images/share.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/open-in-browser.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/star.svg" alt=""></a>
+                        <a href="#"><img class="newscard-icon" src="../images/share.svg" alt=""></a>
                     </div>
 
                 </div>
             </div>
         </div>
     </main>
-
-
-
     <footer id="my-footer"></footer>
     <!---------------------------------------------->
     <!-- JS scripts  -->
     <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_DTC01.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./scripts/alertsandnews.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="../scripts/firebaseAPI_DTC01.js"></script>
+    <script src="../scripts/template.js"></script>
 
 </body>
 
