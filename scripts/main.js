@@ -1,8 +1,7 @@
-
+// This file contains the code for the Community Board section in main.html
 // This funciton displays Community Board posts as cards sorted by last added
 function displayCardsDate(collection) {
     let cardTemplate = document.getElementById("cb-card-template");
-    console.log("TEST #1!")
 
     db.collection(collection).orderBy("last_updated", "desc").limit(6).get()
         .then(allPosts => {
@@ -10,7 +9,6 @@ function displayCardsDate(collection) {
             allPosts.forEach(doc => { //iterate through each doc
                 let title = doc.data().title;
                 let category = doc.data().category;
-                console.log("allPosts: " + doc.data().title)
                 let imageURL = doc.get("image");
                 var docID = doc.id;
                 let listingCard = cardTemplate.content.cloneNode(true);
@@ -19,33 +17,31 @@ function displayCardsDate(collection) {
                 listingCard.querySelector('.cb-card-img').src = imageURL;
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
                 listingCard.querySelector('.cb-card-category').innerHTML = category;
-                listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
-                console.log("TEST #2!");
+                listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./communityboard/viewListing.html?docID=${docID}'`);
 
                 document.getElementById("cb-card-date").appendChild(listingCard)
             })
         })
 }
 
-// This funciton displays Community Board posts as cards sorted randomly...
+// This funciton displays Community Board posts as cards sorted randomly
 function displayCardsRandom(collection) {
     let cardTemplate = document.getElementById("cb-card-template");
-    console.log("TEST #1!")
+
 
     db.collection(collection).orderBy("last_updated", "desc").limit(6).get()
         .then(allPosts => {
-            console.log('line 34:' + allPosts)
+
             var allPostsArray = [];
             allPosts.forEach(doc => { //store each doc id into an a newly created array
                 allPostsArray.push(doc);
                 // randomize items in allListingsArray
                 allPostsArray.sort(() => Math.random() - 0.5);
-                console.log('line 43 allPostsArray:' + allPostsArray)
+
             })
             return allPostsArray;
         })
            .then(allPostsArray => {
-                console.log('line 47:' + allPostsArray)
                 allPostsArray.forEach(doc => { 
                 console.log("line 49: doc.id " + doc.id);
 
@@ -60,7 +56,7 @@ function displayCardsRandom(collection) {
                 listingCard.querySelector('.cb-card-img').src = imageURL;
                 listingCard.querySelector('.cb-card-title').innerHTML = title;
                 listingCard.querySelector('.cb-card-category').innerHTML = category;
-                listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./viewListing.html?docID=${docID}'`);
+                listingCard.querySelector('.click-card').setAttribute('onclick', `location.href='./communityboard/viewListing.html?docID=${docID}'`);
                 document.getElementById("cb-card-random").appendChild(listingCard);
                 })
             })
