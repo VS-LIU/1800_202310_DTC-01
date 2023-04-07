@@ -5,7 +5,7 @@
 }
 
 body {
-    padding-top: 8%;
+    /* padding-top: 8%; */
     padding-bottom: 20%;
     background-color: white;
 
@@ -174,9 +174,9 @@ a {
 /*                           Section: Alerts & News                             */
 /* -+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+--+-+- */
 
-.header-space {
+/* .header-space {
     margin-top: 7vw;
-}
+} */
 
 #section_alerts {
     padding: 0;
