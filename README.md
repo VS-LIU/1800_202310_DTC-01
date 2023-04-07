@@ -55,7 +55,8 @@ Content of the project folder:
 ├── main.html                 # landing page after user login
 ├── README.md                 # README for this project
 │
-│------It has the following subfolders and files------
+It has the following subfolders and files:
+│
 ├── .git                      # Folder for git repo
 ├── images                    # Folder for images
 │   ├── footer                # Folder for footer images
@@ -78,8 +79,6 @@ Content of the project folder:
 │   └── script.js             # Script to logout
 │   └── template.js           # To display our templates
 │   └── viewListing.js        # To view post details in communityboard
-│
-│
 │
 ├── styles                   # Folder for styles
 │   └── style.css            # Our style sheet for all things CSS
