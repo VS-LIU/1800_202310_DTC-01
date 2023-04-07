@@ -1,8 +1,12 @@
+//-------------------------------------------------------------------
+// Populate the listing page with the listing details from Firestore
+//-------------------------------------------------------------------
+
 function populateReviews() {
-    //retreive thes url for each listing .
+
+    //retrieve the urls for each listing .
     let params = new URL(window.location.href) 
     let postID = params.searchParams.get("docID");
-
 
     // Sets listing elements dynamically after reading from Firestore
     db.collection("posts").doc(postID).get()
@@ -33,6 +37,3 @@ function populateReviews() {
         })
 }
 populateReviews();
-
-
-
