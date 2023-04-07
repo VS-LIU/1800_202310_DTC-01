@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Revival - Listing</title>
+  <title>Revival - Viewing Article</title>
   <meta name="comp1800 template" content="My 1800 App">
 
   <!-- Required meta tags -->
@@ -25,6 +25,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
@@ -37,27 +38,23 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/a04ac0de8d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
 
   <header>
     <nav id="my-navbar"></nav>
+    <div class="header-space" style="height: 70px;"></div>
   </header>
 
   <main>
     <!-- News Article container -->
-    <div class="content-box">
-      <div class="container-fluid article-banner-box"></div>
-      <div class="row">
-      </div>
-    </div>
     <h2 style="text-align: center;">The storm, which made landfall early Sunday morning, brought sustained winds of over
       200 kilometers per hour and dumped over 300 millimeters of rain on the city in just a few hours. The combination
       of high winds and heavy rainfall led to widespread flooding, with many homes and businesses completely submerged
       under water.</h2>
-    <img class="article-img" src="/images/vancouvernews.jpg" alt="article thumbnail">
+    <img class="article-img" src="../images/vancouvernews.jpg" alt="article thumbnail">
     </div>
     <div class="article-body">
       <p>
@@ -116,10 +113,8 @@
   <!---------------------------------------------->
   <!-- JS scripts  -->
   <!---------------------------------------------->
-  <script src="./scripts/firebaseAPI_DTC01.js"></script>
-  <script src="./scripts/template.js"></script>
-  <script src="./scripts/main.js"></script>
-
+  <script src="../scripts/firebaseAPI_DTC01.js"></script>
+  <script src="../scripts/template.js"></script>
 
 </body>
 
